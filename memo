@@ -1,0 +1,4 @@
+php artisan make:migration TwitterUser TwitterUser
+
+
+composer create-project --prefer-dist "laravel/laravel=6.*" test
