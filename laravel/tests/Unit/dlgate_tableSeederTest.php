@@ -14,7 +14,7 @@ class dlgate_tableSeederTest extends TestCase
     public function testDLgate_TableSeeder()
     {
         $Dlgate_Table = Dlgate_Table::all();
-        // dd($Dlgate_Table);
+        dd($Dlgate_Table);
         // $this->assertEquals(6,count($Dlgate_Table));
     }
 }
