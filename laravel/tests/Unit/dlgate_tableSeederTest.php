@@ -15,6 +15,7 @@ class dlgate_tableSeederTest extends TestCase
     {
         $Dlgate_Table = Dlgate_Table::all();
         dd($Dlgate_Table);
+        ///tesutoで今書いています
         // $this->assertEquals(6,count($Dlgate_Table));
     }
 }
