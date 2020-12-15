@@ -42,7 +42,7 @@ class dlgate_tableSeederTest extends TestCase
 
         $Dlgate_Table = Dlgate_Table::all();
         foreach($Dlgate_Table as $row){
-            $this->DLgate_add_name($row["name"]);
+            $this->DLgate_Extraction_Name($row["name"]);
         }
         $this->Array_Unique_Delete();
 
@@ -61,7 +61,7 @@ class dlgate_tableSeederTest extends TestCase
         //Userテーブルに追加したseederのデータを検証するメソッド
         $user = User::all();
         foreach($user as $row){
-            $this->User_Add_Name($row["name"]);
+            $this->User_Extraction_Name($row["name"]);
         }
         $this->assertEquals(2, count($user));
         // seederに挿入したデータの総数に間違えがないかどうか検証
