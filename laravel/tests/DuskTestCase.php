@@ -39,6 +39,7 @@ abstract class DuskTestCase extends BaseTestCase
             '--lang=ja_JP',
             
         ]);
+        
 
         return RemoteWebDriver::create(
             $_ENV['DUSK_DRIVER_URL'] ?? 'http://localhost:9515',
