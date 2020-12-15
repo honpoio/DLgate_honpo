@@ -22,6 +22,20 @@ unzip \
 RUN apt-get -y install libzip-dev
 RUN docker-php-ext-install zip
 
-RUN npm install -g create-nuxt-app 
+
+RUN apt-get -y install libnss3
+RUN apt-get -y install libasound2-data  libasound2 xdg-utils
+RUN apt install sudo
+RUN apt-get install -y wget
+RUN apt-get install -y gnupg2
+
+RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+RUN echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list
+RUN sudo apt update
+RUN sudo apt-get install -y google-chrome-stable
+RUN apt-get install -y fonts-ipafont 
+
+# RUN npm install -g create-nuxt-app 
+
 #コンテナ内に入った時のディレクトリを指定
 WORKDIR /var/www/html

@@ -51,7 +51,7 @@
 
 
 <article>
-<h1>タイトル</h1>
+<h1>DLgate一覧</h1>
 
 <section>
 
