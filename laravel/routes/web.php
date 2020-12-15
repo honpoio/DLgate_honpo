@@ -34,7 +34,6 @@ Route::middleware('verified')->group(function () {
                         return view('DLgate_create');
                 });
                 
-                Route::get('/DLgate','DLgate\CRUDController@select');
                 route::get('/update','DLgate\CRUDController@select_update');
                 route::post('/insert','DLgate\CRUDController@create');
                 route::put('/update/add','DLgate\CRUDController@update');
@@ -53,6 +52,7 @@ Route::middleware('verified')->group(function () {
         });
 });
 
+                Route::get('/DLgate','DLgate\CRUDController@select');
                 //ログインの有無によってアクセス制限するrouting
                 Route::get('/testDLgate','DLgate\DLGateDisplayController@DLGateForm');
 

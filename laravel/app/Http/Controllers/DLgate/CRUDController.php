@@ -19,7 +19,7 @@ class CRUDController extends Controller
     }
     public function select(){
         $user = Auth::user();
-        $this->checkLogin($user);
+        // $this->checkLogin($user);
         return app('DB_Operation')->select($user);
     }
 
