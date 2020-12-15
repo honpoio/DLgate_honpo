@@ -14,7 +14,13 @@ RUN apt-get update \
 git \
 zip \
 unzip \
-&& docker-php-ext-install pdo_mysql bcmath
+&& docker-php-ext-install pdo_mysql bcmath 
+
+
+# COPY ./php.ini /usr/local/etc/php/php.ini
+
+RUN apt-get -y install libzip-dev
+RUN docker-php-ext-install zip
 
 RUN npm install -g create-nuxt-app 
 #コンテナ内に入った時のディレクトリを指定

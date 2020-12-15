@@ -1,2 +1,5 @@
 {
+    "require-dev": {
+        "laravel/dusk": "^6.9"
+    }
 }
