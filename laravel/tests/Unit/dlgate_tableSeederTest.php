@@ -21,29 +21,30 @@ class dlgate_tableSeederTest extends TestCase
     private static $User_Table_Name=[];
     //Userテーブルのカラムnameを格納
 
-    private function DLgate_add_name($name){
-
+    private function DLgate_Extraction_Name($name){
+        //DLgateテーブルのnameカラムを抽出するメソッド
         array_push(self::$Dlgate_Table_Name,$name);
     }
 
-    private function User_Add_Name($name){
+    private function User_Extraction_Name($name){
+        //Userテーブルのnameカラムを抽出するメソッド
         array_push(self::$User_Table_Name,$name);
     }
 
     private function Array_Unique_Delete(){
+        //DBから一意のデータを削除するメソッド
         self::$Dlgate_Table_Name = array_values(array_unique(self::$Dlgate_Table_Name));
     }
 
 
     public function testDLgate_TableSeeder(){
+        // DLgate_tableに追加したseederのデータを検証するメソッド
 
         $Dlgate_Table = Dlgate_Table::all();
         foreach($Dlgate_Table as $row){
             $this->DLgate_add_name($row["name"]);
         }
         $this->Array_Unique_Delete();
-
-        //名前の重複を許可しているので一意の名前を削除し番号を振り分け直す
 
         $this->assertEquals(6, count($Dlgate_Table));
         // seederに挿入したデータの総数に間違えがないかどうか検証
@@ -57,6 +58,7 @@ class dlgate_tableSeederTest extends TestCase
         //seederで挿入したtest2ユーザーのgate総数を検証
     }
     public function testUser_TableSeeder(){
+        //Userテーブルに追加したseederのデータを検証するメソッド
         $user = User::all();
         foreach($user as $row){
             $this->User_Add_Name($row["name"]);
@@ -66,6 +68,7 @@ class dlgate_tableSeederTest extends TestCase
         
         $User_Email_Add = User::where('email','test@exmple.com')->get();
         foreach($User_Email_Add as $_User_Email_Add){
+            //seederで追加しtest@exmple.comのデータに誤りがないかどうか検証
             $this->assertEquals('test',$_User_Email_Add["name"]);
             $this->assertEquals('test@exmple.com',$_User_Email_Add["email"]);
             $this->assertEquals('2020-12-09 14:40:35',$_User_Email_Add["email_verified_at"]);
@@ -74,6 +77,9 @@ class dlgate_tableSeederTest extends TestCase
 
     }
     public function testGateUserSeeder(){
+        //GateUserで一意にしたuserのデータと
+        //Userテーブル、DLgate_tableのnameが外部キー制約として
+        //動いているか検証するメソッド
         $_GateUser =[]; 
         $GateUser = GateUser::all();
         foreach($GateUser as $row){
