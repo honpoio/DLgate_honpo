@@ -14,7 +14,7 @@ class UserEdit_LoginUserInformationControllerTest extends TestCase
      * @return void
      */
 
-    public function UserInformation(){
-        
+    public function testUserInformation(){
+
     }
 }
