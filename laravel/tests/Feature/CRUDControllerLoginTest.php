@@ -21,19 +21,19 @@ class CRUDControllerLoginTest extends TestCase
      * @return void
      */
 
-    public function __get($URL_id){
-        return $this->URL_id;
-    }
+    use RefreshDatabase;
 
+    public function setUp() :void
+    {   
+        parent::setUp(); 
+        $this->seed('usersTableSeeder');
+        $this->seed('dlgate_tableSeeder');
+    }
     public function testGateLoginForm(){
         // 　/Dlgateでログインしたか検証する
-            $response = $this->actingAs(User::find(1))
-            // ->withSession(['foo' => 'bar'])
-            ->get('DLgate');
+        $response = $this->actingAs(User::find(1))
+        ->get('DLgate');
             
-            // ->get('/testDLgate');
-
-        // dd($response);
         $this->assertTrue(Auth::check());
         $response->assertStatus(200);
     }
