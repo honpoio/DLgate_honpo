@@ -9,7 +9,7 @@ use App\User;
 use App\Dlgate_Table;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
-class CRUDControllerTest extends TestCase
+class Gate_CRUDControllerTest extends TestCase
 {
     /**
      * A basic feature test example.
