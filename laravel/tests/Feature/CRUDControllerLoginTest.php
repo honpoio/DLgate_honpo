@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 
 class CRUDControllerLoginTest extends TestCase
 {
-    private $URL_id;
+
 
 
 
@@ -29,8 +29,9 @@ class CRUDControllerLoginTest extends TestCase
         $this->seed('usersTableSeeder');
         $this->seed('dlgate_tableSeeder');
     }
+
     public function testGateLoginForm(){
-        // 　/Dlgateでログインしたか検証する
+        // 　/Dlgateでログインの有無を検証する
         $response = $this->actingAs(User::find(1))
         ->get('DLgate');
             
@@ -41,15 +42,23 @@ class CRUDControllerLoginTest extends TestCase
         // /Dlgate/update?URL_id=(URL_id)を検証
         $dlgate_table = Dlgate_Table::select(['URL_id'])->where('id',[1])->get();
         foreach($dlgate_table as $row){
-            $this->URL_id = $row->URL_id;
+            $URL_id = $row->URL_id;
         }
         
         $response = $this->actingAs(User::find(1))
-        ->get('update?URL_id='.$this->URL_id);
+        ->get('update?URL_id='.$URL_id);
 
 
         $this->assertTrue(Auth::check());
         $response->assertStatus(200);
+    }
+    
+    public function testGateLoginInsertForm(){
 
+        $response = $this->actingAs(User::find(1))
+        ->get('DLgate/create');
+            
+        $this->assertTrue(Auth::check());
+        $response->assertStatus(200);
     }
 }
