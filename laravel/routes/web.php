@@ -20,7 +20,7 @@ Route::get('/', function(){
 
 // Route::get('/admin', 'AdminController@index')->name('admin');
 // app()->make(ClassA::class);
-Auth::routes(['verify'   => true, // メール確認機能（※5.7系以上のみ）
+Auth::routes(['verify'   => true, // メール確認機能
         'register' => true, // デフォルトの登録機能ON
         'reset'    => true,  // メールリマインダー機能ON
         ]);

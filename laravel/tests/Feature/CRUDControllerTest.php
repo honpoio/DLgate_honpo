@@ -28,6 +28,7 @@ class CRUDControllerTest extends TestCase
     }
 
     public function testGateUpdate(){
+        //Gateテーブルのupdateが可能かどうか検証するメソッド
 
         $dlgate_table = Dlgate_Table::select(['URL_id'])->where('id',[1])->get();
         // updateするGateを用意
@@ -44,16 +45,56 @@ class CRUDControllerTest extends TestCase
             "dl_url" =>'https://www.innovation.co.jp/',
             "URL_id" => $URL_id,
             ]);
+        
 
 
-        $this->assertTrue(Auth::check());
         $response->assertStatus(302);
+        $this->assertTrue(Auth::check());
+        $this->assertDatabaseHas('dlgate_table', [
+            "URL_id" => $URL_id,
+        ]);
+
 
     }
     public function testGateInsert(){
-        $dlgate_table = Dlgate_Table::select(['URL_id'])->where('id',[1])->get();
-        dd($dlgate_table);
+        //GateテーブルのInsertが可能かどうか検証するメソッド
+        $response = $this->actingAs(User::find(1))
+        ->post('/insert',[
+            "Twitter_user"=>'Sankei_news',
+            "tweet_id"=>'1337272952140623874',
+            "gate_name"=>'sankei',
+            "dl_url" =>'https://www.innovation.co.jp/',
+        ]);
 
+        $this->assertTrue(Auth::check());
+        $response->assertStatus(302);
+        $this->assertDatabaseHas('dlgate_table', [
+            "Twitter_user"=>'Sankei_news',
+            "Twitter_tweet"=>'1337272952140623874',
+            "gate_name"=>'sankei',
+            "dl_url" =>'https://www.innovation.co.jp/',
+        ]);
+    }
+    public function testGateDelete(){
+        //Gateテーブルのdeleteが可能かどうか検証するメソッド
+        $dlgate_table = Dlgate_Table::select(['URL_id'])->where('id',[2])->get();
+        // deleteするGateのURL_idを用意
+        foreach($dlgate_table as $row){
+            $URL_id = $row->URL_id;
+        }
+
+
+        $response = $this->actingAs(User::find(1))
+        ->delete('/delete',[
+            "URL_id"=>$URL_id,
+        ]);
+
+        $this->assertTrue(Auth::check());
+        $response->assertStatus(302);
+        $this->assertDatabaseMissing('dlgate_table',[
+            "URL_id" => $URL_id,
+            
+        ]);
 
     }
 }
