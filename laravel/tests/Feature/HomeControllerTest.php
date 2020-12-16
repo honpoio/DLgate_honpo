@@ -14,8 +14,13 @@ class HomeControllerTest extends TestCase
      *
      * @return void
      */
+    use RefreshDatabase;
+
     public function testExample()
     {
+        $this->seed('usersTableSeeder');
+        $this->seed('dlgate_tableSeeder');
+        
         $response = $this
             ->actingAs(User::find(1))
             ->get(route('home'));
