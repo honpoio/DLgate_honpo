@@ -20,7 +20,7 @@
     <!-- <a href="http://localhost:8000/testDLgate{{$row->URL_id}}">test</a> -->
     <form method="GET" action="/testDLgate">
         <input type="hidden" name='id' value={{$row->URL_id}}>
-        <input type="submit" value='view'>
+        <button dusk="view-button">view</button>
     </form>
     <br>
     <a>{{$loop->iteration}}</a><br>
