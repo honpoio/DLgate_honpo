@@ -29,7 +29,8 @@ Route::middleware('verified')->group(function () {
 
 
                 
-
+                Route::get('/DLgate','DLgate\CRUDController@select');
+                
                 Route::get('/DLgate/create',function(){
                         return view('DLgate_create');
                 });
@@ -52,7 +53,7 @@ Route::middleware('verified')->group(function () {
         });
 });
 
-                Route::get('/DLgate','DLgate\CRUDController@select');
+
                 //ログインの有無によってアクセス制限するrouting
                 Route::get('/testDLgate','DLgate\DLGateDisplayController@DLGateForm');
 
