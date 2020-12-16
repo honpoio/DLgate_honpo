@@ -15,14 +15,15 @@ class LoginTest extends DuskTestCase
      */
     public function testBasicExample()
     {
+        //サーバー自体は本番用なので.envをテスト用のDBに変更する必要があり
         $user = User::find(1);
-        $this->browse(function ($browser) use ($user) {
+        $this->browse(function ($browser) use ($user){
             $browser->visit('/login')
                     ->type('email', $user->email)
-                    ->type('password','kazuma115')
+                    ->type('password','testpass')
                     ->press('Login')
                     ->assertPathIs('/')
-                    ->screenshot('loggin');
+                    ->screenshot('login');
         });
     }
 }
