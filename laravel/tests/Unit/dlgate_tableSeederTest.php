@@ -16,10 +16,12 @@ class dlgate_tableSeederTest extends TestCase
      *
      * @return void
      */
+
     private static $Dlgate_Table_Name = [];
     //Dlgate_Tableのカラムnameを格納
     private static $User_Table_Name=[];
     //Userテーブルのカラムnameを格納
+
 
     private function DLgate_Extraction_Name($name){
         //DLgateテーブルのnameカラムを抽出するメソッド
@@ -36,6 +38,15 @@ class dlgate_tableSeederTest extends TestCase
         self::$Dlgate_Table_Name = array_values(array_unique(self::$Dlgate_Table_Name));
     }
 
+
+    use RefreshDatabase;
+
+    public function setUp() :void
+    {   
+        parent::setUp(); 
+        $this->seed('usersTableSeeder');
+        $this->seed('dlgate_tableSeeder');
+    }
 
     public function testDLgate_TableSeeder(){
         // DLgate_tableに追加したseederのデータを検証するメソッド
@@ -56,6 +67,7 @@ class dlgate_tableSeederTest extends TestCase
         $Usertest2_add_Dlgate_Table = Dlgate_Table::where('name', 'test2')->get();
         $this->assertEquals(3, count($Usertest2_add_Dlgate_Table));
         //seederで挿入したtest2ユーザーのgate総数を検証
+        return self::$Dlgate_Table_Name;
     }
     public function testUser_TableSeeder(){
         //Userテーブルに追加したseederのデータを検証するメソッド
@@ -68,24 +80,27 @@ class dlgate_tableSeederTest extends TestCase
         
         $User_Email_Add = User::where('email','test@exmple.com')->get();
         foreach($User_Email_Add as $_User_Email_Add){
-            //seederで追加しtest@exmple.comのデータに誤りがないかどうか検証
+            //seederで追加したデータ
             $this->assertEquals('test',$_User_Email_Add["name"]);
             $this->assertEquals('test@exmple.com',$_User_Email_Add["email"]);
             $this->assertEquals('2020-12-09 14:40:35',$_User_Email_Add["email_verified_at"]);
         }
-        
+        return self::$User_Table_Name;
+
 
     }
-    public function testGateUserSeeder(){
-        //GateUserで一意にしたuserのデータと
-        //Userテーブル、DLgate_tableのnameが外部キー制約として
-        //動いているか検証するメソッド
+    /**
+     * @depends testDLgate_TableSeeder
+     * @depends testUser_TableSeeder
+     */
+    public function testGateUserSeeder(array $Dlgate_Table_Name, array $User_Table_Name){
+    
         $_GateUser =[]; 
         $GateUser = GateUser::all();
         foreach($GateUser as $row){
             array_push($_GateUser,$row["user"]);
         }
-        $this->assertEquals(self::$Dlgate_Table_Name,$_GateUser);
-        $this->assertEquals(self::$User_Table_Name,$_GateUser);
+        $this->assertEquals($Dlgate_Table_Name,$_GateUser);
+        $this->assertEquals($User_Table_Name,$_GateUser);
     }
 }
