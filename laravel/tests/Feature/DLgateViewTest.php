@@ -31,7 +31,7 @@ class DLgateViewTest extends TestCase
             $URL_id = $row->URL_id;
         }
 
-        $response = $this->get('testDLgate?id='.$URL_id);
+        $response = $this->get('/DLgate/view?id='.$URL_id);
 
         $response->assertStatus(200);
     }
