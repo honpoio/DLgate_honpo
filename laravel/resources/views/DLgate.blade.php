@@ -18,7 +18,7 @@
     <a>{{$row->gate_name}}</a><br>
     <a>{{$row->dl_url}}</a><br>
     <!-- <a href="http://localhost:8000/testDLgate{{$row->URL_id}}">test</a> -->
-    <form method="GET" action="/testDLgate">
+    <form method="GET" action="/DLgate/view">
         <input type="hidden" name='id' value={{$row->URL_id}}>
         <button dusk="view-button">view</button>
     </form>
