@@ -37,6 +37,6 @@ class DLGateDisplayController extends Controller
         if (empty($dlgate_table["0"])){
             \App::abort(404);
         }
-        return view('testDLgate',[ 'dlgate_table' => $dlgate_table]);
+        return view('DLgateForm',[ 'dlgate_table' => $dlgate_table]);
     }
 }
