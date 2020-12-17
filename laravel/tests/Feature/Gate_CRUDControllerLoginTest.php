@@ -77,6 +77,16 @@ class Gate_CRUDControllerLoginTest extends TestCase
         $response->assertStatus(200)
         ->assertViewIs('DLgate_create');
     }
+    public function testGateLoginviewForm(){
+        // ルーティングDLgate/viewはログインしていない状態でのアクセスが可能か検証
+        $dlgate_table = Dlgate_Table::select(['URL_id'])->where('id',[1])->get();
+        foreach($dlgate_table as $row){
+            $URL_id = $row->URL_id;
+        //動的パスのDLgate/view={}を取得
+        }
+        $this->get('/DLgate/view?id='.$URL_id)->assertViewIs('DLgateForm')->assertStatus(200);
+        
+    }
 
     
 }
