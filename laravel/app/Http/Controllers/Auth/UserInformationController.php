@@ -43,7 +43,7 @@ class UserInformationController extends Controller
             User::where('id',$request->UserId)
             ->update(['email_verified_at' =>NULL]);
             // return redirect('/email/verify');
-            return redirect('/email/verify')->with('status', __('パスワードの変更に成功しました'));
+            return redirect('/email/verify')->with('status', __('メールアドレスの変更に成功しました'));
         });
     }    
     
