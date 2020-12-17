@@ -7,7 +7,7 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 use App\User;
 use Illuminate\Support\Facades\Auth;
-class User_Edit_LoginUserInformationControllerTest extends TestCase
+class User_Edit_UserInformationControllerLoginTest extends TestCase
 {
     /**
      * A basic feature test example.
