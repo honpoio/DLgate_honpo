@@ -27,6 +27,11 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+import './bootstrap'
+import Vue from 'vue'
+import FooBar from './components/FooBar'
+
+
 const app = new Vue({
     el: '#app',
 });
