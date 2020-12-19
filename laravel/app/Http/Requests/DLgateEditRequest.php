@@ -29,28 +29,9 @@ class DLgateEditRequest extends FormRequest
             "gate_name" =>['required','string','max:255'],
             "dl_url" =>['required','url'],
         ];
-
+        //カスタムバリデーションについて↓
+        //laravel/resources/lang/ja/validation.phpに記載済み
     }
 
-    public function attributes()
-{
-    return [
-        'Twitter_user' => 'ツイッターユーザー名',
-        'tweet_id' => 'ツイート_id',
-        // 'gate_name' => 'ラジオボタン',
-    ];
-}
-    public function messages()
-{
-    return [
-        'tweet_id.integer' =>'ツイートidのみ入力してください',
-        'gate_name.required' =>'gatenameは入力必須です',
-        'gate_name.string' =>'gatenameは英数字のみ入力可能です',
-        'gate_name.max:255' => 'gatenameは255文字以内で入力してください',
-        'dl_url.required' =>'DL_urlは入力必須です',
-        'dl_url.url' =>'DL_urlにはURLを入力してください',
-
-
-    ];
-}
+    
 }
