@@ -88,7 +88,7 @@ return [
     'min' => [
         'numeric' => ':attributeは:maxより小さくてはいけません。',
         'file' => ':attributeは:maxキロバイトより小さくてはいけません。',
-        'string' => ':attributeは:max文字より小さくてはいけません。',
+        'string' => ':attributeは8文字以上にしてください',
         'array' => ':attributeには少なくとも:min個のアイテムが必要です。',
     ],
     'not_in' => '選択された:attributeは無効です。',
@@ -134,6 +134,16 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+        /* 
+        DLgateEditRequestの独自バリデーション
+        */
+        'tweet_id.integer' =>'ツイートidのみ入力してください',
+        'gate_name.required' =>'GATEnameは入力必須です',
+        'gate_name.string' =>'GATEnameは英数字のみ入力可能です',
+        'gate_name.max:255' => 'gatenameは255文字以内で入力してください',
+        'dl_url.required' =>'DL_urlは入力必須です',
+        'dl_url.url' =>'DL_urlにはURLを入力してください',
+
     ],
 
     /*
@@ -146,6 +156,9 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'Twitter_user' => 'ツイッターユーザー名',
+        'tweet_id' => 'ツイートid',
+    ],
 
 ];

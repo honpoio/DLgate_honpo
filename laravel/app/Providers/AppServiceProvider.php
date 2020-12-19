@@ -18,6 +18,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind('Twitter_Operation','App\Twitter_Oauth_Operation\Twitter_Operation',true);
         app()->bind('DLgate_User_Table','Illuminate\Database\DLgate_Components\DLgate_User_Table');
         app()->bind('DB_Operation','Database\operateDB\DLgate_Operation_DB');
+        app()->bind('User_DB_Operation','Database\operateDB\User_Operation_DB');
     }
 
     /**

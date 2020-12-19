@@ -21,10 +21,10 @@ class DLgate_Operation_DB
         Dlgate_Table::where('URL_id',$request->URL_id)
         ->where('name',$user["name"])
         ->update([
-            'Twitter_user' => $request->Twitter_user,
-            'Twitter_tweet' => $request->tweet_id,
-            'gate_name'=> $request->gate_name,
-            'dl_url'=> $request->dl_url,
+            'Twitter_user' => trim(ltrim($request->Twitter_user,'https://twitter.com/')),
+            'Twitter_tweet' => trim($request->tweet_id),
+            'gate_name'=> trim($request->gate_name),
+            'dl_url'=> trim($request->dl_url),
             ]);
         return redirect('/DLgate');
     }
@@ -38,10 +38,10 @@ class DLgate_Operation_DB
         Dlgate_Table::create([
             'name' => $user["name"],
             'URL_id' => uniqid(),
-            'Twitter_user' => $request->Twitter_user,
-            'Twitter_tweet' => $request->tweet_id,
-            'gate_name'=> $request->gate_name,
-            'dl_url'=> $request->dl_url,
+            'Twitter_user' => trim(ltrim($request->Twitter_user,'https://twitter.com/')),
+            'Twitter_tweet' => trim($request->tweet_id),
+            'gate_name'=> trim($request->gate_name),
+            'dl_url'=> trim($request->dl_url),
             ]);
         return redirect('/DLgate');
     }
