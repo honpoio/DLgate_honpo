@@ -51,6 +51,10 @@ class Gate_CRUDControllerTest extends TestCase
         $response->assertStatus(302);
         $this->assertTrue(Auth::check());
         $this->assertDatabaseHas('dlgate_table', [
+            "Twitter_user"=>'Sankei_news',
+            "Twitter_tweet"=>'1337272952140623874',
+            "gate_name"=>'sankei',
+            "dl_url" =>'https://www.innovation.co.jp/',
             "URL_id" => $URL_id,
         ]);
 

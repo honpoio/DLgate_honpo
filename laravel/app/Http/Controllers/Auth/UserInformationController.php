@@ -5,13 +5,6 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
-use App\User;
-use App\Dlgate_Table;
-use App\GateUser;
-
-use Illuminate\Support\Facades\DB;
-
 use App\Http\Requests\ChangePasswordRequest;
 use App\Http\Requests\WithdrawalRequest;
 
@@ -34,29 +27,13 @@ class UserInformationController extends Controller
     public function EmailUpdate(Request $request){
         $auth = auth::user();
         $this->checkLogin();
-        return DB::transaction(function () use($request){
-            User::where('id',$request->UserId)
-            ->lockForUpdate()
-            //専有ロック
-            ->update(['email'=> $request->Email,]);
-            
-            User::where('id',$request->UserId)
-            ->update(['email_verified_at' =>NULL]);
-            // return redirect('/email/verify');
-            return redirect('/email/verify')->with('status', __('メールアドレスの変更に成功しました'));
-        });
+        return app('User_DB_Operation')->EmailUpdate($request);
     }    
     
     public function PasswordChange(ChangePasswordRequest $request){
         $this->checkLogin();
         $user = Auth::user();
-        return DB::transaction(function () use($request,$user){
-            User::where('id',$request->UserId)
-            ->lockForUpdate();
-            $user->password = bcrypt($request->newPassword);
-            $user->save();
-            return redirect()->route('user')->with('status', __('パスワードの変更に成功しました'));
-        });
+        return app('User_DB_Operation')->PasswordChange($request,$user);
     }
 
     public function WithdrawalForm(){
@@ -69,19 +46,7 @@ class UserInformationController extends Controller
         $this->checkLogin();
         $user = auth::user();
         
-        return DB::transaction(function () use($request,$user){
-            GateUser::where('user',$user["name"])
-            ->lockForUpdate()
-            ->delete();
-            User::where('id',$request->UserId)
-            ->lockForUpdate()
-            ->delete();
-            Dlgate_Table::where('id',$user["name"])
-            ->lockForUpdate()
-            ->delete();
-            Auth::logout();
-            return redirect('/')->with('status', __('退会できました。ご利用ありがとうございます'));
-        });
+        return app('User_DB_Operation')->Withdrawal($request,$user);
     }
     
 
