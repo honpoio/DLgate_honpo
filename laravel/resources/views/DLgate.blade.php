@@ -12,7 +12,9 @@
 </head>
 <body>
 @section('content')
-
+<form method="GET" action="/DLgate/create">
+    <button dusk="view-button" class="btn　btn-primary" >gateを新規作成する</button>
+</form>
 </nav>
 <div class="card">
 @if(isset($dlgate_table))
@@ -67,33 +69,8 @@
     
 @endforeach
 @endif
-<form method="GET" action="/DLgate/create">
-    <input type="submit" value="create">
-</form>
-<!----- header----->
-<header>ヘッダー</header>
-<nav>ナビ</nav>
-<!----- /header ----->
-<!----- main ----->
 
 
-
-<article>
-<h1>DLgate一覧</h1>
-
-<section>
-
-
-
-
-<p>コンテンツの内容</p>
-</section>
-</article>
-<!----- /main ----->
-
-<!----- footer ----->
-<footer>フッター</footer>
-<!----- /footer ----->
 
 
 </body>
