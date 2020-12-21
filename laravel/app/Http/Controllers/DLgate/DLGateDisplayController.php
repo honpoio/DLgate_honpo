@@ -20,19 +20,20 @@ class DLGateDisplayController extends Controller
             $request->session()->put('Twitter_user',$row->Twitter_user);
             
             if(is_null($request->session()->get('Twitter_user'))){
-                $screen_name = $request->session()->get('Twitter_user_sucsess',true);
+                //もしもtwitterのユーザー名を登録していない場合
+                $request->session()->put('Twitter_user_sucsess',true);
             }
 
             
             $request->session()->put('Twitter_tweet',$row->Twitter_tweet);
+            //もしもtweetidをデータに挿入していない場合
                 if(is_null($request->session()->get('Twitter_tweet'))){
                     $request->session()->put('Twitter_tweet_sucsess',true);
                 }
 
             $request->session()->put('URL_id',$row->URL_id);
         }
-        // $twitter = new TwitterController();
-        // $twitter::AddGateProperty($dlgate_table);
+
 
         if (empty($dlgate_table["0"])){
             \App::abort(404);
