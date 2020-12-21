@@ -1,3 +1,7 @@
+@extends('layouts.app')
+
+@section('content')
+
 <body>
 @if($dlgate_table ?? '')
 @foreach($dlgate_table ?? '' as $row)
