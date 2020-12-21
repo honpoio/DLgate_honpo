@@ -27,7 +27,7 @@ class Twitter_Operation extends TwitterController
             print "Follow failed\n";
         }
         return redirect(
-            'http://localhost:8000/testDLgate?id='.
+            'http://localhost:8000//DLgate/view?id='.
             $request->session()->get('URL_id')
         );
     }
@@ -51,7 +51,7 @@ class Twitter_Operation extends TwitterController
         }
 
         return redirect(
-            'http://localhost:8000/testDLgate?id='.
+            'http://localhost:8000//DLgate/view?id='.
             $request->session()->get('URL_id')
         );
     }
