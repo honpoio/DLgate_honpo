@@ -68,7 +68,6 @@
         </style>
     </head>
     <body>
-    <script src="{ { assets('js/app.js') } }"></script>
 
     @if (session('status'))
     {{ session('status') }}
