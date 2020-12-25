@@ -1,17 +1,35 @@
-<template>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                Hello World!
-            </div>
+    <template>
+        <!-- <div class="container"> -->
+            <div id ="app">
+            <span class="test">DLgate_url:{{ test }}</span>
+                <button @click="writeToClipboard(test)">URLをコピーする</button>
         </div>
-    </div>
-</template>
+    </template>
 
-<script>
-    export default {
-        mounted() {
-            console.log('Component mounted.')
-        }
+
+
+    <style scoped>
+    .test {
+        color: rgb(28, 108, 182);
     }
-</script>
+    </style>
+
+    <script>
+    export default {
+        props: {
+            test: String,
+        },
+        methods: {
+            writeToClipboard(text) {
+                navigator.clipboard.writeText(text).catch((e) => {
+                    console.error(e)
+                })
+            }
+        },
+
+            mounted() {
+            console.log('ExampleComponent mounted.')
+        },
+    }
+    </script>
+
