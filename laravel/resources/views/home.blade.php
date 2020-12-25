@@ -14,9 +14,7 @@
                         </div>
                     @endif
 
-                    ログインに成功しました！
-                    <a c href="{{ url('/') }}">ホーム画面に戻る</a>
-
+                    You are logged in!
                 </div>
             </div>
         </div>
