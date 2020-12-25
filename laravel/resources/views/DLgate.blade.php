@@ -8,10 +8,10 @@
 <head>
 <!-- [if lt IE 9] -->
 <!-- [endif] -->
-<script src="main.js"></script>
 </head>
 <body>
 @section('content')
+
 <form method="GET" action="/DLgate/create">
     <button dusk="view-button" class="btn　btn-primary" >gateを新規作成する</button>
 </form>
@@ -29,42 +29,22 @@
                 <button dusk="view-button" class="btn　btn-primary" >view</button>
         </div>
         </form>
-        
-        <div style= "position: absolute; opacity:0;">
-            <input id="copyTarget{{$loop->iteration}}" type="text" value="http://localhost:8000/DLgate/view{{$row->URL_id}}"readonly>
-        </div>
-            <button onclick="copyToClipboard({{$loop->iteration}})">URLをコピーする</button>
-    </div>
+        <hello-world-component test="http://127.0.0.1:8000/DLgate/view?id={{ $row['URL_id'] }}"></hello-world-component>
 
-    <script>
-        function copyToClipboard(index){
-        // コピー対象をJavaScript上で変数として定義する
-        var copyTarget = document.getElementById("copyTarget" + index);
 
-        // コピー対象のテキストを選択する
-        copyTarget.select();
-
-        // 選択しているテキストをクリップボードにコピーする
-        document.execCommand("Copy");
-
-        // コピーをお知らせする
-        alert("URLをコピーできました！ : " + copyTarget.value);
-    }
-    </script>
 
     <!-- bodyタグ内の下部に以下を入力する -->
     <form method="GET" action="/update">
         <input type="hidden" name="URL_id" value={{$row["URL_id"]}}>
-        <input type="submit" value="update">
+        <input type="submit" value="{{$row->gate_name}}をupdateする" style="width:160px">
     </form>
 
     <form method="POST" action="/delete">
     @csrf
         <input type="hidden" name="_method" value="DELETE">
-        <input type="hidden" name="URL_id" value={{$row["URL_id"]}}>
-        <input type="submit" value="delete">
+        <input type="hidden" name="URL_id" value={{$row["URL_id"]}}  style="width:160px">
+        <input type="submit" value="{{$row->gate_name}}をdeleteする">
     </form>
-
 
     
 @endforeach
