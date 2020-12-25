@@ -15,16 +15,23 @@
 </template>
 
 <script>
-
-
     export default {
+
         mounted() {
             console.log('Component mounted.')
         }
-        
-
     }
+    // function copyToClipboard(index){
+    //     // コピー対象をJavaScript上で変数として定義する
+    //     var copyTarget = document.getElementById("copyTarget" + index);
 
+    //     // コピー対象のテキストを選択する
+    //     copyTarget.select();
+
+    //     // 選択しているテキストをクリップボードにコピーする
+    //     document.execCommand("Copy");
+
+    //     // コピーをお知らせする
+    //     alert("URLをコピーできました！ : " + copyTarget.value);
+    // }
 </script>
-
-
