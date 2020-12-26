@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\ChangePasswordRequest;
+use App\Http\Requests\addEmailRequest;
 use App\Http\Requests\WithdrawalRequest;
 
 class UserInformationController extends Controller
