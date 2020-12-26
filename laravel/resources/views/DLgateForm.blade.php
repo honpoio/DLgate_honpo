@@ -20,7 +20,10 @@
                             <form method="GET" action="/DLgate/view">
                                 <input  type="hidden" name='id' value=Session::get('URL_id')>
                                     <button dusk="view-button" class="button_font_variable_length">view</button>
-                                    <a>viewボタンを押下し再度試して下さい</a>
+                                        <a>viewボタンを押下し再度試して下さい</a>
+                                        <br>
+                                        <a>※再度試しても変わらない場合はお使いのアカウントでフォロー、RT、登録、を解除した上でお試し下さい</a>
+
                             </form>
                         @endif 
                         <form method="GET" action="/auth/redirect/twitter">
