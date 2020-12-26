@@ -24,7 +24,7 @@ class UserInformationController extends Controller
     return view('auth.UserInformationEdit',['auth'=>$auth]);
     }
     
-    public function EmailUpdate(Request $request){
+    public function EmailUpdate(addEmailRequest $request){
         $auth = auth::user();
         $this->checkLogin();
         return app('User_DB_Operation')->EmailUpdate($request);

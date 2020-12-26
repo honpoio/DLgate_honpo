@@ -1,14 +1,19 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<title>タイトル</title>
-</head>
+@extends('layouts.app')
+@section('content')
 <body>
 <a>ユーザー名は変更できません</a>
 <br>
 
 <form method="POST" action="/user/edit/email">
 @csrf
+<div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">ユーザー設定</div>
+
+                    <div class="card-body">
+
     <a>メールアドレスを変更</a>
     <br>
     <input type="text" name="Email" value={{$auth["email"]}}>
@@ -51,6 +56,9 @@
     <br>
     <button type="submit">退会</button>
 </form>
-
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
-</html>
+@endsection
