@@ -34,9 +34,9 @@ class DLgate_Operation_DB
         ->delete();
         return redirect('/DLgate');
     }
-    public function create($request,$user){
+    public function create($request,$id){
         Dlgate_Table::create([
-            'name' => $user["name"],
+            'user_id' => $id,
             'URL_id' => uniqid(),
             'Twitter_user' => trim(ltrim($request->Twitter_user,'https://twitter.com/')),
             'Twitter_tweet' => trim($request->tweet_id),
