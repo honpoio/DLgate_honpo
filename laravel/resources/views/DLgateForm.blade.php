@@ -47,8 +47,7 @@
                                     <br>
                                     <a> ダウンロードURL:{{Session::get('URL_id')}}</a>
                                     <redirect_button-component redirect_button="{{Session::get('URL_id')}}"></redirect_button-component>
-                                    {{Session::flush('Twitter_user_sucsess')}}
-                                    {{Session::flush('Twitter_tweet_sucsess')}}
+                                    {{Session::flush()}}
                             @endif
                             </div>
 
