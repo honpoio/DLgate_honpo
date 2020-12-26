@@ -11,4 +11,6 @@ class GateUser extends Model
     public $timestamps = false;
 
     protected $fillable = ['user'];
+
+    protected $primaryKey = 'user_id';
 }
