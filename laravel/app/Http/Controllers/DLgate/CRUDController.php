@@ -40,9 +40,9 @@ class CRUDController extends Controller
         
     }
     public function create(DLgateEditRequest $request){
-        $user = Auth::user();
+        $id = Auth::id();
         $this->checkLogin();
-        return app('Gate_DB_Operation')->create($request,$user);
+        return app('Gate_DB_Operation')->create($request,$id);
     }
     
 }
