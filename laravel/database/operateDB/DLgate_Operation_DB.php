@@ -12,9 +12,9 @@ class DLgate_Operation_DB
         $dlgate_table = Dlgate_Table::where('user_id', $id)->get();
         return view('DLgate',[ 'dlgate_table' => $dlgate_table]);
     }
-    public function select_update($request,$user){
+    public function select_update($request,$id){
         $dlgate_table = Dlgate_Table::where('URL_id',$request->URL_id)
-        ->where('name',$user["name"])->get();
+        ->where('user_id', $id)->get();
         return view('DLgate_update',[ 'dlgate_table' => $dlgate_table]);
     }
     public function update($request,$user){

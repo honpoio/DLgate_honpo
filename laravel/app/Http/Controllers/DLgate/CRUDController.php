@@ -24,9 +24,9 @@ class CRUDController extends Controller
     }
 
     public function select_update(Request $request){
-        $user = Auth::user();
+        $id = Auth::id();
         $this->checkLogin();
-        return app('Gate_DB_Operation')->select_update($request,$user);
+        return app('Gate_DB_Operation')->select_update($request,$id);
     }
     public function update(DLgateEditRequest $request){
         $user = Auth::user();
