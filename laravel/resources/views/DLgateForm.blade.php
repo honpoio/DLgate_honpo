@@ -13,7 +13,7 @@
                 
                     <div class="card-body">
                         <form method="GET" action="/auth/redirect/twitter">
-                            @if(isset($row->Twitter_user))
+                            @if(!empty(Session::get('Twitter_user')))
                                 <a href="{{ url('/auth/redirect/twitter') }}">
                                     <button type="submit" name="Follow" class="button_font_variable_length">
                                     Twitterをフォロー
@@ -21,15 +21,15 @@
                                 </a>
                             @endif
                             <br>
-                            @if(isset($row->Twitter_tweet))
+                            @if(!empty(Session::get('Twitter_tweet')))
                                 <a href="{{ url('/auth/redirect/twitter') }}">
                                     <button type="submit" name="RT" class="button_font_variable_length">
                                     TwitterをRT
                                     </button>
                             @endif
                             </form>
-                            @if(Session::get('Twitter_user_sucsess')?? '' and
-                                Session::get('Twitter_tweet_sucsess')?? '')
+                            @if(Session::get('Twitter_user_sucsess') and
+                                Session::get('Twitter_tweet_sucsess'))
                                     <br>
                                     <a> ダウンロードURL:{{$row->dl_url}}</a>
                                     <redirect_button-component redirect_button="{{$row->dl_url}}"></redirect_button-component>
