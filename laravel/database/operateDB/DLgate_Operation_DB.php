@@ -17,9 +17,9 @@ class DLgate_Operation_DB
         ->where('user_id', $id)->get();
         return view('DLgate_update',[ 'dlgate_table' => $dlgate_table]);
     }
-    public function update($request,$user){
+    public function update($request,$id){
         Dlgate_Table::where('URL_id',$request->URL_id)
-        ->where('name',$user["name"])
+        ->where('user_id', $id)
         ->update([
             'Twitter_user' => trim(ltrim($request->Twitter_user,'https://twitter.com/')),
             'Twitter_tweet' => trim($request->tweet_id),
