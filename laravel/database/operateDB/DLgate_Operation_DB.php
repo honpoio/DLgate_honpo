@@ -28,9 +28,9 @@ class DLgate_Operation_DB
             ]);
         return redirect('/DLgate');
     }
-    public function delete($request,$user){
+    public function delete($request,$id){
         Dlgate_Table::where('URL_id',$request->URL_id)
-        ->where('name',$user["name"])
+        ->where('user_id', $id)
         ->delete();
         return redirect('/DLgate');
     }
