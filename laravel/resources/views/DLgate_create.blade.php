@@ -61,10 +61,10 @@
                             </div>
                         <button dusk="view-button" class="btn btn-primary">add</button>
                     </div>
-                </div>
             </div>
         </div>
     </div>
+</div>
 
 </form>
 </body>
