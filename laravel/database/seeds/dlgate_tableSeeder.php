@@ -15,14 +15,14 @@ class dlgate_tableSeeder extends Seeder
         DB::table('dlgate_table')->insert([
         [
             'Twitter_tweet' => '1331201779199950848',
-            'name' =>'test',
+            'user_id' =>'1',
             'dl_url' =>'https://www.google.com',
             'Twitter_user' =>'MutturiPrin',
             'gate_name' =>'test_gate',
             'URL_id' => uniqid(),
         ],
         [
-            'name' => 'test',
+            'user_id' => '1',
             'dl_url' =>'https://www.google.com',
             'Twitter_user' => NULL,
             'Twitter_tweet' =>'1331201779199950848',
@@ -31,7 +31,7 @@ class dlgate_tableSeeder extends Seeder
         ],
 
         [
-            'name' => 'test',
+            'user_id' => '1',
             'dl_url' =>'https://www.google.com',
             'Twitter_tweet' =>NULL,
             'Twitter_user' =>'MutturiPrin',
@@ -40,7 +40,7 @@ class dlgate_tableSeeder extends Seeder
         ],
 
         [
-            'name' =>'test2',
+            'user_id' =>'2',
             'dl_url' =>'https://www.google.com',
             'Twitter_user' =>'MutturiPrin',
             'Twitter_tweet' =>'1334835300955131904',
@@ -48,7 +48,7 @@ class dlgate_tableSeeder extends Seeder
             'URL_id' => uniqid(),
         ],
         [
-            'name' => 'test2',
+            'user_id' => '2',
             'dl_url' =>'https://www.google.com',
             'Twitter_user' => NULL,
             'Twitter_tweet' =>'1334835300955131904',
@@ -57,7 +57,7 @@ class dlgate_tableSeeder extends Seeder
         ],
 
         [
-            'name' => 'test2',
+            'user_id' => '2',
             'dl_url' =>'https://www.google.com',
             'Twitter_user' =>'MutturiPrin',
             'Twitter_tweet' =>NULL,
