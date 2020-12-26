@@ -8,8 +8,8 @@ use App\Dlgate_Table;
 class DLgate_Operation_DB
 {
 
-    public function select($user){
-        $dlgate_table = Dlgate_Table::where('name', $user["name"])->get();
+    public function select($id){
+        $dlgate_table = Dlgate_Table::where('user_id', $id)->get();
         return view('DLgate',[ 'dlgate_table' => $dlgate_table]);
     }
     public function select_update($request,$user){
