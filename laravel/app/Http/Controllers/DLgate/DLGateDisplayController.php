@@ -14,24 +14,23 @@ class DLGateDisplayController extends Controller
     public function DLGateForm(Request  $request){
 
         $dlgate_table = Dlgate_Table::where('URL_id', $request["id"])->get();
+            foreach($dlgate_table as $row){
+                $request->session()->flush();
+                $request->session()->put('Twitter_user',$row->Twitter_user);
+                $request->session()->put('gate_name',$row->gate_name);
+                
+                if(($request->session()->get('Twitter_user')) === ""){
+                    //もしもtwitterのユーザー名を登録していない場合
+                    $request->session()->put('Twitter_user_sucsess',true);
+                }
+                $request->session()->put('Twitter_tweet',$row->Twitter_tweet);
+                //もしもtweetidをデータに挿入していない場合
+                if($request->session()->get('Twitter_tweet') === ""){
+                    $request->session()->put('Twitter_tweet_sucsess',true);
+                }
 
-        foreach($dlgate_table as $row){
-            
-            $request->session()->put('Twitter_user',$row->Twitter_user);
-            
-            if(($request->session()->get('Twitter_user')) === ""){
-                //もしもtwitterのユーザー名を登録していない場合
-                $request->session()->put('Twitter_user_sucsess',true);
+                $request->session()->put('URL_id',$row->URL_id);
             }
-            $request->session()->put('Twitter_tweet',$row->Twitter_tweet);
-            //もしもtweetidをデータに挿入していない場合
-            if($request->session()->get('Twitter_tweet') === ""){
-                $request->session()->put('Twitter_tweet_sucsess',true);
-            }
-
-            $request->session()->put('URL_id',$row->URL_id);
-        }
-
 
         if (empty($dlgate_table["0"])){
             \App::abort(404);

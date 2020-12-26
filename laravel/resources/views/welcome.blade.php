@@ -22,6 +22,8 @@
     @if (session('status'))
     {{ session('status') }}
     @endif    
+
+   
     <div class="container">
     
         <div class="flex-center position-ref full-height">
