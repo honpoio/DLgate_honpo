@@ -79,7 +79,7 @@
                         <form method="GET" action="/user/edit/delete">
                             <br>
                             <button class="button_font_variable_length_withdrawal">退会</button>
-                        </form>Z
+                        </form>
                     </div>
                 </div>
             </div>

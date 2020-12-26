@@ -37,7 +37,7 @@ class DLgateViewTest extends TestCase
         $response = $this->get('/DLgate/view?id='.$URL_id);
 
         $response->assertStatus(200);
-        $response->assertDontSee('ダウンロードURLhttps://www.google.com');
+        $response->assertDontSee('ダウンロードURL:');
     }
 
     public function testGate_Url_View(){
@@ -52,7 +52,7 @@ class DLgateViewTest extends TestCase
             'Twitter_tweet_sucsess'=>true
             ])
         ->get('/DLgate/view?id='.$URL_id)
-        ->assertSee('ダウンロードURLhttps://www.google.com');
+        ->assertSee('ダウンロードURL:https://www.google.com');
 
 
 

@@ -4,7 +4,6 @@ namespace Database\operateDB;
 use Illuminate\Http\Request;
 
 use App\User;
-use App\GateUser;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
@@ -33,9 +32,9 @@ class User_Operation_DB
             return redirect()->route('user')->with('status', __('パスワードの変更に成功しました'));
         });
     }
-    public function Withdrawal($request,$user){
-        return DB::transaction(function () use($request,$user){
-            GateUser::where('user',$user["name"])
+    public function Withdrawal($request,$id){
+        return DB::transaction(function () use($request,$id){
+            User::where('id',$id)
             ->lockForUpdate()
             ->delete();
             Auth::logout();
