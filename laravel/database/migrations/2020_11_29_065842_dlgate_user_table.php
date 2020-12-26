@@ -17,6 +17,7 @@ class DlgateUserTable extends Migration
         Schema::create('dlgate_table', function (Blueprint $table) {
 
             $table->engine = 'InnoDB';
+            $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->uuid('URL_id')->unique();
             $table->string('gate_name');
