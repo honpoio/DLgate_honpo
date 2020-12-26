@@ -57,6 +57,10 @@ Route::middleware('verified')->group(function () {
                 //ログインの有無によってアクセス制限するrouting
                 Route::get('/DLgate/view','DLgate\DLGateDisplayController@DLGateForm');
 
+                Route::get('/DLgate/form',function(){
+                        return view('DLgateForm');
+                });
+
                 // Route::get('/auth/redirect/twitter', 'TwitterController@redirect')
                 Route::get('/auth/redirect/twitter', 'TwitterController@redirect')
                         ->name('twitter_OAuth');
