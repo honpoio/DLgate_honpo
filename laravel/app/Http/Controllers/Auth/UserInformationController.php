@@ -26,7 +26,6 @@ class UserInformationController extends Controller
     }
     
     public function EmailUpdate(addEmailRequest $request){
-        $auth = auth::user();
         $this->checkLogin();
         return app('User_DB_Operation')->EmailUpdate($request);
     }    
@@ -45,9 +44,9 @@ class UserInformationController extends Controller
 
     public function Withdrawal(WithdrawalRequest $request){
         $this->checkLogin();
-        $user = auth::user();
+        $id = auth::id();
         
-        return app('User_DB_Operation')->Withdrawal($request,$user);
+        return app('User_DB_Operation')->Withdrawal($request,$id);
     }
     
 

@@ -101,15 +101,10 @@ class User_Edit_UserInformationControllerTest extends TestCase
     $this->assertFalse(Auth::check());
 
     $this->assertDatabaseMissing('users', [
-        "name" => $name,
+        "id" => $id,
     ]);
     $this->assertDatabaseMissing('dlgate_table', [
-        "name" => $name,
+        "user_id" => $id,
     ]);
-
-    $this->assertDatabaseMissing('gate_users', [
-        "user" => $name,
-    ]);
-
     }
 }
