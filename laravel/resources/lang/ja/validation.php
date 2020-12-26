@@ -157,7 +157,7 @@ return [
     */
 
     'attributes' => [
-        'Twitter_user' => 'ツイッターユーザー名',
+        'Twitter_user' => 'ツイッターユーザーid',
         'tweet_id' => 'ツイートid',
     ],
 
