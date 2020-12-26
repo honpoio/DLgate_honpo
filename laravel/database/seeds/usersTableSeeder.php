@@ -12,14 +12,7 @@ class usersTableSeeder extends Seeder
     public function run()
     
     {
-        DB::table('gate_users')->insert([
-            [
-            'user' =>'test',
-            ],
-            [
-            'user' =>'test2',
-            ]
-        ]);
+
         DB::table('users')->insert([
             [
             'name' =>'test',
