@@ -9,9 +9,9 @@ use Abraham\TwitterOAuth\TwitterOAuth as TwitterOAuth;
 class TwitterController extends Controller
 {
     protected static $Twitter_Config;
+    
     private function OAuth_AND_User_Info(){
-        $_User_Info = app('User_Info');
-        self::$Twitter_Config = $_User_Info->Twitter_User_Property();
+        self::$Twitter_Config = app('User_Info')->Twitter_User_Property();
     }
 
     public function redirect(Request $request){
@@ -27,9 +27,7 @@ class TwitterController extends Controller
         return app('Twitter_Operation')->Follow_Operation($request);
     }
     public function TweetRT(Request $request){
-        $this->OAuth_AND_User_Info();
-        $Twitter_Operation = app('Twitter_Operation');
-        // $tweet ='1316919356983595009';    
-        return $Twitter_Operation->RT_Operation($request);
+        $this->OAuth_AND_User_Info(); 
+        return app('Twitter_Operation')->RT_Operation($request);
     }
 }
