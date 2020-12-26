@@ -34,9 +34,9 @@ class CRUDController extends Controller
         return app('Gate_DB_Operation')->update($request,$id);
     }
     public function delete(Request $request){
-        $user = Auth::user();
+        $id = Auth::id();
         $this->checkLogin();
-        return app('Gate_DB_Operation')->delete($request,$user);
+        return app('Gate_DB_Operation')->delete($request,$id);
         
     }
     public function create(DLgateEditRequest $request){
