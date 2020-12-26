@@ -17,14 +17,16 @@ class DlgateUserTable extends Migration
         Schema::create('dlgate_table', function (Blueprint $table) {
 
             $table->engine = 'InnoDB';
-            $table->string('name');
+            $table->unsignedBigInteger('user_id');
             $table->uuid('URL_id')->unique();
+            $table->string('gate_name');
+            $table->string('dl_url');
             $table->string('Twitter_user')->nullable();
             $table->string('Twitter_tweet')->nullable();
             
-            $table->foreign('name')
-            ->references('user')
-            ->on('gate_users')
+            $table->foreign('user_id')
+            ->references('id')
+            ->on('users')
             ->onDelete('cascade');
 
             // $table->onDelete('SET NULL');

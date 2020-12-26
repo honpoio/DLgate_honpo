@@ -47,7 +47,8 @@
             "database/factories",
             "database/operateDB/DLgate_Operation_DB.php",
             "database/operateDB/User_Operation_DB.php",
-            "app/Http/Controllers/Auth/ResetPasswordController.php"
+            "app/Http/Controllers/Auth/ResetPasswordController.php",
+            "database/migrations"
         ]
     },
     "autoload-dev": {
