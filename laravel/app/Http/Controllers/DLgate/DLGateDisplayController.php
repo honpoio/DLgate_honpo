@@ -15,10 +15,10 @@ class DLGateDisplayController extends Controller
 
         session()->forget(
             'DLgate_session',
-            'Twitter_user_sucsess',
-            'Twitter_tweet_sucsess',
             'Twitter_user',
-            'Twitter_tweet');
+            'Twitter_user_sucsess',
+            'Twitter_tweet',
+            'Twitter_tweet_sucsess');
 
 
         $dlgate_table = Dlgate_Table::where('URL_id', $request["id"])->get();
