@@ -27,7 +27,7 @@
                             </form>
                         @endif 
                         <form method="GET" action="/auth/redirect/twitter">
-                            @if(!empty(Session::get('Twitter_user')))
+                            @if((Session::has('Twitter_user')))
                                 <a href="{{ url('/auth/redirect/twitter') }}">
                                     <button type="submit" name="Follow" class="button_font_variable_length">
                                     Twitterをフォロー
@@ -35,7 +35,7 @@
                                 </a>
                             @endif
                             <br>
-                            @if(!empty(Session::get('Twitter_tweet')))
+                            @if((Session::has('Twitter_tweet')))
                                 <a href="{{ url('/auth/redirect/twitter') }}">
                                     <button type="submit" name="RT" class="button_font_variable_length">
                                     TwitterをRT
@@ -47,7 +47,9 @@
                                     <br>
                                     <a> ダウンロードURL:{{Session::get('dl_url')}}</a>
                                     <redirect_button-component redirect_button="{{Session::get('URL_id')}}"></redirect_button-component>
-                                    {{Session::flush('Twitter_user_sucsess','Twitter_tweet_sucsess')}}
+                                    {{Session::flush('Twitter_user_sucsess',
+                                    'Twitter_tweet_sucsess','Twitter_user',
+                                    'Twitter_tweet','dl_url','URL_id')}}
                             @endif
                             </div>
 
