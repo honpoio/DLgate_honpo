@@ -55,11 +55,11 @@ class Gate_CRUDControllerLoginTest extends TestCase
         //動的パスのupdate?URL_id={}を取得
         }
 
-        $this->get('update?URL_id='.$URL_id)->assertRedirect('login')->assertStatus(302);
+        $this->get('/DLgate/update?URL_id='.$URL_id)->assertRedirect('login')->assertStatus(302);
         //ログインしていない状態で/DLgateにアクセスする
 
         $response = $this->actingAs(User::find(1))
-        ->get('update?URL_id='.$URL_id);
+        ->get('/DLgate/update?URL_id='.$URL_id);
         $this->assertTrue(Auth::check());
         $response->assertStatus(200)
         ->assertViewIs('DLgate_update');
