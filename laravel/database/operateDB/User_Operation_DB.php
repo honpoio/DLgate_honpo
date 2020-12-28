@@ -11,6 +11,7 @@ class User_Operation_DB
 {
 
     public function EmailUpdate($request){
+        //メール情報更新
         return DB::transaction(function () use($request){
             User::where('id',$request->UserId)
             ->lockForUpdate()
@@ -19,10 +20,12 @@ class User_Operation_DB
             
             User::where('id',$request->UserId)
             ->update(['email_verified_at' =>NULL]);
+            //再度メール認証
             return redirect('/email/verify')->with('status', __('メールアドレスの変更に成功しました'));
         });
     }
     public function PasswordChange($request,$user){
+        //パスワード変更
         return DB::transaction(function () use($request,$user){
             User::where('id',$request->UserId)
             ->lockForUpdate();
@@ -32,6 +35,7 @@ class User_Operation_DB
         });
     }
     public function Withdrawal($request,$id){
+        //退会
         return DB::transaction(function () use($request,$id){
             User::where('id',$id)
             ->lockForUpdate()
