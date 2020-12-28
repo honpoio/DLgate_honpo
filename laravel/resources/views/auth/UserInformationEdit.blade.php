@@ -39,7 +39,7 @@
                             <div class="form-group row">
                                 <label for="password"  class="col-md-4 col-form-label text-md-right">現在のパスワードを入力</label>
                                 <div class="col-md-6">
-                                    <input id="password"  name="CurrentPassword" class="form-control @error('CurrentPassword') is-invalid @enderror">
+                                    <input  type="password"　id="password"  name="CurrentPassword" class="form-control @error('CurrentPassword') is-invalid @enderror">
                                     @error('CurrentPassword')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -51,7 +51,7 @@
                             <div class="form-group row">
                                 <label for="password" class="col-md-4 col-form-label text-md-right">新規パスワードを入力</label>
                                 <div class="col-md-6">
-                                    <input id="password" name="newPassword" class="form-control @error('password') is-invalid @enderror" name="newPassword">
+                                    <input　 type="password" id="password" name="newPassword" class="form-control @error('password') is-invalid @enderror" name="newPassword">
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -63,7 +63,7 @@
                             <div class="form-group row">
                                 <label for="password" class="col-md-4 col-form-label text-md-right">新規パスワードを再入力</label>
                                 <div class="col-md-6">
-                                    <input id="password" name="newPassword_confirmation" class="form-control @error('newPassword') is-invalid @enderror" name="newPassword">
+                                    <input  type="password"　id="password" name="newPassword_confirmation" class="form-control @error('newPassword') is-invalid @enderror" name="newPassword">
                                     @error('newPassword')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
