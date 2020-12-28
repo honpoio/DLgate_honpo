@@ -20,6 +20,6 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         // CSRFを無効にする
-        // 'http://localhost:8000/delete',
+   
     ];
 }
