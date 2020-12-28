@@ -48,11 +48,12 @@
                                     <a> ダウンロードURL:{{Session('DLgate_session')['dl_url']}}</a>
                                     <redirect_button-component redirect_button="{{Session('DLgate_session')['dl_url']}}"></redirect_button-component>
                                     {{Session::flush(
-                                    'DLgate_session',
-                                    'Twitter_user_sucsess',
-                                    'Twitter_tweet_sucsess',
-                                    'Twitter_user',
-                                    'Twitter_tweet')}}
+                                        'DLgate_session',
+                                        'Twitter_user',
+                                        'Twitter_user_sucsess',
+                                        'Twitter_tweet',
+                                        'Twitter_tweet_sucsess'
+                                        )}}
                             @endif
                             </div>
 
