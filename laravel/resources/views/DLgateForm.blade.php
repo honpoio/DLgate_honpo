@@ -7,7 +7,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{Session::get('gate_name')}}</div>
+                    <div class="card-header">{{Session('DLgate_session')['gate_name']}}</div>
                 
                     <div class="card-body">
                         @if (session('status'))
@@ -18,7 +18,7 @@
                             {{ session('status_error') }}
                             <br>
                             <form method="GET" action="/DLgate/view">
-                                <input  type="hidden" name='id' value={{Session::get('URL_id')}}>
+                                <input  type="hidden" name='id' value={{Session('DLgate_session')['URL_id']}}>
                                     <button dusk="view-button" class="button_font_variable_length">view</button>
                                         <a>viewボタンを押下し再度試して下さい</a>
                                         <br>
@@ -45,11 +45,14 @@
                             @if(Session::has('Twitter_user_sucsess') and
                                 Session::has('Twitter_tweet_sucsess'))
                                     <br>
-                                    <a> ダウンロードURL:{{Session::get('dl_url')}}</a>
-                                    <redirect_button-component redirect_button="{{Session::get('dl_url')}}"></redirect_button-component>
-                                    {{Session::flush('Twitter_user_sucsess',
-                                    'Twitter_tweet_sucsess','Twitter_user',
-                                    'Twitter_tweet','dl_url','URL_id')}}
+                                    <a> ダウンロードURL:{{Session('DLgate_session')['dl_url']}}</a>
+                                    <redirect_button-component redirect_button="{{Session('DLgate_session')['dl_url']}}"></redirect_button-component>
+                                    {{Session::flush(
+                                    'DLgate_session',
+                                    'Twitter_user_sucsess',
+                                    'Twitter_tweet_sucsess',
+                                    'Twitter_user',
+                                    'Twitter_tweet')}}
                             @endif
                             </div>
 
