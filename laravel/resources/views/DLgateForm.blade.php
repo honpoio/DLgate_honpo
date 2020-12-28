@@ -18,7 +18,7 @@
                             {{ session('status_error') }}
                             <br>
                             <form method="GET" action="/DLgate/view">
-                                <input  type="hidden" name='id' value=Session::get('URL_id')>
+                                <input  type="hidden" name='id' value={{Session::get('URL_id')}}>
                                     <button dusk="view-button" class="button_font_variable_length">view</button>
                                         <a>viewボタンを押下し再度試して下さい</a>
                                         <br>
@@ -45,9 +45,9 @@
                             @if(Session::get('Twitter_user_sucsess') and
                                 Session::get('Twitter_tweet_sucsess'))
                                     <br>
-                                    <a> ダウンロードURL:{{Session::get('URL_id')}}</a>
+                                    <a> ダウンロードURL:{{Session::get('dl_url')}}</a>
                                     <redirect_button-component redirect_button="{{Session::get('URL_id')}}"></redirect_button-component>
-                                    {{Session::flush()}}
+                                    {{Session::flush('Twitter_user_sucsess','Twitter_tweet_sucsess')}}
                             @endif
                             </div>
 
