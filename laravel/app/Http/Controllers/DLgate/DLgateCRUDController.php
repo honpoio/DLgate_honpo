@@ -9,7 +9,7 @@ use App\Http\Requests\DLgateEditRequest;
 use Illuminate\Support\Facades\Auth;
 // use App\Dlgate_Table;
 
-class CRUDController extends Controller
+class DLgateCRUDController extends Controller
 {
     private function checkLogin(){
         //ログインの有無をチェック
