@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
-use App\GateUser;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -69,8 +68,6 @@ class RegisterController extends Controller
     {
         
         return DB::transaction(function () use($data){
-            GateUser::create(['user' =>$data['name']]);
-
             return User::create([
                 'name' => $data['name'],
                 'email' => $data['email'],
