@@ -34,8 +34,7 @@ class WithdrawalRequest extends FormRequest
     public function withValidator(Validator $validator) {
         $validator->after(function ($validator) {
             $auth = Auth::user();
-            // dd($this->input('CurrentPassword'));
-            //現在のパスワードと新しいパスワードが合わなければエラー
+            //現在のパスワードと新しいパスワードが合わなければエラーを出力
             if (!(Hash::check($this->input('CurrentPassword'), $auth->password))) {
                 $validator->errors()->add('CurrentPassword', __('パスワードが一致しません'));
             }

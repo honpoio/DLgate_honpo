@@ -9,14 +9,19 @@ class Twitter_Operation extends TwitterController
 {
 
     public function Follow_Operation($request){
+        //アクセストークンを使用しフォローするメソッド
         $screen_name = $request->session()->get('Twitter_user');
+
         $User_Info =self::$Twitter_Config->get('users/show', ['screen_name'=> $screen_name]);
+        //スクリーンネームを取得
 
         if($User_Info->errors){
+            //error
             return redirect('/DLgate/Form')->with('status', __('ユーザーの取得に失敗しました。作成者にお問い合わせお願いします'));
         }
+
         $user_id=$User_Info->id_str;
-        //ユーザー情報からスクリーンネーム取得
+        //スクリーンネームからユーザーID取得
         self::$Twitter_Config->post('friendships/create', ['user_id'=> $user_id]);
         // フォローする
         
