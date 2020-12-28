@@ -29,14 +29,14 @@ class DLgate_Operation_DB
             'gate_name'=> trim($request->gate_name),
             'dl_url'=> trim($request->dl_url),
             ]);
-        return redirect('/DLgate');
+        return redirect('/DLgate')->with('status', __('更新に成功しました'));
     }
     public function delete($request,$id){
         //レコードを削除
         Dlgate_Table::where('URL_id',$request->URL_id)
         ->where('user_id', $id)
         ->delete();
-        return redirect('/DLgate');
+        return redirect('/DLgate')->with('status', __('削除に成功しました'));
     }
     public function create($request,$id){
         //レコードを新規作成
@@ -48,6 +48,6 @@ class DLgate_Operation_DB
             'gate_name'=> trim($request->gate_name),
             'dl_url'=> trim($request->dl_url),
             ]);
-        return redirect('/DLgate');
+        return redirect('/DLgate')->with('status', __('新規作成に成功しました'));
     }
 }
