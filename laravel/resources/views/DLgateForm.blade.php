@@ -42,8 +42,8 @@
                                     </button>
                             @endif
                             </form>
-                            @if(Session::get('Twitter_user_sucsess') and
-                                Session::get('Twitter_tweet_sucsess'))
+                            @if(Session::has('Twitter_user_sucsess') and
+                                Session::has('Twitter_tweet_sucsess'))
                                     <br>
                                     <a> ダウンロードURL:{{Session::get('dl_url')}}</a>
                                     <redirect_button-component redirect_button="{{Session::get('URL_id')}}"></redirect_button-component>
