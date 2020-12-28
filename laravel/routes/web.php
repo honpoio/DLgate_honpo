@@ -27,14 +27,14 @@ Route::middleware('verified')->group(function () {
         Route::group(['middleware' => ['auth','verified']], function() {
                 //ログインの有無によってアクセス制限
                 Route::get('/DLgate','DLgate\DLgateCRUDController@select');
-                route::get('/update','DLgate\DLgateCRUDController@select_update');
+                route::get('/DLgate/update','DLgate\DLgateCRUDController@select_update');
                 Route::get('/DLgate/create',function(){
                         return view('DLgate_create');
                 });
 
-                route::post('/insert','DLgate\DLgateCRUDController@create');
-                route::put('/update/add','DLgate\DLgateCRUDController@update');
-                route::delete('/delete','DLgate\DLgateCRUDController@delete');
+                route::post('/DLgate/insert','DLgate\DLgateCRUDController@create');
+                route::put('/DLgate/update/add','DLgate\DLgateCRUDController@update');
+                route::delete('/DLgate/delete','DLgate\DLgateCRUDController@delete');
 
 
                 Route::get('/user', 'Auth\UserInformationController@UserInformation')->name('user');
