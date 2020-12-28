@@ -2,7 +2,7 @@
 @section('content')
 <body>
     @foreach($dlgate_table as $row)
-    <form method="POST" action="/update/add">
+    <form method="POST" action="/DLgate/update/add">
     @csrf
     @method('PUT')
     <div class="row justify-content-center">
