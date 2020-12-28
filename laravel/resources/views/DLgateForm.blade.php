@@ -46,7 +46,7 @@
                                 Session::has('Twitter_tweet_sucsess'))
                                     <br>
                                     <a> ダウンロードURL:{{Session::get('dl_url')}}</a>
-                                    <redirect_button-component redirect_button="{{Session::get('URL_id')}}"></redirect_button-component>
+                                    <redirect_button-component redirect_button="{{Session::get('dl_url')}}"></redirect_button-component>
                                     {{Session::flush('Twitter_user_sucsess',
                                     'Twitter_tweet_sucsess','Twitter_user',
                                     'Twitter_tweet','dl_url','URL_id')}}
