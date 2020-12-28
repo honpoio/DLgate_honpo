@@ -21,7 +21,7 @@ class DLgate_Operation_DB
         Dlgate_Table::where('URL_id',$request->URL_id)
         ->where('user_id', $id)
         ->update([
-            'Twitter_user' => trim(ltrim($request->Twitter_user,'https://twitter.com/')),
+            'Twitter_user' => trim(str_replace('https://twitter.com/',NULL,$request->Twitter_user)),
             'Twitter_tweet' => trim($request->tweet_id),
             'gate_name'=> trim($request->gate_name),
             'dl_url'=> trim($request->dl_url),
@@ -38,7 +38,7 @@ class DLgate_Operation_DB
         Dlgate_Table::create([
             'user_id' => $id,
             'URL_id' => uniqid(),
-            'Twitter_user' => trim(ltrim($request->Twitter_user,'https://twitter.com/')),
+            'Twitter_user' => trim(str_replace('https://twitter.com/',NULL,$request->Twitter_user)),
             'Twitter_tweet' => trim($request->tweet_id),
             'gate_name'=> trim($request->gate_name),
             'dl_url'=> trim($request->dl_url),
