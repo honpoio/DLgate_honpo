@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <body>
-<form action="/insert" method="POST">
+<form action="/DLgate/insert" method="POST">
 @csrf
 
 <div class="container">
