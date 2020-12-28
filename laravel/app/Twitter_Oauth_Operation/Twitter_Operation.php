@@ -13,7 +13,7 @@ class Twitter_Operation extends TwitterController
         $User_Info =self::$Twitter_Config->get('users/show', ['screen_name'=> $screen_name]);
 
         if($User_Info->errors){
-            return redirect('/DLgate/form')->with('status', __('ユーザーの取得に失敗しました。作成者にお問い合わせお願いします'));
+            return redirect('/DLgate/Form')->with('status', __('ユーザーの取得に失敗しました。作成者にお問い合わせお願いします'));
         }
         $user_id=$User_Info->id_str;
         //ユーザー情報からスクリーンネーム取得
@@ -25,11 +25,11 @@ class Twitter_Operation extends TwitterController
             print "sucsess Follow\n";
             $request->session()->forget('Twitter_user');
             $request->session()->put('Twitter_user_sucsess',true);
-            return redirect('/DLgate/form')->with('status', __('フォロー成功しました'));
+            return redirect('/DLgate/Form')->with('status', __('フォロー成功しました'));
         } else {
             // フォロー失敗
             print "Follow failed\n";
-            return redirect('/DLgate/form')->with('status', __('フォロー失敗しました'));
+            return redirect('/DLgate/Form')->with('status', __('フォロー失敗しました'));
         }
         
     }
@@ -45,14 +45,14 @@ class Twitter_Operation extends TwitterController
             $request->session()->forget('Twitter_tweet');
 
             $request->session()->put('Twitter_tweet_sucsess',true);
-            return redirect('/DLgate/form')->with('status', __('RTに成功しました'));
+            return redirect('/DLgate/Form')->with('status', __('RTに成功しました'));
         } else {
             // リツイート失敗
             print "RT failed \n";
-            return redirect('/DLgate/form')->with('status_error', __('RTに失敗しました'));
+            return redirect('/DLgate/Form')->with('status_error', __('RTに失敗しました'));
 
         }
-        return redirect('/DLgate/form');
+        return redirect('/DLgate/Form');
     }
 
 }
