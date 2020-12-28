@@ -6,7 +6,9 @@
 
 <body>
 @section('content')
-
+@if (session('status'))
+    <a>{{ session('status') }}</a>
+    @endif
 <form method="GET" action="/DLgate/create">
     <button dusk="view-button" class="button_font_variable_length" >gateを新規作成する</button>
 </form>
@@ -18,6 +20,7 @@
         作成ゲート数:{{$loop->iteration}}
     </div>
     <div class="card-body">
+
         <div class="form-group row">
             DL_url: {{$row->dl_url}}
         </div>
