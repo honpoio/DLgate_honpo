@@ -1,9 +1,5 @@
 @extends('layouts.app')
 
-
-
-
-
 <body>
 @section('content')
 @if (session('status'))
