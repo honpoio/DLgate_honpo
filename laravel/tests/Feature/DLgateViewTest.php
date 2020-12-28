@@ -44,18 +44,16 @@ class DLgateViewTest extends TestCase
         // Gateの手順twitterフォロー等の手順が済んだらURLが出現するか検証するメソッド
         $dlgate_table = Dlgate_Table::select(['URL_id'])->where('id',[rand (1 ,6)])->get();
         foreach($dlgate_table as $row){
-            $URL_id = $row->URL_id;
-        }
+            $dl_url = $row->dl_url;
+        }  
 
         $response = $this->withSession([
             'Twitter_user_sucsess' => true,
-            'Twitter_tweet_sucsess'=>true
+            'Twitter_tweet_sucsess'=>true,
+            'dl_url'=>$dl_url,
             ])
-        ->get('/DLgate/view?id='.$URL_id)
-        ->assertSee('ダウンロードURL:https://www.google.com');
-
-
-
+        ->get('/DLgate/Form')
+        ->assertSee('ダウンロードURL:');
     }
 
 

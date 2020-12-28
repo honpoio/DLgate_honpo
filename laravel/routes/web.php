@@ -47,7 +47,7 @@ Route::middleware('verified')->group(function () {
         });
 });
                 Route::get('/DLgate/view','DLgate\DLGateDisplayController@DLGateForm');
-                Route::get('/DLgate/form',function(){
+                Route::get('/DLgate/Form',function(){
                         return view('DLgateForm');
                 });
                 Route::get('/auth/redirect/twitter', 'TwitterController@redirect')

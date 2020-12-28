@@ -15,7 +15,7 @@ class DLGateDisplayController extends Controller
         $request->session()->forget('Twitter_user_sucsess',
         'Twitter_tweet_sucsess','Twitter_user',
         'Twitter_tweet','dl_url','URL_id');
-        
+
         $dlgate_table = Dlgate_Table::where('URL_id', $request["id"])->get();
 
             foreach($dlgate_table as $row){
@@ -38,15 +38,7 @@ class DLGateDisplayController extends Controller
                 }else{
                     $request->session()->put('Twitter_tweet',$row->Twitter_tweet);
                 }
-
-
-
-
-
-
-
             }
-
         if (empty($dlgate_table["0"])){
             \App::abort(404);
         }
