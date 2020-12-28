@@ -11,32 +11,33 @@ class Twitter_Operation extends TwitterController
     public function Follow_Operation($request){
         //アクセストークンを使用しフォローするメソッド
         $screen_name = $request->session()->get('Twitter_user');
-
+        
         $User_Info =self::$Twitter_Config->get('users/show', ['screen_name'=> $screen_name]);
         //スクリーンネームを取得
-
-        if($User_Info->errors){
-            //error
-            return redirect('/DLgate/Form')->with('status', __('ユーザーの取得に失敗しました。作成者にお問い合わせお願いします'));
+        // dd($User_Info);
+        try {
+            if($User_Info->errors){
+                return redirect('/DLgate/Form')->with('status', __('ユーザーの取得に失敗しました。作成者にお問い合わせお願いします'));
+            }
+        } catch(\Exception $e){
+            //ユーザー取得に成功した時の処理
+            $user_id=$User_Info->id_str;
+            //スクリーンネームからユーザーID取得
+            self::$Twitter_Config->post('friendships/create', ['user_id'=> $user_id]);
+            // フォローする
+            
+            if(self::$Twitter_Config->getLastHttpCode() == 200) {
+                // フォロー成功
+                print "sucsess Follow\n";
+                $request->session()->forget('Twitter_user');
+                $request->session()->put('Twitter_user_sucsess',true);
+                return redirect('/DLgate/Form')->with('status', __('フォロー成功しました'));
+            } else {
+                // フォロー失敗
+                print "Follow failed\n";
+                return redirect('/DLgate/Form')->with('status', __('フォロー失敗しました'));
+            }
         }
-
-        $user_id=$User_Info->id_str;
-        //スクリーンネームからユーザーID取得
-        self::$Twitter_Config->post('friendships/create', ['user_id'=> $user_id]);
-        // フォローする
-        
-        if(self::$Twitter_Config->getLastHttpCode() == 200) {
-            // フォロー成功
-            print "sucsess Follow\n";
-            $request->session()->forget('Twitter_user');
-            $request->session()->put('Twitter_user_sucsess',true);
-            return redirect('/DLgate/Form')->with('status', __('フォロー成功しました'));
-        } else {
-            // フォロー失敗
-            print "Follow failed\n";
-            return redirect('/DLgate/Form')->with('status', __('フォロー失敗しました'));
-        }
-        
     }
     public function RT_Operation($request){
         $tweet = $request->session()->get('Twitter_tweet');
