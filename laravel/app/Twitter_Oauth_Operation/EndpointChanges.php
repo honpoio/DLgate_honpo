@@ -8,6 +8,7 @@ class EndpointChanges extends SocialiteManager
 {
     
     public function Scope_Change($provider,$request){
+        //コールバックURLを変更するメソッド
         if($request->has('Follow')){
             $this->Callback_Change = 'http://localhost:8000/callback';
             // $Twitter_provider = self::driver($provider)->redirect();
