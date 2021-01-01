@@ -11,7 +11,7 @@
                 
                     <div class="card-body">
                         @if (session('status'))
-                        {{ session('status') }}
+                        {{session('status')}}
                         @endif    
 
                         @if (session('status_error'))
