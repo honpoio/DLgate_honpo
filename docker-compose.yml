@@ -12,10 +12,14 @@ services:
     - '443:443'
     restart: always
     environment:
-      DOMAINS: 'local -> web'
+      DOMAINS: 'localhost -> web'
       STAGE: local
     volumes:
       - ./org-chimata-ssl-certs:/var/lib/https-portal
+    depends_on:
+      - app
+      - web
+
 
       #Webサーバーのコンテナ
   web:
