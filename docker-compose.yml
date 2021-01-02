@@ -10,12 +10,13 @@ services:
   https-portal:
     image: steveltn/https-portal:1
     ports:
+    - '80:80'
     - '443:443'
     restart: always
     environment:
       DOMAINS: 'dlgate-jp.cyou -> web'
       #domainを記述
-      STAGE: staging
+      STAGE: 'staging'
     volumes:
       - ./org-chimata-ssl-certs:/var/lib/https-portal
     depends_on:
@@ -27,7 +28,7 @@ services:
   web:
     image: nginx:1.18
     ports:
-      - '80:80'
+      - '8000:8000'
     depends_on:
       - app
     volumes:
