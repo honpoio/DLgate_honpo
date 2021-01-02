@@ -9,9 +9,6 @@ services:
   #Webサーバーのコンテナ
   web:
     image: nginx:1.18
-    environment:
-      PORT: 80
-      HOST: 0.0.0.0
     ports:
       - '80:80'
     depends_on:
@@ -26,6 +23,7 @@ services:
       - .:/var/www/html
     environment:
       PORT: 3000
+      HOST: 0.0.0.0
     ports:
       - 3000:3000
   #データベースのコンテナ
