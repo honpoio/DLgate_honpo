@@ -5,7 +5,7 @@ volumes:
   docker-volume:
 
 #services以下に各コンテナの設定を書く
-# services:
+services:
 
 #   proxy:
 #     build: ./proxy
@@ -54,9 +54,6 @@ volumes:
 # networks:
 #   proxy_nw:
 #     external: true
-
-
-
 
 
   #Webサーバーのコンテナ
