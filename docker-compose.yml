@@ -12,8 +12,8 @@ services:
     - '443:443'
     restart: always
     environment:
-      DOMAINS: 'localhost -> web'
-      STAGE: local
+      DOMAINS: 'dlgate-jp.cyou -> web'
+      STAGE: staging
     volumes:
       - ./org-chimata-ssl-certs:/var/lib/https-portal
     depends_on:
