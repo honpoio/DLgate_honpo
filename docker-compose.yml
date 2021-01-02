@@ -5,6 +5,7 @@ volumes:
   docker-volume:
 
 #services以下に各コンテナの設定を書く
+
 services:
   https-portal:
     image: steveltn/https-portal:1
@@ -13,6 +14,7 @@ services:
     restart: always
     environment:
       DOMAINS: 'dlgate-jp.cyou -> web'
+      #domainを記述
       STAGE: staging
     volumes:
       - ./org-chimata-ssl-certs:/var/lib/https-portal
