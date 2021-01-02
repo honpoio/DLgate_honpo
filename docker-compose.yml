@@ -16,6 +16,9 @@ services:
       - ./nginx/conf/certs:/etc/nginx/certs
       - .:/var/www/html
       # デフォルト443のままで良いなら不要
+    environment:
+      PORT: 80
+      HOST: 0.0.0.0
     ports:
       - '80:334'
     depends_on:
