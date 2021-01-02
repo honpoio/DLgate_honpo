@@ -32,3 +32,10 @@
   margin: 10px;
 
 }
+
+.image-view {
+  width : 20vw ; 
+  hight : 20vw ; 
+  margin : 10px ;
+  padding : 20px ;
+}
