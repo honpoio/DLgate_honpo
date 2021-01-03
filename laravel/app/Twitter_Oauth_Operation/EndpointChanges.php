@@ -10,14 +10,12 @@ class EndpointChanges extends SocialiteManager
     public function Scope_Change($provider,$request){
         //コールバックURLを変更するメソッド
         if($request->has('Follow')){
-            $this->Callback_Change = 'http://localhost:8000/callback';
-            // $Twitter_provider = self::driver($provider)->redirect();
+            $this->Callback_Change = 'https://dlgate-jp.cyou/callback/follw';
             return self::driver($provider)->redirect();
         }
 
         elseif($request->has('RT')){
-            $this->Callback_Change = 'http://localhost:8000/callback2';
-            // $Twitter_provider = self::driver($provider)->redirect();
+            $this->Callback_Change = 'https://dlgate-jp.cyou/callback/RT';
             return self::driver($provider)->redirect();
         }
     }
