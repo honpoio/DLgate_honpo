@@ -17,7 +17,9 @@ Route::get('/', function(){
 Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
-
+route::get('/privacy',function(){
+        return view('privacy');
+})->name('privacy');
 
 Auth::routes(['verify'   => true, // メール確認機能
         'register' => true, // デフォルトの登録機能ON
