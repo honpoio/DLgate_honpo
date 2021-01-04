@@ -21,6 +21,7 @@ class AppServiceProvider extends ServiceProvider
         app()->bind('User_DB_Operation','Database\operateDB\User_Operation_DB');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($this->app->environment('local', 'testing', 'staging')) {
             $this->app->register(DuskServiceProvider::class);
         }
@@ -28,6 +29,11 @@ class AppServiceProvider extends ServiceProvider
 >>>>>>> test
 =======
 >>>>>>> frontend
+=======
+        if ($this->app->environment('local', 'testing', 'staging')) {
+            $this->app->register(DuskServiceProvider::class);
+        }
+>>>>>>> stagingMaster
     }
 
     /**
@@ -38,11 +44,17 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (\App::environment(['production'])) {
             \URL::forceScheme('https');
         }
 =======
         //
 >>>>>>> test
+=======
+        if (\App::environment(['production'])) {
+            \URL::forceScheme('https');
+        }
+>>>>>>> stagingMaster
     }
 }

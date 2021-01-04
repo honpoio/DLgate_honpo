@@ -13,6 +13,7 @@ class EndpointChanges extends SocialiteManager
         //コールバックURLを変更するメソッド
         if($request->has('Follow')){
             $this->Callback_Change = 'https://dlgate-jp.cyou/callback/follw';
+<<<<<<< HEAD
 =======
 =======
         //コールバックURLを変更するメソッド
@@ -24,10 +25,13 @@ class EndpointChanges extends SocialiteManager
 >>>>>>> test
 =======
 >>>>>>> frontend
+=======
+>>>>>>> stagingMaster
             return self::driver($provider)->redirect();
         }
 
         elseif($request->has('RT')){
+<<<<<<< HEAD
 <<<<<<< HEAD
             $this->Callback_Change = 'https://dlgate-jp.cyou/callback/RT';
 =======
@@ -37,6 +41,9 @@ class EndpointChanges extends SocialiteManager
 >>>>>>> test
 =======
 >>>>>>> frontend
+=======
+            $this->Callback_Change = 'https://dlgate-jp.cyou/callback/RT';
+>>>>>>> stagingMaster
             return self::driver($provider)->redirect();
         }
     }

@@ -53,9 +53,13 @@ return [
             'level' => 'debug',
             'days' => 14,
 <<<<<<< HEAD
+<<<<<<< HEAD
             'permission' => 0664,
 =======
 >>>>>>> test
+=======
+            'permission' => 0664,
+>>>>>>> stagingMaster
         ],
 
         'slack' => [

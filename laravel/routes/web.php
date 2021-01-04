@@ -13,6 +13,7 @@
 
 Route::get('/', function(){
 <<<<<<< HEAD
+<<<<<<< HEAD
         return view('root');
 });
 Route::get('/home', 'HomeController@index')->name('home');
@@ -24,6 +25,9 @@ route::get('/privacy',function(){
 
 =======
         return view('welcome');
+=======
+        return view('root');
+>>>>>>> stagingMaster
 });
 Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
@@ -152,10 +156,10 @@ Route::middleware('verified')->group(function () {
                 Route::get('/auth/redirect/twitter', 'TwitterController@redirect')
                         ->name('twitter_OAuth');
 
-                Route::get('/callback', 'TwitterController@Twetter_Follow')
+                Route::get('/callback/follw', 'TwitterController@Twetter_Follow')
                         ->name('twitter');
 
-                Route::get('/callback2', 'TwitterController@TweetRT')
+                Route::get('/callback/RT', 'TwitterController@TweetRT')
                         ->where('provider','twitter');
 
 <<<<<<< HEAD

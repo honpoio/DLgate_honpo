@@ -6457,6 +6457,7 @@ __webpack_require__.r(__webpack_exports__);
 })));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 //# sourceMappingURL=bootstrap.js.map
@@ -6464,6 +6465,9 @@ __webpack_require__.r(__webpack_exports__);
 =======
 //# sourceMappingURL=bootstrap.js.map
 >>>>>>> frontend
+=======
+
+>>>>>>> stagingMaster
 
 
 /***/ }),
@@ -37143,6 +37147,7 @@ Popper.Defaults = Defaults;
 /* harmony default export */ __webpack_exports__["default"] = (Popper);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 //# sourceMappingURL=popper.js.map
@@ -37150,6 +37155,9 @@ Popper.Defaults = Defaults;
 =======
 //# sourceMappingURL=popper.js.map
 >>>>>>> frontend
+=======
+
+>>>>>>> stagingMaster
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
 
