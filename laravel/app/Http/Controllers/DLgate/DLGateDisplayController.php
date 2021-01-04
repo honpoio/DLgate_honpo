@@ -14,6 +14,9 @@ class DLGateDisplayController extends Controller
     public function DLGateForm(Request  $request){
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> prepare_deploy
         session()->forget(
             'DLgate_session',
             'Twitter_user',
@@ -22,6 +25,7 @@ class DLGateDisplayController extends Controller
             'Twitter_tweet_sucsess');
 
 
+<<<<<<< HEAD
         $dlgate_table = Dlgate_Table::where('URL_id', $request["id"])->get();
 <<<<<<< HEAD
 
@@ -55,10 +59,13 @@ class DLGateDisplayController extends Controller
         }
         return view('DLgateForm');
 =======
+=======
+>>>>>>> prepare_deploy
         $dlgate_table = Dlgate_Table::where('URL_id', $request["id"])->get();
-            foreach($dlgate_table as $row){
-                $request->session()->put('gate_name',$row->gate_name);
 
+            foreach($dlgate_table as $row){
+
+<<<<<<< HEAD
                 $request->session()->put('Twitter_user',$row->Twitter_user);
                 if(empty($request->session()->get('Twitter_user') )){
 =======
@@ -87,8 +94,31 @@ class DLGateDisplayController extends Controller
 
                 $request->session()->put('URL_id',$row->URL_id);
 >>>>>>> frontend
-            }
+=======
+                session()->put('DLgate_session',[
+                    'gate_name' => $row->gate_name,
+                    'dl_url' =>$row->dl_url,
+                    'URL_id' =>$row->URL_id
+                    ]);
 
+                if(empty($row->Twitter_user)){
+                    //もしもtwitterのユーザー名を登録していない場合
+                    session()->forget('Twitter_user');
+                    session()->put('Twitter_user_sucsess',true);
+                }else{
+                    session()->put('Twitter_user',$row->Twitter_user);
+                }
+
+                
+                if(empty($row->Twitter_tweet)){
+                    //もしもtweetidを登録していない場合
+                    session()->forget('Twitter_tweet');
+                    session()->put('Twitter_tweet_sucsess',true);
+                }else{
+                    session()->put('Twitter_tweet',$row->Twitter_tweet);
+                }
+>>>>>>> prepare_deploy
+            }
         if (empty($dlgate_table["0"])){
             \App::abort(404);
         }

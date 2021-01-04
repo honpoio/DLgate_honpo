@@ -5,6 +5,7 @@
 @section('content')
 <body>
 <form action="/DLgate/insert" method="POST">
+<<<<<<< HEAD
 @csrf
 
 <div class="container">
@@ -92,6 +93,8 @@
 >>>>>>> frontend
 <body>
 <form action="/insert" method="POST">
+=======
+>>>>>>> prepare_deploy
 @csrf
 
 <div class="container">

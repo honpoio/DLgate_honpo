@@ -33,6 +33,7 @@ class User_Edit_UserInformationControllerTest extends TestCase
         // Emailのフィールドがupdateできるか検証
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $dlgate_table = User::select(['id'])->where('id',[2])->get();
 =======
         $dlgate_table = User::select(['id'])->where('id',[1])->get();
@@ -40,11 +41,15 @@ class User_Edit_UserInformationControllerTest extends TestCase
 =======
         $dlgate_table = User::select(['id'])->where('id',[1])->get();
 >>>>>>> frontend
+=======
+        $dlgate_table = User::select(['id'])->where('id',[2])->get();
+>>>>>>> prepare_deploy
         // updateするGateのカラムidのフィールドを用意
         foreach($dlgate_table as $row){
             $id = $row->id;
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         $response = $this->actingAs(User::find(2))
@@ -54,6 +59,9 @@ class User_Edit_UserInformationControllerTest extends TestCase
 =======
         $response = $this->actingAs(User::find(1))
 >>>>>>> frontend
+=======
+        $response = $this->actingAs(User::find(2))
+>>>>>>> prepare_deploy
         ->post('/user/edit/email',[
             "Email" => 'hogehoge@gmail.com',
             "UserId" => $id,
@@ -74,6 +82,7 @@ class User_Edit_UserInformationControllerTest extends TestCase
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $dlgate_table = User::select(['id','password'])->where('id',[2])->get();
 =======
         $dlgate_table = User::select(['id','password'])->where('id',[1])->get();
@@ -81,6 +90,9 @@ class User_Edit_UserInformationControllerTest extends TestCase
 =======
         $dlgate_table = User::select(['id','password'])->where('id',[1])->get();
 >>>>>>> frontend
+=======
+        $dlgate_table = User::select(['id','password'])->where('id',[2])->get();
+>>>>>>> prepare_deploy
         // updateするGateのカラムidのフィールドを用意
 
         foreach($dlgate_table as $row){
@@ -90,6 +102,7 @@ class User_Edit_UserInformationControllerTest extends TestCase
         
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $response = $this->actingAs(User::find(2))
 =======
         $response = $this->actingAs(User::find(1))
@@ -97,6 +110,9 @@ class User_Edit_UserInformationControllerTest extends TestCase
 =======
         $response = $this->actingAs(User::find(1))
 >>>>>>> frontend
+=======
+        $response = $this->actingAs(User::find(2))
+>>>>>>> prepare_deploy
         ->post('/user/edit/password',[
             "CurrentPassword" => 'testpass',
             "newPassword" =>'loginsimasuyo',
@@ -116,6 +132,7 @@ class User_Edit_UserInformationControllerTest extends TestCase
     // 退会できるか検証
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     $dlgate_table = User::select(['id','name'])->where('id',[2])->get();
 =======
     $dlgate_table = User::select(['id','name'])->where('id',[1])->get();
@@ -123,12 +140,16 @@ class User_Edit_UserInformationControllerTest extends TestCase
 =======
     $dlgate_table = User::select(['id','name'])->where('id',[1])->get();
 >>>>>>> frontend
+=======
+    $dlgate_table = User::select(['id','name'])->where('id',[2])->get();
+>>>>>>> prepare_deploy
 
     foreach($dlgate_table as $row){
         $id = $row->id;
         $name = $row->name;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     $response = $this->actingAs(User::find(2))
@@ -138,6 +159,9 @@ class User_Edit_UserInformationControllerTest extends TestCase
 =======
     $response = $this->actingAs(User::find(1))
 >>>>>>> frontend
+=======
+    $response = $this->actingAs(User::find(2))
+>>>>>>> prepare_deploy
     ->post('/user/edit/Withdrawal',[
         "CurrentPassword" => 'testpass',
         "UserId" => $id,

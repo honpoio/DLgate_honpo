@@ -14,10 +14,14 @@ return [
     */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     'name' => env('APP_NAME', 'simple_DLgate'),
 =======
     'name' => env('APP_NAME', 'Laravel'),
 >>>>>>> test
+=======
+    'name' => env('APP_NAME', 'simple_DLgate'),
+>>>>>>> prepare_deploy
 
     /*
     |--------------------------------------------------------------------------

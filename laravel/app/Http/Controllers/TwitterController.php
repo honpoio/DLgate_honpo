@@ -15,6 +15,7 @@ class TwitterController extends Controller
     
     private function OAuth_AND_User_Info(){
     // Oauthのアクセスキーを取得するメソッド
+<<<<<<< HEAD
         self::$Twitter_Config = app('User_Info')->Twitter_User_Property();
     }
 
@@ -30,11 +31,13 @@ class TwitterController extends Controller
 >>>>>>> frontend
     private function OAuth_AND_User_Info(){
          
+=======
+>>>>>>> prepare_deploy
         self::$Twitter_Config = app('User_Info')->Twitter_User_Property();
     }
 
     public function redirect(Request $request){
-        
+        //認可サーバーにアクセス
         $provider = "twitter";
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -50,9 +53,13 @@ class TwitterController extends Controller
     public function Twetter_Follow(Request $request)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         //トークンを使用しリソースサーバーにアクセス
 =======
 >>>>>>> test
+=======
+        //トークンを使用しリソースサーバーにアクセス
+>>>>>>> prepare_deploy
         $this->OAuth_AND_User_Info();
         return app('Twitter_Operation')->Follow_Operation($request);
     }

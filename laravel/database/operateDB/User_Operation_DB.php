@@ -24,11 +24,15 @@ class User_Operation_DB
     public function EmailUpdate($request){
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         //メール情報更新
 =======
 >>>>>>> test
 =======
 >>>>>>> frontend
+=======
+        //メール情報更新
+>>>>>>> prepare_deploy
         return DB::transaction(function () use($request){
             User::where('id',$request->UserId)
             ->lockForUpdate()
@@ -39,6 +43,7 @@ class User_Operation_DB
             ->update(['email_verified_at' =>NULL]);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             //再度メール認証
 =======
             // return redirect('/email/verify');
@@ -46,10 +51,14 @@ class User_Operation_DB
 =======
             // return redirect('/email/verify');
 >>>>>>> frontend
+=======
+            //再度メール認証
+>>>>>>> prepare_deploy
             return redirect('/email/verify')->with('status', __('メールアドレスの変更に成功しました'));
         });
     }
     public function PasswordChange($request,$user){
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         //パスワード変更
@@ -57,6 +66,9 @@ class User_Operation_DB
 >>>>>>> test
 =======
 >>>>>>> frontend
+=======
+        //パスワード変更
+>>>>>>> prepare_deploy
         return DB::transaction(function () use($request,$user){
             User::where('id',$request->UserId)
             ->lockForUpdate();
@@ -79,6 +91,7 @@ class User_Operation_DB
 >>>>>>> test
 =======
     public function Withdrawal($request,$id){
+        //退会
         return DB::transaction(function () use($request,$id){
             User::where('id',$id)
 >>>>>>> DB_redesign

@@ -93,13 +93,15 @@ class DLgateViewTest extends TestCase
         $dlgate_table = Dlgate_Table::select(['URL_id'])->where('id',[3])->get();
 >>>>>>> frontend
         foreach($dlgate_table as $row){
-            $URL_id = $row->URL_id;
-        }
+            $dl_url = $row->dl_url;
+        }  
 
         $response = $this->withSession([
             'Twitter_user_sucsess' => true,
-            'Twitter_tweet_sucsess'=>true
+            'Twitter_tweet_sucsess'=>true,
+            'dl_url'=>$dl_url,
             ])
+<<<<<<< HEAD
         ->get('/DLgate/view?id='.$URL_id)
 <<<<<<< HEAD
         ->assertSee('ダウンロードURL:https://www.google.com');
@@ -109,6 +111,10 @@ class DLgateViewTest extends TestCase
 
 
 
+=======
+        ->get('/DLgate/Form')
+        ->assertSee('ダウンロードURL:');
+>>>>>>> prepare_deploy
     }
 <<<<<<< HEAD
 <<<<<<< HEAD

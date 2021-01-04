@@ -9,9 +9,13 @@ class OAuth_AND_User_Info extends SocialiteManager
 {
     public function Twitter_User_Property(){
 <<<<<<< HEAD
+<<<<<<< HEAD
         // Oauthのアクセスキーを取得
 =======
 >>>>>>> test
+=======
+        // Oauthのアクセスキーを取得
+>>>>>>> prepare_deploy
         $info = self::driver('twitter')->user(); 
         $accessToken = $info->token;
         $accessTokenSecret =  $info->tokenSecret;

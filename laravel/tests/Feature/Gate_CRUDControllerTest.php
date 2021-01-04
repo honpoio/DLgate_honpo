@@ -40,6 +40,7 @@ class Gate_CRUDControllerTest extends TestCase
         //ログイン
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         ->put('/DLgate/update/add',[
 =======
         ->put('/update/add',[
@@ -47,6 +48,9 @@ class Gate_CRUDControllerTest extends TestCase
 =======
         ->put('/update/add',[
 >>>>>>> frontend
+=======
+        ->put('/DLgate/update/add',[
+>>>>>>> prepare_deploy
             "Twitter_user"=>'Sankei_news',
             "tweet_id"=>'1337272952140623874',
             "gate_name"=>'sankei',
@@ -73,6 +77,7 @@ class Gate_CRUDControllerTest extends TestCase
         $response = $this->actingAs(User::find(1))
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         ->post('/DLgate/insert',[
 =======
         ->post('/insert',[
@@ -80,6 +85,9 @@ class Gate_CRUDControllerTest extends TestCase
 =======
         ->post('/insert',[
 >>>>>>> frontend
+=======
+        ->post('/DLgate/insert',[
+>>>>>>> prepare_deploy
             "Twitter_user"=>'Sankei_news',
             "tweet_id"=>'1337272952140623874',
             "gate_name"=>'sankei',
@@ -107,6 +115,7 @@ class Gate_CRUDControllerTest extends TestCase
         $response = $this->actingAs(User::find(1))
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         ->delete('/DLgate/delete',[
 =======
         ->delete('/delete',[
@@ -114,6 +123,9 @@ class Gate_CRUDControllerTest extends TestCase
 =======
         ->delete('/delete',[
 >>>>>>> frontend
+=======
+        ->delete('/DLgate/delete',[
+>>>>>>> prepare_deploy
             "URL_id"=>$URL_id,
         ]);
 

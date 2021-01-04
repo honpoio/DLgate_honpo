@@ -30,6 +30,9 @@ class UserInformationController extends Controller
     }
     
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> prepare_deploy
     private function checkTestUser(){
         //テストユーザーのみ編集機能を制限
         if(Auth::user()["name"] === 'test'){
@@ -37,6 +40,7 @@ class UserInformationController extends Controller
         }
 
     }
+<<<<<<< HEAD
 
     public function UserInformation(Request $request){
         //ユーザー編集画面を表示させるメソッド
@@ -44,6 +48,11 @@ class UserInformationController extends Controller
 
     public function UserInformation(Request $request){
 >>>>>>> test
+=======
+
+    public function UserInformation(Request $request){
+        //ユーザー編集画面を表示させるメソッド
+>>>>>>> prepare_deploy
     $auth = auth::user();
     $this->checkLogin();
     return view('auth.UserInformationEdit',['auth'=>$auth]);
@@ -64,16 +73,23 @@ class UserInformationController extends Controller
         $auth = auth::user();
 =======
     public function EmailUpdate(addEmailRequest $request){
+<<<<<<< HEAD
 >>>>>>> DB_redesign
         $this->checkLogin();
 <<<<<<< HEAD
 >>>>>>> test
 =======
 >>>>>>> frontend
+=======
+        //登録メールアドレスを更新するメソッド
+        $this->checkLogin();
+        $this->checkTestUser();
+>>>>>>> prepare_deploy
         return app('User_DB_Operation')->EmailUpdate($request);
     }    
     
     public function PasswordChange(ChangePasswordRequest $request){
+<<<<<<< HEAD
 <<<<<<< HEAD
         //パスワードを変更するメソッド
         $this->checkLogin();
@@ -81,21 +97,31 @@ class UserInformationController extends Controller
 =======
         $this->checkLogin();
 >>>>>>> test
+=======
+        //パスワードを変更するメソッド
+        $this->checkLogin();
+        $this->checkTestUser();
+>>>>>>> prepare_deploy
         $user = Auth::user();
         return app('User_DB_Operation')->PasswordChange($request,$user);
     }
 
     public function WithdrawalForm(){
 <<<<<<< HEAD
+<<<<<<< HEAD
         //退会フォームを表示させるメソッド
 =======
 >>>>>>> test
+=======
+        //退会フォームを表示させるメソッド
+>>>>>>> prepare_deploy
         $this->checkLogin();
         $auth = auth::user();
         return view('auth.WithdrawalForm',['auth'=>$auth]);
     }
 
     public function Withdrawal(WithdrawalRequest $request){
+<<<<<<< HEAD
 <<<<<<< HEAD
         //退会処理を追加するメソッド
         $this->checkLogin();
@@ -104,7 +130,11 @@ class UserInformationController extends Controller
         
         return app('User_DB_Operation')->Withdrawal($request,$id);
 =======
+=======
+        //退会処理を追加するメソッド
+>>>>>>> prepare_deploy
         $this->checkLogin();
+        $this->checkTestUser();
         $id = auth::id();
         
 <<<<<<< HEAD

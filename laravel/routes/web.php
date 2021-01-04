@@ -71,15 +71,19 @@ Route::middleware('verified')->group(function () {
 =======
                 //ログインの有無によってアクセス制限
                 Route::get('/DLgate','DLgate\DLgateCRUDController@select');
+<<<<<<< HEAD
                 route::get('/update','DLgate\DLgateCRUDController@select_update');
 >>>>>>> DB_redesign
+=======
+                route::get('/DLgate/update','DLgate\DLgateCRUDController@select_update');
+>>>>>>> prepare_deploy
                 Route::get('/DLgate/create',function(){
                         return view('DLgate_create');
                 });
 
-                route::post('/insert','DLgate\DLgateCRUDController@create');
-                route::put('/update/add','DLgate\DLgateCRUDController@update');
-                route::delete('/delete','DLgate\DLgateCRUDController@delete');
+                route::post('/DLgate/insert','DLgate\DLgateCRUDController@create');
+                route::put('/DLgate/update/add','DLgate\DLgateCRUDController@update');
+                route::delete('/DLgate/delete','DLgate\DLgateCRUDController@delete');
 
 =======
                 
@@ -142,7 +146,7 @@ Route::middleware('verified')->group(function () {
         });
 });
                 Route::get('/DLgate/view','DLgate\DLGateDisplayController@DLGateForm');
-                Route::get('/DLgate/form',function(){
+                Route::get('/DLgate/Form',function(){
                         return view('DLgateForm');
                 });
                 Route::get('/auth/redirect/twitter', 'TwitterController@redirect')

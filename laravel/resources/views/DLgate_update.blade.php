@@ -6,6 +6,7 @@
 <body>
     @foreach($dlgate_table as $row)
     <form method="POST" action="/DLgate/update/add">
+<<<<<<< HEAD
     @csrf
     @method('PUT')
     <div class="row justify-content-center">
@@ -102,6 +103,8 @@
 >>>>>>> frontend
     @foreach($dlgate_table as $row)
     <form method="POST" action="/update/add">
+=======
+>>>>>>> prepare_deploy
     @csrf
     @method('PUT')
     <div class="row justify-content-center">
