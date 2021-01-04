@@ -22,6 +22,16 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+<<<<<<< HEAD
+=======
+            
+            $table->foreign('name')
+            ->references('user')
+            ->on('gate_users')
+            ->onDelete('cascade');
+
+            // ->onDelete('SET NULL');
+>>>>>>> test
         });
     }
 

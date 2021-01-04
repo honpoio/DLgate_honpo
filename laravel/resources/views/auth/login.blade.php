@@ -19,6 +19,10 @@
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
+<<<<<<< HEAD
+=======
+                                    
+>>>>>>> test
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror

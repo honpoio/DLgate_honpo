@@ -12,7 +12,18 @@ class usersTableSeeder extends Seeder
     public function run()
     
     {
+<<<<<<< HEAD
 
+=======
+        DB::table('gate_users')->insert([
+            [
+            'user' =>'test',
+            ],
+            [
+            'user' =>'test2',
+            ]
+        ]);
+>>>>>>> test
         DB::table('users')->insert([
             [
             'name' =>'test',

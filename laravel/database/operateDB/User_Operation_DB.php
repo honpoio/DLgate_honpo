@@ -4,6 +4,10 @@ namespace Database\operateDB;
 use Illuminate\Http\Request;
 
 use App\User;
+<<<<<<< HEAD
+=======
+use App\GateUser;
+>>>>>>> test
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
@@ -11,7 +15,10 @@ class User_Operation_DB
 {
 
     public function EmailUpdate($request){
+<<<<<<< HEAD
         //メール情報更新
+=======
+>>>>>>> test
         return DB::transaction(function () use($request){
             User::where('id',$request->UserId)
             ->lockForUpdate()
@@ -20,12 +27,19 @@ class User_Operation_DB
             
             User::where('id',$request->UserId)
             ->update(['email_verified_at' =>NULL]);
+<<<<<<< HEAD
             //再度メール認証
+=======
+            // return redirect('/email/verify');
+>>>>>>> test
             return redirect('/email/verify')->with('status', __('メールアドレスの変更に成功しました'));
         });
     }
     public function PasswordChange($request,$user){
+<<<<<<< HEAD
         //パスワード変更
+=======
+>>>>>>> test
         return DB::transaction(function () use($request,$user){
             User::where('id',$request->UserId)
             ->lockForUpdate();
@@ -34,10 +48,16 @@ class User_Operation_DB
             return redirect()->route('user')->with('status', __('パスワードの変更に成功しました'));
         });
     }
+<<<<<<< HEAD
     public function Withdrawal($request,$id){
         //退会
         return DB::transaction(function () use($request,$id){
             User::where('id',$id)
+=======
+    public function Withdrawal($request,$user){
+        return DB::transaction(function () use($request,$user){
+            GateUser::where('user',$user["name"])
+>>>>>>> test
             ->lockForUpdate()
             ->delete();
             Auth::logout();

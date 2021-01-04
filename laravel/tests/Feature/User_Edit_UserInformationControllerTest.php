@@ -31,13 +31,21 @@ class User_Edit_UserInformationControllerTest extends TestCase
     public function testEmailUpdate()
     {
         // Emailのフィールドがupdateできるか検証
+<<<<<<< HEAD
         $dlgate_table = User::select(['id'])->where('id',[2])->get();
+=======
+        $dlgate_table = User::select(['id'])->where('id',[1])->get();
+>>>>>>> test
         // updateするGateのカラムidのフィールドを用意
         foreach($dlgate_table as $row){
             $id = $row->id;
         }
 
+<<<<<<< HEAD
         $response = $this->actingAs(User::find(2))
+=======
+        $response = $this->actingAs(User::find(1))
+>>>>>>> test
         ->post('/user/edit/email',[
             "Email" => 'hogehoge@gmail.com',
             "UserId" => $id,
@@ -56,7 +64,11 @@ class User_Edit_UserInformationControllerTest extends TestCase
     public function testPasswordChange(){
         // passwordのフィールドがupdateできるか検証
 
+<<<<<<< HEAD
         $dlgate_table = User::select(['id','password'])->where('id',[2])->get();
+=======
+        $dlgate_table = User::select(['id','password'])->where('id',[1])->get();
+>>>>>>> test
         // updateするGateのカラムidのフィールドを用意
 
         foreach($dlgate_table as $row){
@@ -64,7 +76,11 @@ class User_Edit_UserInformationControllerTest extends TestCase
             $password = $row->password;
         }
         
+<<<<<<< HEAD
         $response = $this->actingAs(User::find(2))
+=======
+        $response = $this->actingAs(User::find(1))
+>>>>>>> test
         ->post('/user/edit/password',[
             "CurrentPassword" => 'testpass',
             "newPassword" =>'loginsimasuyo',
@@ -82,14 +98,22 @@ class User_Edit_UserInformationControllerTest extends TestCase
     }
     public function testWithdrawal(){
     // 退会できるか検証
+<<<<<<< HEAD
     $dlgate_table = User::select(['id','name'])->where('id',[2])->get();
+=======
+    $dlgate_table = User::select(['id','name'])->where('id',[1])->get();
+>>>>>>> test
 
     foreach($dlgate_table as $row){
         $id = $row->id;
         $name = $row->name;
     }
 
+<<<<<<< HEAD
     $response = $this->actingAs(User::find(2))
+=======
+    $response = $this->actingAs(User::find(1))
+>>>>>>> test
     ->post('/user/edit/Withdrawal',[
         "CurrentPassword" => 'testpass',
         "UserId" => $id,
@@ -101,10 +125,23 @@ class User_Edit_UserInformationControllerTest extends TestCase
     $this->assertFalse(Auth::check());
 
     $this->assertDatabaseMissing('users', [
+<<<<<<< HEAD
         "id" => $id,
     ]);
     $this->assertDatabaseMissing('dlgate_table', [
         "user_id" => $id,
     ]);
+=======
+        "name" => $name,
+    ]);
+    $this->assertDatabaseMissing('dlgate_table', [
+        "name" => $name,
+    ]);
+
+    $this->assertDatabaseMissing('gate_users', [
+        "user" => $name,
+    ]);
+
+>>>>>>> test
     }
 }

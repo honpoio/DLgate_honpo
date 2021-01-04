@@ -3,6 +3,10 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+<<<<<<< HEAD
+=======
+// use Illuminate\Contracts\Validation\Validator;
+>>>>>>> test
 class DLgateEditRequest extends FormRequest
 {
     /**
@@ -23,7 +27,11 @@ class DLgateEditRequest extends FormRequest
     public function rules()
     {
         return [
+<<<<<<< HEAD
             "Twitter_user" =>['nullable','string','not_in:@'.str_replace( '@','',$this->input('Twitter_user'))],
+=======
+            "Twitter_user" =>['nullable','string'],
+>>>>>>> test
             "tweet_id" =>['nullable','integer'],
             "gate_name" =>['required','string','max:255'],
             "dl_url" =>['required','url'],
@@ -32,5 +40,9 @@ class DLgateEditRequest extends FormRequest
         //laravel/resources/lang/ja/validation.phpに記載済み
     }
 
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> test
 }

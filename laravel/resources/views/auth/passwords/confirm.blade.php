@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 @extends('layouts.app')
+=======
+aaa.@extends('layouts.app')
+>>>>>>> test
 
 @section('content')
 <div class="container">

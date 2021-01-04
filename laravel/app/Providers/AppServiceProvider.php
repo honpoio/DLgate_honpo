@@ -19,9 +19,12 @@ class AppServiceProvider extends ServiceProvider
         app()->bind('DLgate_User_Table','Illuminate\Database\DLgate_Components\DLgate_User_Table');
         app()->bind('Gate_DB_Operation','Database\operateDB\DLgate_Operation_DB');
         app()->bind('User_DB_Operation','Database\operateDB\User_Operation_DB');
+<<<<<<< HEAD
         if ($this->app->environment('local', 'testing', 'staging')) {
             $this->app->register(DuskServiceProvider::class);
         }
+=======
+>>>>>>> test
     }
 
     /**
@@ -31,8 +34,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+<<<<<<< HEAD
         if (\App::environment(['production'])) {
             \URL::forceScheme('https');
         }
+=======
+        //
+>>>>>>> test
     }
 }

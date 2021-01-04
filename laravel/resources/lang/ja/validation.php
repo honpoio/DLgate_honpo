@@ -157,7 +157,11 @@ return [
     */
 
     'attributes' => [
+<<<<<<< HEAD
         'Twitter_user' => 'ツイッターユーザーid',
+=======
+        'Twitter_user' => 'ツイッターユーザー名',
+>>>>>>> test
         'tweet_id' => 'ツイートid',
     ],
 

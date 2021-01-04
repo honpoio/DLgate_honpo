@@ -16,11 +16,15 @@
 
 <script>
     export default {
+<<<<<<< HEAD
 
+=======
+>>>>>>> test
         mounted() {
             console.log('Component mounted.')
         }
     }
+<<<<<<< HEAD
     // function copyToClipboard(index){
     //     // コピー対象をJavaScript上で変数として定義する
     //     var copyTarget = document.getElementById("copyTarget" + index);
@@ -34,4 +38,6 @@
     //     // コピーをお知らせする
     //     alert("URLをコピーできました！ : " + copyTarget.value);
     // }
+=======
+>>>>>>> test
 </script>

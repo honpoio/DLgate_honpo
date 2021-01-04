@@ -52,7 +52,10 @@ return [
             'path' => storage_path('logs/laravel.log'),
             'level' => 'debug',
             'days' => 14,
+<<<<<<< HEAD
             'permission' => 0664,
+=======
+>>>>>>> test
         ],
 
         'slack' => [

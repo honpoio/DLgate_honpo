@@ -8,7 +8,10 @@ use Abraham\TwitterOAuth\TwitterOAuth as TwitterOAuth;
 class OAuth_AND_User_Info extends SocialiteManager
 {
     public function Twitter_User_Property(){
+<<<<<<< HEAD
         // Oauthのアクセスキーを取得
+=======
+>>>>>>> test
         $info = self::driver('twitter')->user(); 
         $accessToken = $info->token;
         $accessTokenSecret =  $info->tokenSecret;

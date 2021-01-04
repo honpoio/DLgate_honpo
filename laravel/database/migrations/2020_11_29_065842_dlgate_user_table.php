@@ -17,6 +17,7 @@ class DlgateUserTable extends Migration
         Schema::create('dlgate_table', function (Blueprint $table) {
 
             $table->engine = 'InnoDB';
+<<<<<<< HEAD
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->uuid('URL_id')->unique();
@@ -28,6 +29,16 @@ class DlgateUserTable extends Migration
             $table->foreign('user_id')
             ->references('id')
             ->on('users')
+=======
+            $table->string('name');
+            $table->uuid('URL_id')->unique();
+            $table->string('Twitter_user')->nullable();
+            $table->string('Twitter_tweet')->nullable();
+            
+            $table->foreign('name')
+            ->references('user')
+            ->on('gate_users')
+>>>>>>> test
             ->onDelete('cascade');
 
             // $table->onDelete('SET NULL');
