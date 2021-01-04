@@ -7,9 +7,13 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\ChangePasswordRequest;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use App\Http\Requests\addEmailRequest;
 =======
 >>>>>>> test
+=======
+use App\Http\Requests\addEmailRequest;
+>>>>>>> DB_redesign
 use App\Http\Requests\WithdrawalRequest;
 
 class UserInformationController extends Controller
@@ -42,6 +46,7 @@ class UserInformationController extends Controller
     }
     
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function EmailUpdate(addEmailRequest $request){
         //登録メールアドレスを更新するメソッド
         $this->checkLogin();
@@ -49,6 +54,9 @@ class UserInformationController extends Controller
 =======
     public function EmailUpdate(Request $request){
         $auth = auth::user();
+=======
+    public function EmailUpdate(addEmailRequest $request){
+>>>>>>> DB_redesign
         $this->checkLogin();
 >>>>>>> test
         return app('User_DB_Operation')->EmailUpdate($request);
@@ -86,10 +94,14 @@ class UserInformationController extends Controller
         return app('User_DB_Operation')->Withdrawal($request,$id);
 =======
         $this->checkLogin();
-        $user = auth::user();
+        $id = auth::id();
         
+<<<<<<< HEAD
         return app('User_DB_Operation')->Withdrawal($request,$user);
 >>>>>>> test
+=======
+        return app('User_DB_Operation')->Withdrawal($request,$id);
+>>>>>>> DB_redesign
     }
     
 

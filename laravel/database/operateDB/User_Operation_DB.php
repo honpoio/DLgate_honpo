@@ -5,9 +5,12 @@ use Illuminate\Http\Request;
 
 use App\User;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use App\GateUser;
 >>>>>>> test
+=======
+>>>>>>> DB_redesign
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
@@ -49,6 +52,7 @@ class User_Operation_DB
         });
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function Withdrawal($request,$id){
         //退会
         return DB::transaction(function () use($request,$id){
@@ -58,6 +62,11 @@ class User_Operation_DB
         return DB::transaction(function () use($request,$user){
             GateUser::where('user',$user["name"])
 >>>>>>> test
+=======
+    public function Withdrawal($request,$id){
+        return DB::transaction(function () use($request,$id){
+            User::where('id',$id)
+>>>>>>> DB_redesign
             ->lockForUpdate()
             ->delete();
             Auth::logout();

@@ -4,9 +4,12 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // use Illuminate\Contracts\Validation\Validator;
 >>>>>>> test
+=======
+>>>>>>> DB_redesign
 class DLgateEditRequest extends FormRequest
 {
     /**
@@ -28,10 +31,14 @@ class DLgateEditRequest extends FormRequest
     {
         return [
 <<<<<<< HEAD
+<<<<<<< HEAD
             "Twitter_user" =>['nullable','string','not_in:@'.str_replace( '@','',$this->input('Twitter_user'))],
 =======
             "Twitter_user" =>['nullable','string'],
 >>>>>>> test
+=======
+            "Twitter_user" =>['nullable','string','not_in:@'.str_replace( '@','',$this->input('Twitter_user'))],
+>>>>>>> DB_redesign
             "tweet_id" =>['nullable','integer'],
             "gate_name" =>['required','string','max:255'],
             "dl_url" =>['required','url'],
@@ -41,8 +48,12 @@ class DLgateEditRequest extends FormRequest
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> test
+=======
+
+>>>>>>> DB_redesign
 }

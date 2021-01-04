@@ -6,6 +6,7 @@
         <div class="col-md-8">
             <div class="card">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div class="card-header">{{ __('Verify Your Email Address') }}</div>
 
                 <div class="card-body">
@@ -26,12 +27,16 @@
             {{ session('status') }}
             @endif
                 <div class="card-header">本登録メールを送信しました</div>
+=======
+                <div class="card-header">{{ __('Verify Your Email Address') }}</div>
+>>>>>>> DB_redesign
 
                 <div class="card-body">
-                    <!-- @if (session('resent'))
+                    @if (session('resent'))
                         <div class="alert alert-success" role="alert">
-                            メールが送信されました。
+                            {{ __('A fresh verification link has been sent to your email address.') }}
                         </div>
+<<<<<<< HEAD
                     @endif -->
                     <form method="POST" action="/email/resend">
                     @csrf
@@ -47,6 +52,16 @@
                         </form>
                         @endif
 >>>>>>> test
+=======
+                    @endif
+
+                    {{ __('Before proceeding, please check your email for a verification link.') }}
+                    {{ __('If you did not receive the email') }},
+                    <form class="d-inline" method="POST" action="{{ route('verification.resend') }}">
+                        @csrf
+                        <button type="submit" class="btn btn-link p-0 m-0 align-baseline">{{ __('click here to request another') }}</button>.
+                    </form>
+>>>>>>> DB_redesign
                 </div>
             </div>
         </div>

@@ -18,6 +18,7 @@ class DlgateUserTable extends Migration
 
             $table->engine = 'InnoDB';
 <<<<<<< HEAD
+<<<<<<< HEAD
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->uuid('URL_id')->unique();
@@ -31,14 +32,26 @@ class DlgateUserTable extends Migration
             ->on('users')
 =======
             $table->string('name');
+=======
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('user_id');
+>>>>>>> DB_redesign
             $table->uuid('URL_id')->unique();
+            $table->string('gate_name');
+            $table->string('dl_url');
             $table->string('Twitter_user')->nullable();
             $table->string('Twitter_tweet')->nullable();
             
+<<<<<<< HEAD
             $table->foreign('name')
             ->references('user')
             ->on('gate_users')
 >>>>>>> test
+=======
+            $table->foreign('user_id')
+            ->references('id')
+            ->on('users')
+>>>>>>> DB_redesign
             ->onDelete('cascade');
 
             // $table->onDelete('SET NULL');

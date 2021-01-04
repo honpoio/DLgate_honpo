@@ -29,9 +29,13 @@ class HomeControllerTest extends TestCase
         $response->assertStatus(200)
             ->assertViewIs('home')
 <<<<<<< HEAD
+<<<<<<< HEAD
             ->assertSee('ログインしました！');
 =======
             ->assertSee('ログインに成功しました！');
 >>>>>>> test
+=======
+            ->assertSee('ログインしました！');
+>>>>>>> DB_redesign
     }
 }

@@ -20,9 +20,12 @@
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                                     
 >>>>>>> test
+=======
+>>>>>>> DB_redesign
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror

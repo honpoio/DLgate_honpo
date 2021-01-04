@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 @extends('layouts.app')
 =======
 aaa.@extends('layouts.app')
 >>>>>>> test
+=======
+@extends('layouts.app')
+>>>>>>> DB_redesign
 
 @section('content')
 <div class="container">

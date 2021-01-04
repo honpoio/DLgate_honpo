@@ -16,10 +16,14 @@ class dlgate_tableSeeder extends Seeder
         [
             'Twitter_tweet' => '1331201779199950848',
 <<<<<<< HEAD
+<<<<<<< HEAD
             'user_id' =>'1',
 =======
             'name' =>'test',
 >>>>>>> test
+=======
+            'user_id' =>'1',
+>>>>>>> DB_redesign
             'dl_url' =>'https://www.google.com',
             'Twitter_user' =>'MutturiPrin',
             'gate_name' =>'test_gate',
@@ -27,10 +31,14 @@ class dlgate_tableSeeder extends Seeder
         ],
         [
 <<<<<<< HEAD
+<<<<<<< HEAD
             'user_id' => '1',
 =======
             'name' => 'test',
 >>>>>>> test
+=======
+            'user_id' => '1',
+>>>>>>> DB_redesign
             'dl_url' =>'https://www.google.com',
             'Twitter_user' => NULL,
             'Twitter_tweet' =>'1331201779199950848',
@@ -40,10 +48,14 @@ class dlgate_tableSeeder extends Seeder
 
         [
 <<<<<<< HEAD
+<<<<<<< HEAD
             'user_id' => '1',
 =======
             'name' => 'test',
 >>>>>>> test
+=======
+            'user_id' => '1',
+>>>>>>> DB_redesign
             'dl_url' =>'https://www.google.com',
             'Twitter_tweet' =>NULL,
             'Twitter_user' =>'MutturiPrin',
@@ -53,10 +65,14 @@ class dlgate_tableSeeder extends Seeder
 
         [
 <<<<<<< HEAD
+<<<<<<< HEAD
             'user_id' =>'2',
 =======
             'name' =>'test2',
 >>>>>>> test
+=======
+            'user_id' =>'2',
+>>>>>>> DB_redesign
             'dl_url' =>'https://www.google.com',
             'Twitter_user' =>'MutturiPrin',
             'Twitter_tweet' =>'1334835300955131904',
@@ -65,10 +81,14 @@ class dlgate_tableSeeder extends Seeder
         ],
         [
 <<<<<<< HEAD
+<<<<<<< HEAD
             'user_id' => '2',
 =======
             'name' => 'test2',
 >>>>>>> test
+=======
+            'user_id' => '2',
+>>>>>>> DB_redesign
             'dl_url' =>'https://www.google.com',
             'Twitter_user' => NULL,
             'Twitter_tweet' =>'1334835300955131904',
@@ -78,10 +98,14 @@ class dlgate_tableSeeder extends Seeder
 
         [
 <<<<<<< HEAD
+<<<<<<< HEAD
             'user_id' => '2',
 =======
             'name' => 'test2',
 >>>>>>> test
+=======
+            'user_id' => '2',
+>>>>>>> DB_redesign
             'dl_url' =>'https://www.google.com',
             'Twitter_user' =>'MutturiPrin',
             'Twitter_tweet' =>NULL,

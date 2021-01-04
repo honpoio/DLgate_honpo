@@ -158,10 +158,14 @@ return [
 
     'attributes' => [
 <<<<<<< HEAD
+<<<<<<< HEAD
         'Twitter_user' => 'ツイッターユーザーid',
 =======
         'Twitter_user' => 'ツイッターユーザー名',
 >>>>>>> test
+=======
+        'Twitter_user' => 'ツイッターユーザーid',
+>>>>>>> DB_redesign
         'tweet_id' => 'ツイートid',
     ],
 

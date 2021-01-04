@@ -13,6 +13,7 @@ class usersTableSeeder extends Seeder
     
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         DB::table('gate_users')->insert([
@@ -24,6 +25,9 @@ class usersTableSeeder extends Seeder
             ]
         ]);
 >>>>>>> test
+=======
+
+>>>>>>> DB_redesign
         DB::table('users')->insert([
             [
             'name' =>'test',

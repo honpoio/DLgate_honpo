@@ -9,6 +9,7 @@ class DLgate_Operation_DB
 {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function select($id){
         //userの全てのレコードを表示
         $dlgate_table = Dlgate_Table::where('user_id', $id)->get();
@@ -29,16 +30,20 @@ class DLgate_Operation_DB
 =======
     public function select($user){
         $dlgate_table = Dlgate_Table::where('name', $user["name"])->get();
+=======
+    public function select($id){
+        $dlgate_table = Dlgate_Table::where('user_id', $id)->get();
+>>>>>>> DB_redesign
         return view('DLgate',[ 'dlgate_table' => $dlgate_table]);
     }
-    public function select_update($request,$user){
+    public function select_update($request,$id){
         $dlgate_table = Dlgate_Table::where('URL_id',$request->URL_id)
-        ->where('name',$user["name"])->get();
+        ->where('user_id', $id)->get();
         return view('DLgate_update',[ 'dlgate_table' => $dlgate_table]);
     }
-    public function update($request,$user){
+    public function update($request,$id){
         Dlgate_Table::where('URL_id',$request->URL_id)
-        ->where('name',$user["name"])
+        ->where('user_id', $id)
         ->update([
             'Twitter_user' => trim(ltrim($request->Twitter_user,'https://twitter.com/')),
 >>>>>>> test
@@ -65,15 +70,15 @@ class DLgate_Operation_DB
 =======
         return redirect('/DLgate');
     }
-    public function delete($request,$user){
+    public function delete($request,$id){
         Dlgate_Table::where('URL_id',$request->URL_id)
-        ->where('name',$user["name"])
+        ->where('user_id', $id)
         ->delete();
         return redirect('/DLgate');
     }
-    public function create($request,$user){
+    public function create($request,$id){
         Dlgate_Table::create([
-            'name' => $user["name"],
+            'user_id' => $id,
             'URL_id' => uniqid(),
             'Twitter_user' => trim(ltrim($request->Twitter_user,'https://twitter.com/')),
 >>>>>>> test

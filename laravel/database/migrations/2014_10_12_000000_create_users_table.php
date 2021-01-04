@@ -23,6 +23,7 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             
             $table->foreign('name')
@@ -32,6 +33,8 @@ class CreateUsersTable extends Migration
 
             // ->onDelete('SET NULL');
 >>>>>>> test
+=======
+>>>>>>> DB_redesign
         });
     }
 

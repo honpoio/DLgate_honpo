@@ -28,10 +28,14 @@ class DLgateViewTest extends TestCase
     public function testGateViewForm(){
         //dlgate_tableに登録したデータが表示されているかどうか検証するメソッド
 <<<<<<< HEAD
+<<<<<<< HEAD
         $dlgate_table = Dlgate_Table::select(['URL_id'])->where('id',[rand (1 ,6)])->get();
 =======
         $dlgate_table = Dlgate_Table::select(['URL_id'])->where('id',[3])->get();
 >>>>>>> test
+=======
+        $dlgate_table = Dlgate_Table::select(['URL_id'])->where('id',[rand (1 ,6)])->get();
+>>>>>>> DB_redesign
         foreach($dlgate_table as $row){
             $URL_id = $row->URL_id;
         }
@@ -42,14 +46,19 @@ class DLgateViewTest extends TestCase
 
         $response->assertStatus(200);
 <<<<<<< HEAD
+<<<<<<< HEAD
         $response->assertDontSee('ダウンロードURL:');
 =======
         $response->assertDontSee('ダウンロードURLhttps://www.google.com');
 >>>>>>> test
+=======
+        $response->assertDontSee('ダウンロードURL:');
+>>>>>>> DB_redesign
     }
 
     public function testGate_Url_View(){
         // Gateの手順twitterフォロー等の手順が済んだらURLが出現するか検証するメソッド
+<<<<<<< HEAD
 <<<<<<< HEAD
         $dlgate_table = Dlgate_Table::select(['URL_id'])->where('id',[rand (1 ,6)])->get();
         foreach($dlgate_table as $row){
@@ -68,6 +77,9 @@ class DLgateViewTest extends TestCase
 
 =======
         $dlgate_table = Dlgate_Table::select(['URL_id'])->where('id',[3])->get();
+=======
+        $dlgate_table = Dlgate_Table::select(['URL_id'])->where('id',[rand (1 ,6)])->get();
+>>>>>>> DB_redesign
         foreach($dlgate_table as $row){
             $URL_id = $row->URL_id;
         }
@@ -77,10 +89,15 @@ class DLgateViewTest extends TestCase
             'Twitter_tweet_sucsess'=>true
             ])
         ->get('/DLgate/view?id='.$URL_id)
-        ->assertSee('ダウンロードURLhttps://www.google.com');
+        ->assertSee('ダウンロードURL:https://www.google.com');
 
 
 
     }
+<<<<<<< HEAD
 >>>>>>> test
+=======
+
+
+>>>>>>> DB_redesign
 }

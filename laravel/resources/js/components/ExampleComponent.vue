@@ -17,14 +17,21 @@
 <script>
     export default {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> test
+=======
+
+>>>>>>> DB_redesign
         mounted() {
             console.log('Component mounted.')
         }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> DB_redesign
     // function copyToClipboard(index){
     //     // コピー対象をJavaScript上で変数として定義する
     //     var copyTarget = document.getElementById("copyTarget" + index);
@@ -38,6 +45,9 @@
     //     // コピーをお知らせする
     //     alert("URLをコピーできました！ : " + copyTarget.value);
     // }
+<<<<<<< HEAD
 =======
 >>>>>>> test
+=======
+>>>>>>> DB_redesign
 </script>

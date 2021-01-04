@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 @extends('layouts.app')
 @section('content')
 <body>
@@ -93,55 +94,98 @@
 <head>
 <title>タイトル</title>
 </head>
+=======
+@extends('layouts.app')
+@section('content')
+>>>>>>> DB_redesign
 <body>
-<a>ユーザー名は変更できません</a>
-<br>
 
-<form method="POST" action="/user/edit/email">
-@csrf
-    <a>メールアドレスを変更</a>
-    <br>
-    <input type="text" name="Email" value={{$auth["email"]}}>
 
-    <input type="hidden" name="UserId" value={{$auth["id"]}}>
-    
-    <input type="submit" value="更新">
-</form>
 
-<form method="POST" action="/user/edit/password">
-@csrf
 
-    <a>パスワードを変更</a>
-    <br>
-    <a>現在のパスワードを入力</a>
-    <br>
-    <input  type="password" name="CurrentPassword">
-    @if ($errors->has('CurrentPassword'))
-    <a>{{$errors->first('CurrentPassword')}}</a>
-    @endif
-    <br>
-    <a>新しいパスワードを入力</a>
-    <br>
-    <input  type="password" name="newPassword">
-    <br>
-    <a>新しいパスワードを再度入力</a>
-    <br>
-    <input  type="password"  name="newPassword_confirmation">
-    <input type="submit" value="更新">
-    <input type="hidden" name="UserId" value={{$auth["id"]}}>
-    @if ($errors->has('newPassword'))
-    <a>{{$errors->first('newPassword')}}</a>
-    @endif
-    @if (session('status'))
+
+@if (session('status'))
     {{ session('status') }}
-    @endif
-</form>
+@endif
+<div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">ユーザー設定</div>
+                    <div class="card-body">
 
-<form method="GET" action="/user/edit/delete">
-    <br>
-    <button type="submit">退会</button>
-</form>
+                        <form method="POST" action="/user/edit/email">
+                        @csrf  
+                            <div class="form-group row">
+                                <label for="email" class="col-md-4 col-form-label text-md-right">email変更</label>
+                                <div class="col-md-6">
+                                    <input id="email" name="Email" value="{{$auth["email"]}}" class="form-control @error('email') is-invalid @enderror">
+                                    @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                                <input type="hidden" name="UserId" value={{$auth["id"]}}>
+                                <button dusk="view-button" class="btn btn-primary">更新</button>
+                            </div>
 
+                        </form>
+
+                        <form method="POST" action="/user/edit/password">
+                        @csrf
+                            <div class="form-group row">
+                                <label for="password"  class="col-md-4 col-form-label text-md-right">現在のパスワードを入力</label>
+                                <div class="col-md-6">
+                                    <input id="password"  name="CurrentPassword" class="form-control @error('CurrentPassword') is-invalid @enderror">
+                                    @error('CurrentPassword')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="password" class="col-md-4 col-form-label text-md-right">新規パスワードを入力</label>
+                                <div class="col-md-6">
+                                    <input id="password" name="newPassword" class="form-control @error('password') is-invalid @enderror" name="newPassword">
+                                    @error('password')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="password" class="col-md-4 col-form-label text-md-right">新規パスワードを再入力</label>
+                                <div class="col-md-6">
+                                    <input id="password" name="newPassword_confirmation" class="form-control @error('newPassword') is-invalid @enderror" name="newPassword">
+                                    @error('newPassword')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                                <input type="hidden" name="UserId" value={{$auth["id"]}}>
+                                <button dusk="view-button" class="btn btn-primary">更新</button>
+
+
+                            </div>
+                        </form>
+                        <form method="GET" action="/user/edit/delete">
+                            <br>
+                            <button class="button_font_variable_length_withdrawal">退会</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
+<<<<<<< HEAD
 </html>
 >>>>>>> test
+=======
+@endsection
+>>>>>>> DB_redesign

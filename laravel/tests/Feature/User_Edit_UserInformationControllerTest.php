@@ -126,6 +126,7 @@ class User_Edit_UserInformationControllerTest extends TestCase
 
     $this->assertDatabaseMissing('users', [
 <<<<<<< HEAD
+<<<<<<< HEAD
         "id" => $id,
     ]);
     $this->assertDatabaseMissing('dlgate_table', [
@@ -133,15 +134,21 @@ class User_Edit_UserInformationControllerTest extends TestCase
     ]);
 =======
         "name" => $name,
+=======
+        "id" => $id,
+>>>>>>> DB_redesign
     ]);
     $this->assertDatabaseMissing('dlgate_table', [
-        "name" => $name,
+        "user_id" => $id,
     ]);
+<<<<<<< HEAD
 
     $this->assertDatabaseMissing('gate_users', [
         "user" => $name,
     ]);
 
 >>>>>>> test
+=======
+>>>>>>> DB_redesign
     }
 }

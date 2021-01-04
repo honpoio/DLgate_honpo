@@ -1,3 +1,7 @@
 org-chimata-ssl-certs/
 docker-compose.yml
+<<<<<<< HEAD
 DLgate_honpo.git
+=======
+docker/
+>>>>>>> DB_redesign
