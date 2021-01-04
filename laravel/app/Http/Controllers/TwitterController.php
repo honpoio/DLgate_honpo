@@ -11,6 +11,7 @@ class TwitterController extends Controller
     protected static $Twitter_Config;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     
     private function OAuth_AND_User_Info(){
     // Oauthのアクセスキーを取得するメソッド
@@ -24,6 +25,9 @@ class TwitterController extends Controller
 =======
     
 >>>>>>> DB_redesign
+=======
+    
+>>>>>>> frontend
     private function OAuth_AND_User_Info(){
          
         self::$Twitter_Config = app('User_Info')->Twitter_User_Property();
@@ -33,10 +37,13 @@ class TwitterController extends Controller
         
         $provider = "twitter";
 <<<<<<< HEAD
+<<<<<<< HEAD
         
 >>>>>>> test
 =======
 >>>>>>> DB_redesign
+=======
+>>>>>>> frontend
         return app('EndpointChange')->Scope_Change($provider,$request);
     }
     
@@ -52,6 +59,7 @@ class TwitterController extends Controller
     public function TweetRT(Request $request){
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->OAuth_AND_User_Info();   
         return app('Twitter_Operation')->RT_Operation($request);
 =======
@@ -64,5 +72,9 @@ class TwitterController extends Controller
         $this->OAuth_AND_User_Info();   
         return app('Twitter_Operation')->RT_Operation($request);
 >>>>>>> DB_redesign
+=======
+        $this->OAuth_AND_User_Info();   
+        return app('Twitter_Operation')->RT_Operation($request);
+>>>>>>> frontend
     }
 }

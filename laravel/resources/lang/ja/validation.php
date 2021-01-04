@@ -159,6 +159,7 @@ return [
     'attributes' => [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         'Twitter_user' => 'ツイッターユーザーid',
 =======
         'Twitter_user' => 'ツイッターユーザー名',
@@ -166,6 +167,9 @@ return [
 =======
         'Twitter_user' => 'ツイッターユーザーid',
 >>>>>>> DB_redesign
+=======
+        'Twitter_user' => 'ツイッターユーザーid',
+>>>>>>> frontend
         'tweet_id' => 'ツイートid',
     ],
 

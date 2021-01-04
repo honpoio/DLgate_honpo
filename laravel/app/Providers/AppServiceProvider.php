@@ -20,11 +20,14 @@ class AppServiceProvider extends ServiceProvider
         app()->bind('Gate_DB_Operation','Database\operateDB\DLgate_Operation_DB');
         app()->bind('User_DB_Operation','Database\operateDB\User_Operation_DB');
 <<<<<<< HEAD
+<<<<<<< HEAD
         if ($this->app->environment('local', 'testing', 'staging')) {
             $this->app->register(DuskServiceProvider::class);
         }
 =======
 >>>>>>> test
+=======
+>>>>>>> frontend
     }
 
     /**

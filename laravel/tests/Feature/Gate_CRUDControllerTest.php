@@ -39,10 +39,14 @@ class Gate_CRUDControllerTest extends TestCase
         $response = $this->actingAs(User::find(1))
         //ログイン
 <<<<<<< HEAD
+<<<<<<< HEAD
         ->put('/DLgate/update/add',[
 =======
         ->put('/update/add',[
 >>>>>>> test
+=======
+        ->put('/update/add',[
+>>>>>>> frontend
             "Twitter_user"=>'Sankei_news',
             "tweet_id"=>'1337272952140623874',
             "gate_name"=>'sankei',
@@ -68,10 +72,14 @@ class Gate_CRUDControllerTest extends TestCase
         //GateテーブルのInsertが可能かどうか検証するメソッド
         $response = $this->actingAs(User::find(1))
 <<<<<<< HEAD
+<<<<<<< HEAD
         ->post('/DLgate/insert',[
 =======
         ->post('/insert',[
 >>>>>>> test
+=======
+        ->post('/insert',[
+>>>>>>> frontend
             "Twitter_user"=>'Sankei_news',
             "tweet_id"=>'1337272952140623874',
             "gate_name"=>'sankei',
@@ -98,10 +106,14 @@ class Gate_CRUDControllerTest extends TestCase
 
         $response = $this->actingAs(User::find(1))
 <<<<<<< HEAD
+<<<<<<< HEAD
         ->delete('/DLgate/delete',[
 =======
         ->delete('/delete',[
 >>>>>>> test
+=======
+        ->delete('/delete',[
+>>>>>>> frontend
             "URL_id"=>$URL_id,
         ]);
 

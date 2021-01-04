@@ -16,7 +16,10 @@ class EndpointChanges extends SocialiteManager
         if($request->has('Follow')){
             $this->Callback_Change = 'http://localhost:8000/callback';
             // $Twitter_provider = self::driver($provider)->redirect();
+<<<<<<< HEAD
 >>>>>>> test
+=======
+>>>>>>> frontend
             return self::driver($provider)->redirect();
         }
 
@@ -26,7 +29,10 @@ class EndpointChanges extends SocialiteManager
 =======
             $this->Callback_Change = 'http://localhost:8000/callback2';
             // $Twitter_provider = self::driver($provider)->redirect();
+<<<<<<< HEAD
 >>>>>>> test
+=======
+>>>>>>> frontend
             return self::driver($provider)->redirect();
         }
     }

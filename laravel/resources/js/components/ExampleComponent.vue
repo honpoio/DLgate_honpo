@@ -18,20 +18,27 @@
     export default {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> test
 =======
 
 >>>>>>> DB_redesign
+=======
+
+>>>>>>> frontend
         mounted() {
             console.log('Component mounted.')
         }
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> DB_redesign
+=======
+>>>>>>> frontend
     // function copyToClipboard(index){
     //     // コピー対象をJavaScript上で変数として定義する
     //     var copyTarget = document.getElementById("copyTarget" + index);
@@ -46,8 +53,11 @@
     //     alert("URLをコピーできました！ : " + copyTarget.value);
     // }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> test
 =======
 >>>>>>> DB_redesign
+=======
+>>>>>>> frontend
 </script>

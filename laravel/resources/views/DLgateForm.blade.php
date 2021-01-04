@@ -1,11 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> DB_redesign
+=======
+>>>>>>> frontend
 @extends('layouts.app')
 
 @section('content')
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <body>
 <div class="container">
@@ -114,6 +118,8 @@
 </body>
 >>>>>>> test
 =======
+=======
+>>>>>>> frontend
 <body>
 <div class="container">
         <div class="row justify-content-center">
@@ -159,7 +165,12 @@
                                     <br>
                                     <a> ダウンロードURL:{{Session::get('URL_id')}}</a>
                                     <redirect_button-component redirect_button="{{Session::get('URL_id')}}"></redirect_button-component>
+<<<<<<< HEAD
                                     {{Session::flush()}}
+=======
+                                    {{Session::flush('Twitter_user_sucsess')}}
+                                    {{Session::flush('Twitter_tweet_sucsess')}}
+>>>>>>> frontend
                             @endif
                             </div>
 
@@ -178,5 +189,9 @@
 
 
 </body>
+<<<<<<< HEAD
 @endsection
 >>>>>>> DB_redesign
+=======
+@endsection
+>>>>>>> frontend

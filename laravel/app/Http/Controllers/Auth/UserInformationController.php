@@ -8,12 +8,16 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\ChangePasswordRequest;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use App\Http\Requests\addEmailRequest;
 =======
 >>>>>>> test
 =======
 use App\Http\Requests\addEmailRequest;
 >>>>>>> DB_redesign
+=======
+use App\Http\Requests\addEmailRequest;
+>>>>>>> frontend
 use App\Http\Requests\WithdrawalRequest;
 
 class UserInformationController extends Controller
@@ -47,18 +51,25 @@ class UserInformationController extends Controller
     
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function EmailUpdate(addEmailRequest $request){
         //登録メールアドレスを更新するメソッド
         $this->checkLogin();
         $this->checkTestUser();
 =======
     public function EmailUpdate(Request $request){
+=======
+    public function EmailUpdate(addEmailRequest $request){
+>>>>>>> frontend
         $auth = auth::user();
 =======
     public function EmailUpdate(addEmailRequest $request){
 >>>>>>> DB_redesign
         $this->checkLogin();
+<<<<<<< HEAD
 >>>>>>> test
+=======
+>>>>>>> frontend
         return app('User_DB_Operation')->EmailUpdate($request);
     }    
     
@@ -97,11 +108,15 @@ class UserInformationController extends Controller
         $id = auth::id();
         
 <<<<<<< HEAD
+<<<<<<< HEAD
         return app('User_DB_Operation')->Withdrawal($request,$user);
 >>>>>>> test
 =======
         return app('User_DB_Operation')->Withdrawal($request,$id);
 >>>>>>> DB_redesign
+=======
+        return app('User_DB_Operation')->Withdrawal($request,$user);
+>>>>>>> frontend
     }
     
 

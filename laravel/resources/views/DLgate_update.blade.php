@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 @extends('layouts.app')
 @section('content')
 <body>
@@ -94,6 +95,11 @@
 @section('content')
 <body>
 >>>>>>> DB_redesign
+=======
+@extends('layouts.app')
+@section('content')
+<body>
+>>>>>>> frontend
     @foreach($dlgate_table as $row)
     <form method="POST" action="/update/add">
     @csrf
@@ -164,6 +170,7 @@
 
     </form>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </body>
 </html>
 >>>>>>> test
@@ -172,3 +179,8 @@
 
 @endsection
 >>>>>>> DB_redesign
+=======
+</body>
+
+@endsection
+>>>>>>> frontend

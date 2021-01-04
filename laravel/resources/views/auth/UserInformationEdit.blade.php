@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 @extends('layouts.app')
 @section('content')
 <body>
@@ -98,6 +99,10 @@
 @extends('layouts.app')
 @section('content')
 >>>>>>> DB_redesign
+=======
+@extends('layouts.app')
+@section('content')
+>>>>>>> frontend
 <body>
 
 
@@ -177,15 +182,23 @@
                         <form method="GET" action="/user/edit/delete">
                             <br>
                             <button class="button_font_variable_length_withdrawal">退会</button>
+<<<<<<< HEAD
                         </form>
+=======
+                        </form>Z
+>>>>>>> frontend
                     </div>
                 </div>
             </div>
         </div>
 </body>
 <<<<<<< HEAD
+<<<<<<< HEAD
 </html>
 >>>>>>> test
 =======
 @endsection
 >>>>>>> DB_redesign
+=======
+@endsection
+>>>>>>> frontend

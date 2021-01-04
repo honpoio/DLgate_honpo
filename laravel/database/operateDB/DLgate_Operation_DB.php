@@ -46,7 +46,10 @@ class DLgate_Operation_DB
         ->where('user_id', $id)
         ->update([
             'Twitter_user' => trim(ltrim($request->Twitter_user,'https://twitter.com/')),
+<<<<<<< HEAD
 >>>>>>> test
+=======
+>>>>>>> frontend
             'Twitter_tweet' => trim($request->tweet_id),
             'gate_name'=> trim($request->gate_name),
             'dl_url'=> trim($request->dl_url),
@@ -81,7 +84,10 @@ class DLgate_Operation_DB
             'user_id' => $id,
             'URL_id' => uniqid(),
             'Twitter_user' => trim(ltrim($request->Twitter_user,'https://twitter.com/')),
+<<<<<<< HEAD
 >>>>>>> test
+=======
+>>>>>>> frontend
             'Twitter_tweet' => trim($request->tweet_id),
             'gate_name'=> trim($request->gate_name),
             'dl_url'=> trim($request->dl_url),

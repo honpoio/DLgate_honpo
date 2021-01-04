@@ -30,6 +30,7 @@ class HomeControllerTest extends TestCase
             ->assertViewIs('home')
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ->assertSee('ログインしました！');
 =======
             ->assertSee('ログインに成功しました！');
@@ -37,5 +38,8 @@ class HomeControllerTest extends TestCase
 =======
             ->assertSee('ログインしました！');
 >>>>>>> DB_redesign
+=======
+            ->assertSee('ログインしました！');
+>>>>>>> frontend
     }
 }

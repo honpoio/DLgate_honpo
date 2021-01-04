@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 @extends('layouts.app')
 @section('content')
 <body>
@@ -48,6 +49,10 @@
 @extends('layouts.app')
 @section('content')
 >>>>>>> DB_redesign
+=======
+@extends('layouts.app')
+@section('content')
+>>>>>>> frontend
 <body>
 <div class="container">
     <div class="row justify-content-center">
@@ -81,6 +86,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 </html>
 >>>>>>> test
 =======
@@ -88,3 +94,8 @@
 </body>
 @endsection
 >>>>>>> DB_redesign
+=======
+
+</body>
+@endsection
+>>>>>>> frontend

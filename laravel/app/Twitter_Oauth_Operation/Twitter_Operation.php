@@ -59,6 +59,7 @@ class Twitter_Operation extends TwitterController
             return redirect('/DLgate/form')->with('status', __('フォロー失敗しました'));
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         return redirect(
             'http://localhost:8000//DLgate/view?id='.
             $request->session()->get('URL_id')
@@ -67,6 +68,9 @@ class Twitter_Operation extends TwitterController
 =======
         
 >>>>>>> DB_redesign
+=======
+        
+>>>>>>> frontend
     }
     public function RT_Operation($request){
         $tweet = $request->session()->get('Twitter_tweet');
@@ -82,6 +86,7 @@ class Twitter_Operation extends TwitterController
             $request->session()->put('Twitter_tweet_sucsess',true);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             return redirect('/DLgate/Form')->with('status', __('RTに成功しました'));
         } else {
             // リツイート失敗
@@ -95,12 +100,16 @@ class Twitter_Operation extends TwitterController
 =======
             return redirect('/DLgate/form')->with('status', __('RTに成功しました'));
 >>>>>>> DB_redesign
+=======
+            return redirect('/DLgate/form')->with('status', __('RTに成功しました'));
+>>>>>>> frontend
         } else {
             // リツイート失敗
             print "RT failed \n";
             return redirect('/DLgate/form')->with('status_error', __('RTに失敗しました'));
 
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         return redirect(
@@ -111,6 +120,9 @@ class Twitter_Operation extends TwitterController
 =======
         return redirect('/DLgate/form');
 >>>>>>> DB_redesign
+=======
+        return redirect('/DLgate/form');
+>>>>>>> frontend
     }
 
 }

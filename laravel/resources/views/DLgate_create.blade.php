@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 @extends('layouts.app')
 @section('content')
 <body>
@@ -85,6 +86,10 @@
 @extends('layouts.app')
 @section('content')
 >>>>>>> DB_redesign
+=======
+@extends('layouts.app')
+@section('content')
+>>>>>>> frontend
 <body>
 <form action="/insert" method="POST">
 @csrf
@@ -154,8 +159,12 @@
 </form>
 </body>
 <<<<<<< HEAD
+<<<<<<< HEAD
 </html>
 >>>>>>> test
 =======
 @endsection
 >>>>>>> DB_redesign
+=======
+@endsection
+>>>>>>> frontend

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 @extends('layouts.app')
 =======
 aaa.@extends('layouts.app')
@@ -7,6 +8,9 @@ aaa.@extends('layouts.app')
 =======
 @extends('layouts.app')
 >>>>>>> DB_redesign
+=======
+@extends('layouts.app')
+>>>>>>> frontend
 
 @section('content')
 <div class="container">

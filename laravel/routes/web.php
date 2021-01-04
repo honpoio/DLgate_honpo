@@ -34,9 +34,12 @@ Auth::routes();
 
 // Route::get('/admin', 'AdminController@index')->name('admin');
 // app()->make(ClassA::class);
+<<<<<<< HEAD
 >>>>>>> test
 =======
 >>>>>>> DB_redesign
+=======
+>>>>>>> frontend
 Auth::routes(['verify'   => true, // メール確認機能
         'register' => true, // デフォルトの登録機能ON
         'reset'    => true,  // メールリマインダー機能ON
@@ -60,6 +63,7 @@ Route::middleware('verified')->group(function () {
                 Route::get('/user', 'Auth\UserInformationController@UserInformation')->name('user');
 =======
 
+<<<<<<< HEAD
 
                 
                 Route::get('/DLgate','DLgate\CRUDController@select');
@@ -77,6 +81,20 @@ Route::middleware('verified')->group(function () {
                 route::put('/update/add','DLgate\DLgateCRUDController@update');
                 route::delete('/delete','DLgate\DLgateCRUDController@delete');
 
+=======
+                
+                Route::get('/DLgate','DLgate\CRUDController@select');
+                
+                Route::get('/DLgate/create',function(){
+                        return view('DLgate_create');
+                });
+                
+                route::get('/update','DLgate\CRUDController@select_update');
+                route::post('/insert','DLgate\CRUDController@create');
+                route::put('/update/add','DLgate\CRUDController@update');
+                route::delete('/delete','DLgate\CRUDController@delete');
+                //DLgateCRUD機能のroutingtable
+>>>>>>> frontend
 
                 Route::get('/user', 'Auth\UserInformationController@UserInformation')->name('user');
 <<<<<<< HEAD
@@ -101,8 +119,18 @@ Route::middleware('verified')->group(function () {
                 Route::get('/auth/redirect/twitter', 'TwitterController@redirect')
                         ->name('twitter_OAuth');
 
+<<<<<<< HEAD
                 Route::get('/callback/follw', 'TwitterController@Twetter_Follow')
                         ->name('twitter');
+=======
+
+                //ログインの有無によってアクセス制限するrouting
+                Route::get('/DLgate/view','DLgate\DLGateDisplayController@DLGateForm');
+
+                Route::get('/DLgate/form',function(){
+                        return view('DLgateForm');
+                });
+>>>>>>> frontend
 
                 Route::get('/callback/RT', 'TwitterController@TweetRT')
                         ->where('provider','twitter');
@@ -131,6 +159,13 @@ Route::middleware('verified')->group(function () {
 Route::get('/home', 'HomeController@index')->name('home');
 
 
+<<<<<<< HEAD
 >>>>>>> test
 =======
 >>>>>>> DB_redesign
+=======
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+>>>>>>> frontend

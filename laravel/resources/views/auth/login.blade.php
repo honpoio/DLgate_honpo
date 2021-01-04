@@ -21,11 +21,14 @@
                                     <span class="invalid-feedback" role="alert">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                                     
 >>>>>>> test
 =======
 >>>>>>> DB_redesign
+=======
+>>>>>>> frontend
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror

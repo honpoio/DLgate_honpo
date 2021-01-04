@@ -1930,8 +1930,11 @@ __webpack_require__.r(__webpack_exports__);
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> DB_redesign
+=======
+>>>>>>> frontend
 }); // function copyToClipboard(index){
 //     // コピー対象をJavaScript上で変数として定義する
 //     var copyTarget = document.getElementById("copyTarget" + index);
@@ -1943,6 +1946,9 @@ __webpack_require__.r(__webpack_exports__);
 //     alert("URLをコピーできました！ : " + copyTarget.value);
 // }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> frontend
 
 /***/ }),
 
@@ -1958,6 +1964,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+<<<<<<< HEAD
 =======
 });
 =======
@@ -1979,10 +1986,13 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 //
 >>>>>>> DB_redesign
+=======
+>>>>>>> frontend
 //
 //
 //
 //
+<<<<<<< HEAD
 <<<<<<< HEAD
 //
 //
@@ -1992,6 +2002,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 >>>>>>> DB_redesign
+=======
+//
+//
+//
+>>>>>>> frontend
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     redirect_button: String
@@ -2006,11 +2021,14 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {}
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // 略
 >>>>>>> test
 =======
 >>>>>>> DB_redesign
+=======
+>>>>>>> frontend
 
 /***/ }),
 
@@ -6438,10 +6456,14 @@ __webpack_require__.r(__webpack_exports__);
 
 })));
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 //# sourceMappingURL=bootstrap.js.map
 >>>>>>> test
+=======
+//# sourceMappingURL=bootstrap.js.map
+>>>>>>> frontend
 
 
 /***/ }),
@@ -37120,10 +37142,14 @@ Popper.Defaults = Defaults;
 
 /* harmony default export */ __webpack_exports__["default"] = (Popper);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 //# sourceMappingURL=popper.js.map
 >>>>>>> test
+=======
+//# sourceMappingURL=popper.js.map
+>>>>>>> frontend
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
 
@@ -37646,12 +37672,16 @@ render._withStripped = true
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> DB_redesign
+=======
+>>>>>>> frontend
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/redirect_button.vue?vue&type=template&id=820ac20c&":
 /*!******************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/redirect_button.vue?vue&type=template&id=820ac20c& ***!
   \******************************************************************************************************************************************************************************************************************/
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FooBar.vue?vue&type=template&id=73612918&":
@@ -37661,6 +37691,8 @@ render._withStripped = true
 >>>>>>> test
 =======
 >>>>>>> DB_redesign
+=======
+>>>>>>> frontend
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -37674,8 +37706,11 @@ var render = function() {
   var _c = _vm._self._c || _h
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> DB_redesign
+=======
+>>>>>>> frontend
   return _c("div", { attrs: { id: "app" } }, [
     _c(
       "button",
@@ -37691,11 +37726,14 @@ var render = function() {
     )
   ])
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   return _c("div")
 >>>>>>> test
 =======
 >>>>>>> DB_redesign
+=======
+>>>>>>> frontend
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -49877,6 +49915,7 @@ module.exports = function(module) {
 __webpack_require__.r(__webpack_exports__);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 =======
@@ -49890,6 +49929,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 >>>>>>> DB_redesign
+=======
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
+>>>>>>> frontend
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -49900,12 +49943,16 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> test
 =======
 
 >>>>>>> DB_redesign
+=======
+
+>>>>>>> frontend
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -49918,6 +49965,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('redirect_button-component', __webpack_require__(/*! ./components/redirect_button.vue */ "./resources/js/components/redirect_button.vue")["default"]);
 =======
@@ -49927,12 +49975,17 @@ vue__WEBPACK_IMPORTED_MODULE_1___default.a.component('example-component', __webp
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('redirect_button-component', __webpack_require__(/*! ./components/redirect_button.vue */ "./resources/js/components/redirect_button.vue")["default"]);
 >>>>>>> DB_redesign
+=======
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('redirect_button-component', __webpack_require__(/*! ./components/redirect_button.vue */ "./resources/js/components/redirect_button.vue")["default"]);
+>>>>>>> frontend
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
@@ -49945,6 +49998,9 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
 =======
 var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
 >>>>>>> DB_redesign
+=======
+var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
+>>>>>>> frontend
   el: '#app'
 });
 
@@ -50066,13 +50122,17 @@ __webpack_require__.r(__webpack_exports__);
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> DB_redesign
+=======
+>>>>>>> frontend
 /***/ "./resources/js/components/redirect_button.vue":
 /*!*****************************************************!*\
   !*** ./resources/js/components/redirect_button.vue ***!
   \*****************************************************/
 /*! exports provided: default */
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 /***/ "./resources/js/components/FooBar.vue":
@@ -50083,10 +50143,13 @@ __webpack_require__.r(__webpack_exports__);
 >>>>>>> test
 =======
 >>>>>>> DB_redesign
+=======
+>>>>>>> frontend
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 /* harmony import */ var _redirect_button_vue_vue_type_template_id_820ac20c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./redirect_button.vue?vue&type=template&id=820ac20c& */ "./resources/js/components/redirect_button.vue?vue&type=template&id=820ac20c&");
@@ -50103,6 +50166,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _redirect_button_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./redirect_button.vue?vue&type=script&lang=js& */ "./resources/js/components/redirect_button.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 >>>>>>> DB_redesign
+=======
+/* harmony import */ var _redirect_button_vue_vue_type_template_id_820ac20c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./redirect_button.vue?vue&type=template&id=820ac20c& */ "./resources/js/components/redirect_button.vue?vue&type=template&id=820ac20c&");
+/* harmony import */ var _redirect_button_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./redirect_button.vue?vue&type=script&lang=js& */ "./resources/js/components/redirect_button.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+>>>>>>> frontend
 
 
 
@@ -50111,6 +50179,7 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   _redirect_button_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
@@ -50126,6 +50195,11 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   _redirect_button_vue_vue_type_template_id_820ac20c___WEBPACK_IMPORTED_MODULE_0__["render"],
   _redirect_button_vue_vue_type_template_id_820ac20c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
 >>>>>>> DB_redesign
+=======
+  _redirect_button_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _redirect_button_vue_vue_type_template_id_820ac20c___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _redirect_button_vue_vue_type_template_id_820ac20c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+>>>>>>> frontend
   false,
   null,
   null,
@@ -50137,6 +50211,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 if (false) { var api; }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 component.options.__file = "resources/js/components/redirect_button.vue"
 =======
 component.options.__file = "resources/js/components/FooBar.vue"
@@ -50144,19 +50219,26 @@ component.options.__file = "resources/js/components/FooBar.vue"
 =======
 component.options.__file = "resources/js/components/redirect_button.vue"
 >>>>>>> DB_redesign
+=======
+component.options.__file = "resources/js/components/redirect_button.vue"
+>>>>>>> frontend
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> DB_redesign
+=======
+>>>>>>> frontend
 /***/ "./resources/js/components/redirect_button.vue?vue&type=script&lang=js&":
 /*!******************************************************************************!*\
   !*** ./resources/js/components/redirect_button.vue?vue&type=script&lang=js& ***!
   \******************************************************************************/
 /*! exports provided: default */
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 /***/ "./resources/js/components/FooBar.vue?vue&type=script&lang=js&":
@@ -50167,12 +50249,17 @@ component.options.__file = "resources/js/components/redirect_button.vue"
 >>>>>>> test
 =======
 >>>>>>> DB_redesign
+=======
+>>>>>>> frontend
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> frontend
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_redirect_button_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./redirect_button.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/redirect_button.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_redirect_button_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
@@ -50182,6 +50269,7 @@ __webpack_require__.r(__webpack_exports__);
 /*!************************************************************************************!*\
   !*** ./resources/js/components/redirect_button.vue?vue&type=template&id=820ac20c& ***!
   \************************************************************************************/
+<<<<<<< HEAD
 =======
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FooBar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./FooBar.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FooBar.vue?vue&type=script&lang=js&");
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FooBar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FooBar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__);
@@ -50206,11 +50294,14 @@ __webpack_require__.r(__webpack_exports__);
   !*** ./resources/js/components/redirect_button.vue?vue&type=template&id=820ac20c& ***!
   \************************************************************************************/
 >>>>>>> DB_redesign
+=======
+>>>>>>> frontend
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_redirect_button_vue_vue_type_template_id_820ac20c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./redirect_button.vue?vue&type=template&id=820ac20c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/redirect_button.vue?vue&type=template&id=820ac20c&");
@@ -50224,11 +50315,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FooBar_vue_vue_type_template_id_73612918___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 >>>>>>> test
 =======
+=======
+>>>>>>> frontend
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_redirect_button_vue_vue_type_template_id_820ac20c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./redirect_button.vue?vue&type=template&id=820ac20c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/redirect_button.vue?vue&type=template&id=820ac20c&");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_redirect_button_vue_vue_type_template_id_820ac20c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_redirect_button_vue_vue_type_template_id_820ac20c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+<<<<<<< HEAD
 >>>>>>> DB_redesign
+=======
+>>>>>>> frontend
 
 
 
