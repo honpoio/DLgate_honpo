@@ -66,3 +66,4 @@ class UserInformationController extends Controller
     
 
 }
+
