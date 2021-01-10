@@ -50,7 +50,9 @@ class DLgateViewTest extends TestCase
         $response = $this->withSession([
             'Twitter_user_sucsess' => true,
             'Twitter_tweet_sucsess'=>true,
+            'youtube_channel_id_sucsess'=> true,
             'dl_url'=>$dl_url,
+
             ])
         ->get('/DLgate/Form')
         ->assertSee('ダウンロードURL:');
