@@ -8,7 +8,7 @@
     <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">gateを新規作成</div>
+                    <div class="card-header">gateの更新</div>
                     <div class="card-body">
                         
                         <div class="form-group row">
@@ -58,6 +58,19 @@
                             @enderror
                             </div>
                         </div>
+
+                        <div class="form-group row">
+                            <label  class="col-md-4 col-form-label text-md-right">youtube_channel_id</label>
+                            <div class="col-md-6">
+                            <input  type="text" name="youtube_channel_id" value="{{$row["youtube_channel_id"]}}" class="form-control @error('Twitter_user') is-invalid @enderror" >
+                            @error('youtube_channel_id')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
+                            </div>
+                        </div>
+
                         <input type="hidden" name="URL_id" value={{$row["URL_id"]}}>
                             <button dusk="view-button" class="btn btn-primary">更新</button>
                         </input>

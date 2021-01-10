@@ -15,6 +15,12 @@ return [
 
     'name' => env('APP_NAME', 'simple_DLgate'),
 
+
+
+    'Google_OAUTH2_CLIENT_ID' => env('Google_OAUTH2_CLIENT_ID'),
+    'GoogleOAUTH2_CLIENT_SECRET' => env('GoogleOAUTH2_CLIENT_SECRET'),
+    
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment
@@ -179,7 +185,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
+    
     ],
 
     /*

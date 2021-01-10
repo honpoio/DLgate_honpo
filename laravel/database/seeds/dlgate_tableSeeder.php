@@ -20,6 +20,7 @@ class dlgate_tableSeeder extends Seeder
             'Twitter_user' =>'MutturiPrin',
             'gate_name' =>'test_gate',
             'URL_id' => uniqid(),
+            'youtube_channel_id' =>'UCH54kxctdxPdBVr_lbVU9uA',
         ],
         [
             'user_id' => '1',
@@ -28,6 +29,8 @@ class dlgate_tableSeeder extends Seeder
             'Twitter_tweet' =>'1331201779199950848',
             'gate_name' =>'test_gate',
             'URL_id' => uniqid(),
+            'youtube_channel_id' =>NULL,
+
         ],
 
         [
@@ -37,6 +40,19 @@ class dlgate_tableSeeder extends Seeder
             'Twitter_user' =>'MutturiPrin',
             'gate_name' =>'test_gate',
             'URL_id' => uniqid(),
+            'youtube_channel_id' =>NULL,
+        ],
+
+
+        [
+            'user_id' => '1',
+            'dl_url' =>'https://www.google.com',
+            'Twitter_tweet' =>NULL,
+            'Twitter_user' => NULL,
+            'gate_name' =>'test_gate',
+            'URL_id' => uniqid(),
+            'youtube_channel_id' =>'UCH54kxctdxPdBVr_lbVU9uA',
+
         ],
 
         [
@@ -46,6 +62,7 @@ class dlgate_tableSeeder extends Seeder
             'Twitter_tweet' =>'1334835300955131904',
             'gate_name' =>'test_gate',
             'URL_id' => uniqid(),
+            'youtube_channel_id' =>'UCH54kxctdxPdBVr_lbVU9uA',
         ],
         [
             'user_id' => '2',
@@ -54,6 +71,8 @@ class dlgate_tableSeeder extends Seeder
             'Twitter_tweet' =>'1334835300955131904',
             'gate_name' =>'test_gate',
             'URL_id' => uniqid(),
+            'youtube_channel_id' =>NULL,
+
         ],
 
         [
@@ -63,7 +82,8 @@ class dlgate_tableSeeder extends Seeder
             'Twitter_tweet' =>NULL,
             'gate_name' =>'test_gate',
             'URL_id' => uniqid(),
-        ]
+            'youtube_channel_id' =>NULL,
+            ]
         ]);
     }
 }

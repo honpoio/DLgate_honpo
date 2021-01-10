@@ -26,11 +26,11 @@
         <div class="form-group row">
             tweetid: {{$row->Twitter_tweet}}
         </div>
+        <div class="form-group row">
+            youtube_channel_id: {{$row->youtube_channel_id}}
+        </div>
     </div>
-        <form method="GET" action="/DLgate/view">
-            <input  type="hidden" name='id' value={{$row->URL_id}}>
-                <button dusk="view-button" class="button_font_variable_length">view</button>
-        </form>
+
         
         <redirect_button-component redirect_button="{{url('/')}}/DLgate/view?id={{ $row['URL_id'] }}"></redirect_button-component>
 

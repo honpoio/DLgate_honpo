@@ -43,6 +43,7 @@ class Twitter_Operation extends TwitterController
         $tweet = $request->session()->get('Twitter_tweet');
         self::$Twitter_Config->post('statuses/retweet',['id' => $tweet]);
         //RTする
+        
         self::$Twitter_Config->post('favorites/create', ['id' => $tweet]);
         //いいねする
         if(self::$Twitter_Config->getLastHttpCode() == 200) {
