@@ -22,7 +22,7 @@
                                     <button dusk="view-button" class="button_font_variable_length">view</button>
                                         <a>viewボタンを押下し再度試して下さい</a>
                                         <br>
-                                        <a>※再度試しても変わらない場合はお使いのアカウントでフォロー、RT、登録、を解除した上でお試し下さい</a>
+                                        <a>※再度試しても変わらない場合はお使いのアカウントのフォロー、RT、登録を解除した上でお試し下さい</a>
 
                             </form>
                         @endif 

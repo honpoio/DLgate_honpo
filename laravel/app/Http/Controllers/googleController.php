@@ -25,7 +25,7 @@ class googleController extends Controller
         $response = $channelServiceObject->addSubscriptions($properties, $token, $part='snippet', $params=[]);
         
         if($response === NULL){
-            return redirect('/DLgate/Form')->with('status', __('登録に失敗しました。チャンネル登録を外してもう一度試していただくか作成者にお問い合わせお願いします'));
+            return redirect('/DLgate/Form')->with('status_error', __('登録に失敗しました。'));
         }
 
         session()->put('youtube_channel_id_sucsess',true);
