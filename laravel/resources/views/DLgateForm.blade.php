@@ -42,8 +42,20 @@
                                     </button>
                             @endif
                             </form>
+                            <br>
+
+                            @if((Session::has('youtube_channel_id')))
+                                <a href="{{Session::get('youtube_redirect')}}">
+                                    <button type="submit" name="RT" class="button_font_variable_length_withdrawal">
+                                    youtubeを登録
+                                    </button>
+                                </a>
+                            @endif
+                            </form>
                             @if(Session::has('Twitter_user_sucsess') and
-                                Session::has('Twitter_tweet_sucsess'))
+                                Session::has('Twitter_tweet_sucsess')and
+                                Session::has('youtube_channel_id_sucsess')
+                                )
                                     <br>
                                     <a> ダウンロードURL:{{Session('DLgate_session')['dl_url']}}</a>
                                     <redirect_button-component redirect_button="{{Session('DLgate_session')['dl_url']}}"></redirect_button-component>

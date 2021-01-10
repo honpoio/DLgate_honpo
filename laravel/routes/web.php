@@ -17,8 +17,7 @@ Route::get('/', function(){
 Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
-Route::get('/test','googleController@redirect');
-Route::get('/redirect','googleController@subscription');
+Route::get('/youtube/subscription/redirect','googleController@subscription');
 
 route::get('/privacy',function(){
         return view('privacy');

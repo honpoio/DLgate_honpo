@@ -5,22 +5,28 @@ namespace App\Http\Controllers\DLgate;
 use App\Http\Controllers\Controller;
 
 use App\Http\Controllers\Controller\TwitterController;
-
 use Illuminate\Http\Request;
 use App\Dlgate_Table;
+use App\Http\Controllers\googleController;
+use trunks07\YoutubeLaravelApi\AuthenticateService;
+
 
 class DLGateDisplayController extends Controller
 {
     public function DLGateForm(Request  $request){
-
+        // dd($request->id);
+        
         session()->forget(
             'DLgate_session',
             'Twitter_user',
             'Twitter_user_sucsess',
             'Twitter_tweet',
-            'Twitter_tweet_sucsess');
+            'Twitter_tweet_sucsess',
+            'youtube_channel_id',
+            'youtube_channel_id_sucsess',
+            'youtube_redirect');
 
-
+            
         $dlgate_table = Dlgate_Table::where('URL_id', $request["id"])->get();
 
             foreach($dlgate_table as $row){
@@ -47,6 +53,18 @@ class DLGateDisplayController extends Controller
                 }else{
                     session()->put('Twitter_tweet',$row->Twitter_tweet);
                 }
+
+                if(empty($row->youtube_channel_id)){
+                    //もしもyoutube_channel_idを登録していない場合
+                    session()->forget('youtube_channel_id');
+                    session()->put('youtube_channel_id_sucsess',true);
+                }else{
+                    session()->put('youtube_channel_id',$row->youtube_channel_id);
+                    $authObject  = new AuthenticateService;
+                    session()->put('youtube_redirect',$authObject->getLoginUrl('email','identifier'));
+                }
+                
+
             }
         if (empty($dlgate_table["0"])){
             \App::abort(404);

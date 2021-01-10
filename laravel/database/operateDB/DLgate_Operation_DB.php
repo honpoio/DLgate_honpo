@@ -28,6 +28,7 @@ class DLgate_Operation_DB
             'Twitter_tweet' => trim($request->tweet_id),
             'gate_name'=> trim($request->gate_name),
             'dl_url'=> trim($request->dl_url),
+            'youtube_channel_id'=> trim($request->youtube_channel_id),
             ]);
         return redirect('/DLgate')->with('status', __('更新に成功しました'));
     }
@@ -47,7 +48,9 @@ class DLgate_Operation_DB
             'Twitter_tweet' => trim($request->tweet_id),
             'gate_name'=> trim($request->gate_name),
             'dl_url'=> trim($request->dl_url),
+            'youtube_channel_id'=> trim($request->youtube_channel_id),
             ]);
+            
         return redirect('/DLgate')->with('status', __('新規作成に成功しました'));
     }
 }
