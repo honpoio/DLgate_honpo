@@ -1,8 +1,0 @@
-# pack-refs with: peeled fully-peeled sorted 
-36222dc054be048b0978511939c2e28eddb66adb refs/heads/DB_redesign
-c14668cb789f9ed8a0087a8082691f6315639f98 refs/heads/frontend
-4b35213ec657f239adaadb8a1df7fa00907a9146 refs/heads/master
-d8dbbd81678a952779d046c9a6a26f63605d7b52 refs/heads/prepare_deploy
-708169a012ce7d0aa5d4089e878f148e9235e804 refs/heads/stagingMaster
-dcbfcae14e7b6b21f7c16526eb6fa6f5ac50c0a5 refs/heads/test
-c14668cb789f9ed8a0087a8082691f6315639f98 refs/pull/1/head
