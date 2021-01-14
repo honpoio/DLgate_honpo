@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Dlgate_Table extends Model
 {
-    protected $table ='dlgate_table';
+    protected $table ='dlgates';
 
     public $timestamps = false;
 

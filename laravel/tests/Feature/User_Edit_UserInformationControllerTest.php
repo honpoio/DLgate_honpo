@@ -103,7 +103,7 @@ class User_Edit_UserInformationControllerTest extends TestCase
     $this->assertDatabaseMissing('users', [
         "id" => $id,
     ]);
-    $this->assertDatabaseMissing('dlgate_table', [
+    $this->assertDatabaseMissing('dlgates', [
         "user_id" => $id,
     ]);
     }

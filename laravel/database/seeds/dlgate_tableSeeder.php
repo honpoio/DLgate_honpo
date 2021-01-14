@@ -12,7 +12,7 @@ class dlgate_tableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('dlgate_table')->insert([
+        DB::table('dlgates')->insert([
         [
             'Twitter_tweet' => '1331201779199950848',
             'user_id' =>'1',

@@ -50,7 +50,7 @@ class Gate_CRUDControllerTest extends TestCase
 
         $response->assertStatus(302);
         $this->assertTrue(Auth::check());
-        $this->assertDatabaseHas('dlgate_table', [
+        $this->assertDatabaseHas('dlgates', [
             "Twitter_user"=>'Sankei_news',
             "Twitter_tweet"=>'1337272952140623874',
             "gate_name"=>'sankei',
@@ -72,7 +72,7 @@ class Gate_CRUDControllerTest extends TestCase
 
         $this->assertTrue(Auth::check());
         $response->assertStatus(302);
-        $this->assertDatabaseHas('dlgate_table', [
+        $this->assertDatabaseHas('dlgates', [
             "Twitter_user"=>'Sankei_news',
             "Twitter_tweet"=>'1337272952140623874',
             "gate_name"=>'sankei',
@@ -95,7 +95,7 @@ class Gate_CRUDControllerTest extends TestCase
 
         $this->assertTrue(Auth::check());
         $response->assertStatus(302);
-        $this->assertDatabaseMissing('dlgate_table',[
+        $this->assertDatabaseMissing('dlgates',[
             "URL_id" => $URL_id,
             
         ]);
