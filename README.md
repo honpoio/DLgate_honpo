@@ -42,7 +42,7 @@
 ![DLgate_ER](readme_image/DLgate_aws.png)
 
 ## ER-Diagram
-  ![DLgate_ER](readme_image/DLgate_ER.png)
+![DLgate_ER](readme_image/DLgate_ER.png)
   
 ### Table description
 | table | description |
