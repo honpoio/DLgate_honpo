@@ -37,8 +37,12 @@
 * UUIDを用いたgate別の動的パス生成
   * Sessionを駆使し twitterのフォロー、いいね、youtubeの登録に成功した場合にダウンロードURLを提供
   
-## ER-Diagram
   
+## AWS
+![DLgate_ER](readme_image/DLgate_aws.png)
+
+## ER-Diagram
+  ![DLgate_ER](readme_image/DLgate_ER.png)
   
 ### Table description
 | table | description |
@@ -46,7 +50,6 @@
 | users  | 登録ユーザー情報  |
 |  dlgates | ユーザーが作成したゲート情報  |
 
-## Usage
 
 
 ## To-do
