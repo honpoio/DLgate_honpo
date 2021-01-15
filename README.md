@@ -71,7 +71,7 @@ https://dlgate-jp.cyou
   * そのため原因究明が必要※(予測としてsessionの生成に時間がかかっている？　クエリ時にUUIDで選択、射影しているため？)
 * dlgate-jp.cyou/DLgate/view?id=(uuid)でスーパーリロード機能を実装
 * レスポンシブデザインへの対応
-* +privateなCMS機能実装
+* +privateな記事投稿機能実装
 * +youtubeチャンネルの登録、twitterアカウントへいいねを引き換えに記事閲覧権限を付与する機能
 
 
