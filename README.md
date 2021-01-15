@@ -50,7 +50,18 @@
 | users  | 登録ユーザー情報  |
 |  dlgates | ユーザーが作成したゲート情報  |
 
+## Usage
+Gateの新規作成方法は当アプリに記載されているのでそちらをご確認ください
+https://dlgate-jp.cyou
 
+1.ログインしgate作成後、URLをコピーをクリックするとクリップボードにコピーされます
+![DLgate_select_view](readme_image/DLgate_select_view.png)
+2.あなたのデータを必要としているユーザーへURLを送付します。
+<br>
+3.送付されたURLにユーザーがアクセスするとgateで登録した各種snsリダイレクト用のボタンが生成されます
+![DLgate_view_sns](readme_image/gate_view_sns.png)
+4.登録した各種snsにリソースへのアクセスが完了したら、登録したダウンロードリンクが生成されダウンロードが可能となります
+![DLgate_view_sns](readme_image/DLgate_view_subscription.png)
 
 ## To-do
 * テストのカバレッジ (網羅率)を測定／分析
@@ -62,5 +73,6 @@
 * レスポンシブデザインへの対応
 * +privateなCMS機能実装
 * +youtubeチャンネルの登録、twitterアカウントへいいねを引き換えに記事閲覧権限を付与する機能
+
 
 
