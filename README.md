@@ -4,7 +4,7 @@
 
 ## Introduction - the project's aim
 
-各種SNSサービスのフォロー、RT、いいねを引き換えにデータを無料で提供できるサービスです
+各種SNSサービスのフォロー、RT、いいねを引き換えにダウンロードリンクを無料で提供できるサービスです
 
 
 ## Technologies
