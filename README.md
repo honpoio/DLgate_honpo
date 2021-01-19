@@ -64,6 +64,9 @@ https://dlgate-jp.cyou
 ![DLgate_view_sns](readme_image/DLgate_view_subscription.png)
 
 ## To-do
+* HTMLにてプレースホルダー導入
+* PHP-CS-Fixerの導入
+* キャメルケースとスネークケースが混じっていて統一されてないので修正
 * テストのカバレッジ (網羅率)を測定／分析
 * 単体、HTTPリクエスト単位、ブラウザテストの追加実装
 * ci/cdを用いた自動化テスト＆デプロイ
