@@ -6,7 +6,6 @@ use Tests\TestCase;
 // use PHPUnit\Framework\TestCase;
 use App\Dlgate_Table;
 use App\User;
-use App\GateUser;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class dlgate_tableSeederTest extends TestCase
@@ -57,14 +56,14 @@ class dlgate_tableSeederTest extends TestCase
         }
         $this->Array_Unique_Delete();
 
-        $this->assertEquals(6, count($Dlgate_Table));
+        $this->assertEquals(7, count($Dlgate_Table));
         // seederに挿入したデータの総数に間違えがないかどうか検証
 
-        $Usertest_add_Dlgate_Table = Dlgate_Table::where('name', 'test')->get();
-        $this->assertEquals(3, count($Usertest_add_Dlgate_Table));
+        $Usertest_add_Dlgate_Table = Dlgate_Table::where('user_id', '1')->get();
+        $this->assertEquals(4, count($Usertest_add_Dlgate_Table));
         //seederで挿入したtestユーザーのgate総数を検証
 
-        $Usertest2_add_Dlgate_Table = Dlgate_Table::where('name', 'test2')->get();
+        $Usertest2_add_Dlgate_Table = Dlgate_Table::where('user_id', '2')->get();
         $this->assertEquals(3, count($Usertest2_add_Dlgate_Table));
         //seederで挿入したtest2ユーザーのgate総数を検証
         return self::$Dlgate_Table_Name;
@@ -86,21 +85,6 @@ class dlgate_tableSeederTest extends TestCase
             $this->assertEquals('2020-12-09 14:40:35',$_User_Email_Add["email_verified_at"]);
         }
         return self::$User_Table_Name;
-
-
     }
-    /**
-     * @depends testDLgate_TableSeeder
-     * @depends testUser_TableSeeder
-     */
-    public function testGateUserSeeder(array $Dlgate_Table_Name, array $User_Table_Name){
-    
-        $_GateUser =[]; 
-        $GateUser = GateUser::all();
-        foreach($GateUser as $row){
-            array_push($_GateUser,$row["user"]);
-        }
-        $this->assertEquals($Dlgate_Table_Name,$_GateUser);
-        $this->assertEquals($User_Table_Name,$_GateUser);
-    }
+
 }
