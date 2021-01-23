@@ -18,7 +18,7 @@ class googleController extends Controller
 
         $properties =  array('snippet.resourceId.kind' => 'youtube#channel',
         'snippet.resourceId.channelId' => session()->get('youtube_channel_id'));
-        // 'snippet.resourceId.channelId' => 'hoge');
+        //スコープを設定
         
 
         $channelServiceObject  = new ChannelService;
