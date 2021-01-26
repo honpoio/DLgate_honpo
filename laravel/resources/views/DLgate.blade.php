@@ -34,7 +34,7 @@
         
         <redirect_button-component redirect_button="{{url('/')}}/DLgate/view?id={{ $row['URL_id'] }}"></redirect_button-component>
 
-    <!-- bodyタグ内の下部に以下を入力する -->
+    
     <form method="GET" action="/DLgate/update">
         <input type="hidden" name="URL_id" value={{$row["URL_id"]}}>
         <button dusk="view-button" class="button_font_variable_length">update</button>

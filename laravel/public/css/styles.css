@@ -3,7 +3,7 @@
   font-size: 1vw;
   width:200px;
   font-weight: bold;
-
+  
   display: inline-block;
   padding: 0.3em 1em;
   text-decoration: none;
@@ -11,16 +11,19 @@
   border: solid 2px #67c5ff;
   border-radius: 3px;
   transition: .4s;
-
   margin: 10px;
-
+  text-align:center;
+  font-size: 18px;
 }
+
+
 
 
 .button_font_variable_length {
   /* buttonをレスポンシブデザインに対応*/
   max-width: 800px; /* 最大幅 */
   min-width: 220px; /* 最小幅 */
+  min-height: 27px;  
 }
 
 .button_font_variable_length_withdrawal {
@@ -35,14 +38,15 @@
   border: solid 2px #67c5ff;
   border-radius: 3px;
   transition: .4s;
-
   margin: 10px;
+  font-size: 18px;
 }
 
 .button_font_variable_length_withdrawal {
   /* buttonをレスポンシブデザインに対応*/
   max-width: 800px; /* 最大幅 */
   min-width: 220px; /* 最小幅 */
+  min-height: 27px;  
 }
 
 
@@ -50,7 +54,6 @@
 
   .image-view { 
     width : 20vw; 
-    /* height: vw ; */
     margin : 20px ;
     padding : 20px ;
     height:65%; 
