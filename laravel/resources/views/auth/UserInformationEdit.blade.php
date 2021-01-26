@@ -9,6 +9,7 @@
 @if (session('status'))
     {{ session('status') }}
 @endif
+
 <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
@@ -28,10 +29,16 @@
                                         </span>
                                     @enderror
                                 </div>
-                                <input type="hidden" name="UserId" value={{$auth["id"]}}>
-                                <button dusk="view-button" class="btn btn-primary">更新</button>
-                            </div>
+                                <br>
 
+                            </div>
+                            <div class="form-group row mb-0">
+                                <div class="col-md-8 offset-md-4">
+                                    <input type="hidden" name="UserId" value={{$auth["id"]}}>
+                                        <button dusk="view-button" class="btn btn-primary d-flex">更新</button>
+                                </div>
+                            </div>
+                            <br>
                         </form>
 
                         <form method="POST" action="/user/edit/password">
@@ -70,11 +77,15 @@
                                         </span>
                                     @enderror
                                 </div>
-                                <input type="hidden" name="UserId" value={{$auth["id"]}}>
-                                <button dusk="view-button" class="btn btn-primary">更新</button>
-
-
+                                
                             </div>
+                                <div class="form-group row mb-0">
+                                    <div class="col-md-8 offset-md-4">
+                                    <input type="hidden" name="UserId" value={{$auth["id"]}}>
+                                        <button dusk="view-button" class="btn btn-primary d-flex">更新</button>
+                                    </div>
+                                </div>
+                            <br>
                         </form>
                         <form method="GET" action="/user/edit/delete">
                             <br>

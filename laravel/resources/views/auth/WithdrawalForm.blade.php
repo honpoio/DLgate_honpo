@@ -20,9 +20,10 @@
                                         </span>
                                     @enderror
                                 </div>
-                                <input type="hidden" name="UserId" value={{$auth["id"]}}>
-                                <button class="btn btn-primary">退会</button>
                             </div>
+                            <br>
+                                <input type="hidden" name="UserId" value={{$auth["id"]}}>
+                                <button class="button_font_variable_length_withdrawal">退会</button>
                     </form>
 
                 </div>
