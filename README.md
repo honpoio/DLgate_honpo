@@ -64,7 +64,6 @@ https://dlgate-jp.cyou
 ![DLgate_view_sns](readme_image/DLgate_view_subscription.png)
 
 ## To-do
-* レスポンシブデザインへの対応
 * PHP-CS-Fixerの導入
 * キャメルケースとスネークケースが混じっていて統一されてないので修正
 * テストのカバレッジ (網羅率)を測定／分析
@@ -73,7 +72,6 @@ https://dlgate-jp.cyou
 * dlgate-jp.cyou/DLgate/view?id=(uuid)ページにてレスポンスを返す際に１秒程度要する
   * そのため原因究明が必要※(予測としてsessionの生成に時間がかかっている？　クエリ時にUUIDで選択、射影しているため？)
 * dlgate-jp.cyou/DLgate/view?id=(uuid)でスーパーリロード機能を実装
-* レスポンシブデザインへの対応
 * +privateな記事投稿機能実装
 * +youtubeチャンネルの登録、twitterアカウントへいいねを引き換えに記事閲覧権限を付与する機能
 
