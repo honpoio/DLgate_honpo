@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Dlgate_Table extends Model
+class Dlgate extends Model
 {
     protected $table ='dlgates';
 

@@ -2,26 +2,26 @@
 
 namespace Database\operateDB;
 use Illuminate\Http\Request;
-use App\Dlgate_Table;
+use App\Dlgate;
 
 
-class DLgate_Operation_DB
+class DLgateOperationDB
 {
 
-    public function select($id){
+    public function Select($id){
         //userの全てのレコードを表示
-        $dlgate_table = Dlgate_Table::where('user_id', $id)->get();
+        $dlgate_table = Dlgate::where('user_id', $id)->get();
         return view('DLgate',[ 'dlgate_table' => $dlgate_table]);
     }
-    public function select_update($request,$id){
+    public function SelectUpdate($request,$id){
         //指定された1レコードを表示
-        $dlgate_table = Dlgate_Table::where('URL_id',$request->URL_id)
+        $dlgate_table = Dlgate::where('URL_id',$request->URL_id)
         ->where('user_id', $id)->get();
         return view('DLgate_update',[ 'dlgate_table' => $dlgate_table]);
     }
-    public function update($request,$id){
+    public function Update($request,$id){
         //レコードを更新
-        Dlgate_Table::where('URL_id',$request->URL_id)
+        Dlgate::where('URL_id',$request->URL_id)
         ->where('user_id', $id)
         ->update([
             'Twitter_user' => trim(str_replace('https://twitter.com/',NULL,$request->Twitter_user)),
@@ -32,16 +32,16 @@ class DLgate_Operation_DB
             ]);
         return redirect('/DLgate')->with('status', __('更新に成功しました'));
     }
-    public function delete($request,$id){
+    public function Delete($request,$id){
         //レコードを削除
-        Dlgate_Table::where('URL_id',$request->URL_id)
+        Dlgate::where('URL_id',$request->URL_id)
         ->where('user_id', $id)
         ->delete();
         return redirect('/DLgate')->with('status', __('削除に成功しました'));
     }
-    public function create($request,$id){
+    public function Create($request,$id){
         //レコードを新規作成
-        Dlgate_Table::create([
+        Dlgate::create([
             'user_id' => $id,
             'URL_id' => uniqid(),
             'Twitter_user' => trim(str_replace('https://twitter.com/',NULL,$request->Twitter_user)),

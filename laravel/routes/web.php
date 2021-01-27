@@ -30,15 +30,15 @@ Auth::routes(['verify'   => true, // メール確認機能
 Route::middleware('verified')->group(function () {
         Route::group(['middleware' => ['auth','verified']], function() {
                 //ログインの有無によってアクセス制限
-                Route::get('/DLgate','DLgate\DLgateCRUDController@select');
-                route::get('/DLgate/update','DLgate\DLgateCRUDController@select_update');
+                Route::get('/DLgate','DLgate\DLgateCRUDController@Select');
+                route::get('/DLgate/update','DLgate\DLgateCRUDController@SelectUpdate');
                 Route::get('/DLgate/create',function(){
                         return view('DLgate_create');
                 });
 
-                route::post('/DLgate/insert','DLgate\DLgateCRUDController@create');
-                route::put('/DLgate/update/add','DLgate\DLgateCRUDController@update');
-                route::delete('/DLgate/delete','DLgate\DLgateCRUDController@delete');
+                route::post('/DLgate/insert','DLgate\DLgateCRUDController@Create');
+                route::put('/DLgate/update/add','DLgate\DLgateCRUDController@Update');
+                route::delete('/DLgate/delete','DLgate\DLgateCRUDController@Delete');
 
 
                 Route::get('/user', 'Auth\UserInformationController@UserInformation')->name('user');

@@ -46,7 +46,7 @@
         "classmap": [
             "database/seeds",
             "database/factories",
-            "database/operateDB/DLgate_Operation_DB.php",
+            "database/operateDB/DLgateOperationDB.php",
             "database/operateDB/User_Operation_DB.php",
             "app/Http/Controllers/Auth/ResetPasswordController.php",
             "app/Http/Controllers/DLgate/DLgateCRUDController.php",

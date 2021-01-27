@@ -5,7 +5,7 @@ namespace Tests\Feature;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
-use App\Dlgate_Table;
+use App\Dlgate;
 use Illuminate\Http\Request as Request;
 
 class DLgateViewTest extends TestCase
@@ -27,7 +27,7 @@ class DLgateViewTest extends TestCase
 
     public function testGateViewForm(){
         //dlgate_tableに登録したデータが表示されているかどうか検証するメソッド
-        $dlgate_table = Dlgate_Table::select(['URL_id'])->where('id',[rand (1 ,6)])->get();
+        $dlgate_table = Dlgate::select(['URL_id'])->where('id',[rand (1 ,6)])->get();
         foreach($dlgate_table as $row){
             $URL_id = $row->URL_id;
         }
@@ -42,7 +42,7 @@ class DLgateViewTest extends TestCase
 
     public function testGate_Url_View(){
         // Gateの手順twitterフォロー等の手順が済んだらURLが出現するか検証するメソッド
-        $dlgate_table = Dlgate_Table::select(['URL_id'])->where('id',[rand (1 ,6)])->get();
+        $dlgate_table = Dlgate::select(['URL_id'])->where('id',[rand (1 ,6)])->get();
         foreach($dlgate_table as $row){
             $dl_url = $row->dl_url;
         }  

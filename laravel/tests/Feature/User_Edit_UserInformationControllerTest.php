@@ -6,7 +6,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 use App\User;
-use App\Dlgate_Table;
+use App\Dlgate;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 

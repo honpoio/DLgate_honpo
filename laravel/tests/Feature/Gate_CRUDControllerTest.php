@@ -6,7 +6,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 use App\User;
-use App\Dlgate_Table;
+use App\Dlgate;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 class Gate_CRUDControllerTest extends TestCase
@@ -30,7 +30,7 @@ class Gate_CRUDControllerTest extends TestCase
     public function testGateUpdate(){
         //Gateテーブルのupdateが可能かどうか検証するメソッド
 
-        $dlgate_table = Dlgate_Table::select(['URL_id'])->where('id',[1])->get();
+        $dlgate_table = Dlgate::select(['URL_id'])->where('id',[1])->get();
         // updateするGateを用意
         foreach($dlgate_table as $row){
             $URL_id = $row->URL_id;
@@ -81,7 +81,7 @@ class Gate_CRUDControllerTest extends TestCase
     }
     public function testGateDelete(){
         //Gateテーブルのdeleteが可能かどうか検証するメソッド
-        $dlgate_table = Dlgate_Table::select(['URL_id'])->where('id',[2])->get();
+        $dlgate_table = Dlgate::select(['URL_id'])->where('id',[2])->get();
         // deleteするGateのURL_idを用意
         foreach($dlgate_table as $row){
             $URL_id = $row->URL_id;

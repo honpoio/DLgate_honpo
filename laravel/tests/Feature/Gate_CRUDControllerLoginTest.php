@@ -6,7 +6,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 use App\User;
-use App\Dlgate_Table;
+use App\Dlgate;
 use Illuminate\Support\Facades\Auth;
 
 class Gate_CRUDControllerLoginTest extends TestCase
@@ -49,7 +49,7 @@ class Gate_CRUDControllerLoginTest extends TestCase
     public function testGateLoginUpdateForm(){
         // /Dlgate/update?URL_id=(URL_id)のログインの有無を検証
 
-        $dlgate_table = Dlgate_Table::select(['URL_id'])->where('id',[1])->get();
+        $dlgate_table = Dlgate::select(['URL_id'])->where('id',[1])->get();
         foreach($dlgate_table as $row){
             $URL_id = $row->URL_id;
         //動的パスのupdate?URL_id={}を取得
@@ -79,7 +79,7 @@ class Gate_CRUDControllerLoginTest extends TestCase
     }
     public function testGateLoginviewForm(){
         // ルーティングDLgate/viewはログインしていない状態でのアクセスが可能か検証
-        $dlgate_table = Dlgate_Table::select(['URL_id'])->where('id',[1])->get();
+        $dlgate_table = Dlgate::select(['URL_id'])->where('id',[1])->get();
         foreach($dlgate_table as $row){
             $URL_id = $row->URL_id;
         //動的パスのDLgate/view={}を取得

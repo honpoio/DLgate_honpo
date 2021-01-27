@@ -4,7 +4,7 @@ namespace Tests\Unit;
 
 use Tests\TestCase;
 // use PHPUnit\Framework\TestCase;
-use App\Dlgate_Table;
+use App\Dlgate;
 use App\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
@@ -50,7 +50,7 @@ class dlgate_tableSeederTest extends TestCase
     public function testDLgate_TableSeeder(){
         // DLgate_tableに追加したseederのデータを検証するメソッド
 
-        $Dlgate_Table = Dlgate_Table::all();
+        $Dlgate_Table = Dlgate::all();
         foreach($Dlgate_Table as $row){
             $this->DLgate_Extraction_Name($row["name"]);
         }
@@ -59,11 +59,11 @@ class dlgate_tableSeederTest extends TestCase
         $this->assertEquals(7, count($Dlgate_Table));
         // seederに挿入したデータの総数に間違えがないかどうか検証
 
-        $Usertest_add_Dlgate_Table = Dlgate_Table::where('user_id', '1')->get();
+        $Usertest_add_Dlgate_Table = Dlgate::where('user_id', '1')->get();
         $this->assertEquals(4, count($Usertest_add_Dlgate_Table));
         //seederで挿入したtestユーザーのgate総数を検証
 
-        $Usertest2_add_Dlgate_Table = Dlgate_Table::where('user_id', '2')->get();
+        $Usertest2_add_Dlgate_Table = Dlgate::where('user_id', '2')->get();
         $this->assertEquals(3, count($Usertest2_add_Dlgate_Table));
         //seederで挿入したtest2ユーザーのgate総数を検証
         return self::$Dlgate_Table_Name;

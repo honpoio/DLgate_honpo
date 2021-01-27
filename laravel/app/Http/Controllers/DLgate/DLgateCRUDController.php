@@ -7,42 +7,42 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests\DLgateEditRequest;
 use Illuminate\Support\Facades\Auth;
-// use App\Dlgate_Table;
+use Database\operateDB\DLgateOperationDB;
 
 class DLgateCRUDController extends Controller
 {
-    private function checkLogin(){
+    private function CheckLogin(){
         //ログインの有無をチェック
         if (!Auth::check()) {
             return \App::abort(404);
         }        
     }
-    public function select(){
+    public function Select(){
         $id= Auth::id();
-        $this->checkLogin();
-        return app('Gate_DB_Operation')->select($id);
+        $this->CheckLogin();
+        return app()->make(DLgateOperationDB::class)->Select($id);
     }
 
-    public function select_update(Request $request){
+    public function SelectUpdate(Request $request){
         $id = Auth::id();
-        $this->checkLogin();
-        return app('Gate_DB_Operation')->select_update($request,$id);
+        $this->CheckLogin();
+        return app()->make(DLgateOperationDB::class)->SelectUpdate($request,$id);
     }
-    public function update(DLgateEditRequest $request){
+    public function Update(DLgateEditRequest $request){
         $id = Auth::id();
-        $this->checkLogin();
-        return app('Gate_DB_Operation')->update($request,$id);
+        $this->CheckLogin();
+        return app()->make(DLgateOperationDB::class)->Update($request,$id);
     }
-    public function delete(Request $request){
+    public function Delete(Request $request){
         $id = Auth::id();
         $this->checkLogin();
-        return app('Gate_DB_Operation')->delete($request,$id);
+        return app()->make(DLgateOperationDB::class)->Delete($request,$id);
         
     }
-    public function create(DLgateEditRequest $request){
+    public function Create(DLgateEditRequest $request){
         $id = Auth::id();
         $this->checkLogin();
-        return app('Gate_DB_Operation')->create($request,$id);
+        return app()->make(DLgateOperationDB::class)->Create($request,$id);
     }
     
 }

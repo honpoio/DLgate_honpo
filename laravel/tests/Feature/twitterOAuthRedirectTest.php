@@ -15,7 +15,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
-use App\Dlgate_Table;
+use App\Dlgate;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 
@@ -34,7 +34,7 @@ class twitterOAuthRedirectTest extends TestCase
     public function test_Twitter_Follow_OAuth()
     {
         // ルーティングDLgate/viewはtwitterのトークン要求画面(ログイン画面)に遷移するか確認
-        $dlgate_table = Dlgate_Table::select(['URL_id'])->where('id',[1])->get();
+        $dlgate_table = Dlgate::select(['URL_id'])->where('id',[1])->get();
         foreach($dlgate_table as $row){
             $URL_id = $row->URL_id;
         //動的パスのDLgate/view={}を取得
@@ -61,7 +61,7 @@ class twitterOAuthRedirectTest extends TestCase
 
     public function test_Twitter_RT_OAuth(){
 
-        $dlgate_table = Dlgate_Table::select(['URL_id'])->where('id',[1])->get();
+        $dlgate_table = Dlgate::select(['URL_id'])->where('id',[1])->get();
         foreach($dlgate_table as $row){
             $URL_id = $row->URL_id;
         //動的パスのDLgate/view={}を取得

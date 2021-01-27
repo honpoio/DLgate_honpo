@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 
 use App\Http\Controllers\Controller\TwitterController;
 use Illuminate\Http\Request;
-use App\Dlgate_Table;
+use App\Dlgate;
 use App\Http\Controllers\googleController;
 use trunks07\YoutubeLaravelApi\AuthenticateService;
 
@@ -27,9 +27,9 @@ class DLGateDisplayController extends Controller
             'youtube_redirect');
 
             
-        $dlgate_table = Dlgate_Table::where('URL_id', $request["id"])->get();
+        $Dlgate = Dlgate::where('URL_id', $request["id"])->get();
 
-            foreach($dlgate_table as $row){
+            foreach($Dlgate as $row){
 
                 session()->put('DLgate_session',[
                     'gate_name' => $row->gate_name,
@@ -66,7 +66,7 @@ class DLGateDisplayController extends Controller
                 
 
             }
-        if (empty($dlgate_table["0"])){
+        if (empty($Dlgate["0"])){
             \App::abort(404);
         }
         return view('DLgateForm');
