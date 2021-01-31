@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use trunks07\YoutubeLaravelApi\AuthenticateService;
 use trunks07\YoutubeLaravelApi\ChannelService;
-class googleController extends Controller
+class GoogleController extends Controller
 {   
 
 
-    public function subscription(Request $request){
+    public function Subscription(Request $request){
         $code = $request->input('code');
         $authObject  = new AuthenticateService;
         $authResponse = $authObject->authChannelWithCode($code);

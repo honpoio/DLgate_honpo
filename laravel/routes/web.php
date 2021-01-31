@@ -17,7 +17,6 @@ Route::get('/', function(){
 Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
-Route::get('/youtube/subscription/redirect','googleController@subscription');
 
 route::get('/privacy',function(){
         return view('privacy');
@@ -63,3 +62,4 @@ Route::middleware('verified')->group(function () {
                 Route::get('/callback/RT', 'TwitterController@TweetRT')
                         ->where('provider','twitter');
 
+                Route::get('/youtube/subscription/redirect','GoogleController@Subscription');
