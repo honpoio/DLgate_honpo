@@ -14,7 +14,7 @@
                         <div class="form-group row">
                                 <label  class="col-md-4 col-form-label text-md-right" autofocus>ゲート名</label>
                                 <div class="col-md-6">
-                                    <input  type="text" name="gate_name" value="{{$row["gate_name"]}}"　class="form-control @error('gate_name') is-invalid @enderror" placeholder="ゲート名を入力して下さい">
+                                    <input  type="text" name="gate_name" value="{{ old('gate_name', $row["gate_name"] )}}"　class="form-control @error('gate_name') is-invalid @enderror" placeholder="ゲート名を入力して下さい">
                                     @error('gate_name')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -42,7 +42,7 @@
                         <div class="form-group row">
                             <label  class="col-md-4 col-form-label text-md-right"> TwitterUserId</label>
                             <div class="col-md-6">
-                            <input  type="text" name="Twitter_user" value="{{$row["Twitter_user"]}}" class="form-control @error('Twitter_user') is-invalid @enderror" placeholder="twitterのユーザー名を入力して下さい">
+                            <input  type="text" name="Twitter_user" value="{{ old('Twitter_user',$row["Twitter_user"] )}}" class="form-control @error('Twitter_user') is-invalid @enderror" placeholder="twitterのユーザー名を入力して下さい">
                             @error('Twitter_user')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -56,7 +56,7 @@
                         <div class="form-group row">
                             <label  class="col-md-4 col-form-label text-md-right">Tweet Id</label>
                             <div class="col-md-6">
-                            <input  type="text" name="tweet_id" value="{{$row["Twitter_tweet"]}}" class="form-control @error('tweet_id') is-invalid @enderror" placeholder="tweetIDを入力して下さい">
+                            <input  type="text" name="tweet_id" value="{{ old('tweet_id',$row["Twitter_tweet"] )}}" class="form-control @error('tweet_id') is-invalid @enderror" placeholder="tweetIDを入力して下さい">
                             @error('tweet_id')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -70,7 +70,7 @@
                         <div class="form-group row">
                             <label  class="col-md-4 col-form-label text-md-right">youtube_channel_id</label>
                             <div class="col-md-6">
-                            <input  type="text" name="youtube_channel_id" value="{{$row["youtube_channel_id"]}}" class="form-control @error('Twitter_user') is-invalid @enderror" placeholder="YoutubeChannelIdを入力して下さい">
+                            <input  type="text" name="youtube_channel_id" value="{{old ('youtube_channel_id',$row["youtube_channel_id"] )}}" class="form-control @error('Twitter_user') is-invalid @enderror" placeholder="YoutubeChannelIdを入力して下さい">
                             @error('youtube_channel_id')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
