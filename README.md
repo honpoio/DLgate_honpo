@@ -13,12 +13,13 @@
   * vue.js 2.6.12
   * HTML/CSS/bootstrap
 * BackEnd
-  * laravel 6.18.43
+  * laravel 6.20.12
   * composer 1.10.19 
   * PHPUnit 8.5.8
   * laravel/dusk 6.9.1
   * TwitterAPI (laravel/socialite v5.0.1)
   * Youtube Data API (google/auth v1.14.2) (trunks07/youtube-laravel-api)
+  * PHP-CS-Fixer 2.18.2
 * infra
   * Docker 19.03.13
   * docker-compose 1.27.4
