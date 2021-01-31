@@ -70,7 +70,7 @@
                         <div class="form-group row">
                             <label  class="col-md-4 col-form-label text-md-right">youtube_channel_id</label>
                             <div class="col-md-6">
-                            <input  type="text" name="youtube_channel_id" value="{{old ('youtube_channel_id',$row["youtube_channel_id"] )}}" class="form-control @error('Twitter_user') is-invalid @enderror" placeholder="YoutubeChannelIdを入力して下さい">
+                            <input  type="text" name="youtube_channel_id" value="{{old ('youtube_channel_id',$row["youtube_channel_id"] )}}" class="form-control @error('youtube_channel_id') is-invalid @enderror" placeholder="YoutubeChannelIdを入力して下さい">
                             @error('youtube_channel_id')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
