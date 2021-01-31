@@ -33,6 +33,7 @@
 * TwitterAPI,YoutubeDataAPI連携
 * DLgateの新規作成、一覧表示、編集、削除機能
   * 各入力フォームのバリデーション
+  *　一部カスタムバリデーション実装
   
 * UUIDを用いたgate別の動的パス生成
   * Sessionを駆使し twitterのフォロー、いいね、youtubeの登録に成功した場合にダウンロードURLを提供
@@ -64,7 +65,6 @@ https://dlgate-jp.cyou
 ![DLgate_view_sns](readme_image/DLgate_view_subscription.png)
 
 ## To-do
-* PHP-CS-Fixerの導入
 * キャメルケースとスネークケースが混じっていて統一されてないので修正
 * テストのカバレッジ (網羅率)を測定／分析
 * 単体、HTTPリクエスト単位、ブラウザテストの追加実装
