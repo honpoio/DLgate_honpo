@@ -28,7 +28,7 @@
                         <div class="form-group row">
                             <label  class="col-md-4 col-form-label text-md-right"> DL_url</label>
                             <div class="col-md-6">
-                            <input  type="text" name="dl_url" value="{{$row["dl_url"]}}" class="form-control @error('dl_url') is-invalid @enderror" placeholder="用意したDLリンクを記述して下さい">
+                            <input  type="text" name="dl_url" value="{{ old('gate_name',$row["dl_url"]) }}" class="form-control @error('dl_url') is-invalid @enderror" placeholder="用意したDLリンクを記述して下さい">
                             @error('dl_url')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
