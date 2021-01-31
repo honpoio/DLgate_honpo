@@ -1,7 +1,6 @@
-<?php
+<?php declare(strict_types=1);
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | バリデーションの言語行
@@ -9,7 +8,7 @@ return [
     |
     | 次の言語行には、バリデータクラスで使用されるデフォルトの
     | エラーメッセージが含まれています。これらのルールの一部には、
-    | サイズルールなどの複数のバージョンがあります。 
+    | サイズルールなどの複数のバージョンがあります。
     | ここでこれらの各メッセージを自由に調整してください。
     |
     */
@@ -118,7 +117,7 @@ return [
     'uploaded' => ':attributeのアップロードに失敗しました。',
     'url' => ':attributeは無効な形式です。',
     'uuid' => ':attributeは有効なUUIDでなければなりません。',
-
+    'hankaku' => ':attribute は半角英数字で入力してください',
     /*
     |--------------------------------------------------------------------------
     | カスタムバリデーションの言語行
@@ -134,16 +133,15 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
-        /* 
+        /*
         DLgateEditRequestの独自バリデーション
         */
-        'tweet_id.integer' =>'ツイートidのみ入力してください',
-        'gate_name.required' =>'GATEnameは入力必須です',
-        'gate_name.string' =>'GATEnameは英数字のみ入力可能です',
+        'tweet_id.integer' => 'ツイートidのみ入力してください',
+        'gate_name.required' => 'GATEnameは入力必須です',
+        'gate_name.string' => 'GATEnameは英数字のみ入力可能です',
         'gate_name.max:255' => 'gatenameは255文字以内で入力してください',
-        'dl_url.required' =>'DL_urlは入力必須です',
-        'dl_url.url' =>'DL_urlにはURLを入力してください',
-
+        'dl_url.required' => 'DL_urlは入力必須です',
+        'dl_url.url' => 'DL_urlにはURLを入力してください',
     ],
 
     /*
@@ -160,5 +158,4 @@ return [
         'Twitter_user' => 'ツイッターユーザーid',
         'tweet_id' => 'ツイートid',
     ],
-
 ];

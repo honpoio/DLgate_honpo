@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 return [
     //テスト用環境変数
@@ -15,11 +15,8 @@ return [
 
     'name' => env('APP_NAME', 'simple_DLgate'),
 
-
-
     'Google_OAUTH2_CLIENT_ID' => env('Google_OAUTH2_CLIENT_ID'),
     'GoogleOAUTH2_CLIENT_SECRET' => env('GoogleOAUTH2_CLIENT_SECRET'),
-    
 
     /*
     |--------------------------------------------------------------------------
@@ -141,10 +138,9 @@ return [
     */
 
     'providers' => [
-        #https://www.geekfeed.co.jp/geekblog/laravel-service-providers << ここの説明がわかりやすい
+        //https://www.geekfeed.co.jp/geekblog/laravel-service-providers << ここの説明がわかりやすい
         //大雑把にいうとwebアプリケーション開いた時に必要なパッケージとかを登録するところ
         //laravelアプリケーションなサービスプロバイダのクラス名が記載
-        
 
         /*
          * Laravel Framework Service Providers...
@@ -185,7 +181,6 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-    
     ],
 
     /*
@@ -236,7 +231,5 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
     ],
-
 ];

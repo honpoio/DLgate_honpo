@@ -1,19 +1,18 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Http\Controllers;
-use Illuminate\Http\Request;
 
-use App\User;
 use App\Mail\UserRegistered;
+use App\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-use App\Http\Controllers\Controller;
 
 class UserController extends Controller
 {
     /**
      * ユーザ登録
      *
-     * @param  Request  $request
+     * @param Request $request
      * @return Response
      */
     public function store(Request $request)

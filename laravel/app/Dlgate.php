@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App;
 
@@ -6,9 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Dlgate extends Model
 {
-    protected $table ='dlgates';
-
     public $timestamps = false;
+    protected $table = 'dlgates';
 
     protected $guarded = [
         'id',

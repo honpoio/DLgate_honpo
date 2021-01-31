@@ -1,7 +1,6 @@
-<?php
+<?php declare(strict_types=1);
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Validation Language Lines
@@ -13,8 +12,8 @@ return [
     |
     */
 
-    "The current password is incorrect." => "現在のパスワードが違います。",
-    "Your password has been changed." => "パスワードが変更されました。",
+    'The current password is incorrect.' => '現在のパスワードが違います。',
+    'Your password has been changed.' => 'パスワードが変更されました。',
     'accepted' => 'The :attribute must be accepted.',
     'active_url' => 'The :attribute is not a valid URL.',
     'after' => 'The :attribute must be a date after :date.',
@@ -149,5 +148,4 @@ return [
     */
 
     'attributes' => [],
-
 ];

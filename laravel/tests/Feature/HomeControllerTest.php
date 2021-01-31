@@ -1,30 +1,27 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Tests\Feature;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
-use Tests\TestCase;
 use App\User;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class HomeControllerTest extends TestCase
 {
     /**
      * A basic feature test example.
-     *
-     * @return void
      */
     use RefreshDatabase;
 
-    public function testExample()
+    public function testExample(): void
     {
         $this->seed('usersTableSeeder');
         $this->seed('dlgate_tableSeeder');
-        
+
         $response = $this
             ->actingAs(User::find(1))
             ->get(route('home'));
-            // var_dump($this);
+        // var_dump($this);
 
         $response->assertStatus(200)
             ->assertViewIs('home')

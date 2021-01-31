@@ -1,8 +1,10 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Http\Requests;
 
+use App\Rules\Hankaku;
 use Illuminate\Foundation\Http\FormRequest;
+
 class DLgateEditRequest extends FormRequest
 {
     /**
@@ -22,15 +24,17 @@ class DLgateEditRequest extends FormRequest
      */
     public function rules()
     {
+        // $hoge = new Hankaku;
+        // dd($hoge);
+
         return [
-            "Twitter_user" =>['nullable','string','not_in:@'.str_replace( '@','',$this->input('Twitter_user'))],
-            "tweet_id" =>['nullable','integer'],
-            "gate_name" =>['required','string','max:255'],
-            "dl_url" =>['required','url'],
+            'Twitter_user' => ['nullable', new Hankaku, 'not_in:@' . str_replace('@', '', $this->input('Twitter_user'))],
+            'tweet_id' => ['nullable', 'integer'],
+            'gate_name' => ['required', 'string', 'max:255', new Hankaku],
+            'dl_url' => ['required', 'url'],
+            'youtube_channel_id' => ['nullable', 'alpha_dash', new Hankaku],
         ];
         //カスタムバリデーションについて↓
         //laravel/resources/lang/ja/validation.phpに記載済み
     }
-
-
 }

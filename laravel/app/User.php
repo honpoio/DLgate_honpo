@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App;
 
@@ -16,7 +16,7 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'name','email', 'password','email_verified_at',
+        'name', 'email', 'password', 'email_verified_at',
     ];
 
     /**
@@ -36,8 +36,8 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    
+
     protected $guarded = [
-        'role','name', 
+        'role', 'name',
     ];
 }

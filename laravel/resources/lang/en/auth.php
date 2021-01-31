@@ -1,7 +1,6 @@
-<?php
+<?php declare(strict_types=1);
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Authentication Language Lines
@@ -15,7 +14,6 @@ return [
 
     'failed' => 'このメールアドレスは登録されていません',
     'throttle' => ':seconds 秒後に再試行してください',
-    "The current password is incorrect." => "現在のパスワードが違います。",
-    "Your password has been changed." => "パスワードが変更されました。",
-
+    'The current password is incorrect.' => '現在のパスワードが違います。',
+    'Your password has been changed.' => 'パスワードが変更されました。',
 ];

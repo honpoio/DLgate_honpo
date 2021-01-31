@@ -1,7 +1,6 @@
-<?php
+<?php declare(strict_types=1);
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Third Party Services
@@ -13,7 +12,7 @@ return [
     | a conventional file to locate the various service credentials.
     |
     */
-    
+
     'enable_new_resources' => env('ENABLE_NEW_RESOURCES', true),
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
@@ -38,6 +37,4 @@ return [
     ],
     // 'hoge' =>env('TWITTER_CALLBACK'),
     //テスト用変数
-    
-
 ];

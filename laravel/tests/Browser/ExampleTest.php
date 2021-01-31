@@ -1,8 +1,7 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Tests\Browser;
 
-use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Laravel\Dusk\Browser;
 use Tests\DuskTestCase;
 
@@ -10,15 +9,13 @@ class ExampleTest extends DuskTestCase
 {
     /**
      * A basic browser test example.
-     *
-     * @return void
      */
-    public function testBasicExample()
+    public function testBasicExample(): void
     {
-        $this->browse(function (Browser $browser) {
+        $this->browse(function (Browser $browser): void {
             $browser->visit('/')
-                    ->screenshot('tessss1')
-                    ->assertSee('ここには使用方法を記述する');
+                ->screenshot('tessss1')
+                ->assertSee('ここには使用方法を記述する');
         });
     }
 }

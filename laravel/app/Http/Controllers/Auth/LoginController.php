@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Http\Controllers\Auth;
 
@@ -30,17 +30,15 @@ class LoginController extends Controller
 
     /**
      * Create a new controller instance.
-     *
-     * @return void
      */
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
     }
-    
+
     protected function authenticated(\Illuminate\Http\Request $request, $user)
     {
-        if( $user->email_verified_at === null ){
+        if ($user->email_verified_at === null) {
             return redirect('/email/verify')->with('status', __('メールアドレス認証が完了していません'));
             // return redirect()->route('verification.notice', ['message'=>'メールアドレス認証が完了していません']);
         }

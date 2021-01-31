@@ -1,12 +1,12 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Contracts\Validation\Validator;
-use Illuminate\Http\Exceptions\HttpResponseException;
+use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+
 class WithdrawalRequest extends FormRequest
 {
     /**
@@ -31,8 +31,9 @@ class WithdrawalRequest extends FormRequest
         ];
     }
 
-    public function withValidator(Validator $validator) {
-        $validator->after(function ($validator) {
+    public function withValidator(Validator $validator): void
+    {
+        $validator->after(function ($validator): void {
             $auth = Auth::user();
             //現在のパスワードと新しいパスワードが合わなければエラーを出力
             if (!(Hash::check($this->input('CurrentPassword'), $auth->password))) {

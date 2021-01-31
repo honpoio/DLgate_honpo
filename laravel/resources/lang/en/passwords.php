@@ -1,7 +1,6 @@
-<?php
+<?php declare(strict_types=1);
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Password Reset Language Lines
@@ -17,8 +16,7 @@ return [
     'sent' => 'パスワードリセット方法をメールで送信しました。',
     'throttled' => '再試行する前にお待ちください。',
     'token' => 'このパスワードリセットトークンは無効です。',
-    'user' => "メールアドレスのユーザーが見つかりません。",
-    "The current password is incorrect." => "現在のパスワードが違います。",
-    "Your password has been changed." => "パスワードが変更されました。",
-
+    'user' => 'メールアドレスのユーザーが見つかりません。',
+    'The current password is incorrect.' => '現在のパスワードが違います。',
+    'Your password has been changed.' => 'パスワードが変更されました。',
 ];

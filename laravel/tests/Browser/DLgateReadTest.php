@@ -1,27 +1,24 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Tests\Browser;
 
-use Illuminate\Foundation\Testing\DatabaseMigrations;
+use App\User;
 use Laravel\Dusk\Browser;
 use Tests\DuskTestCase;
-use App\User;
 
 class DLgateReadTest extends DuskTestCase
 {
     /**
      * A Dusk test example.
-     *
-     * @return void
      */
-    public function testExample()
+    public function testExample(): void
     {
-        $this->browse(function (Browser $browser) {
+        $this->browse(function (Browser $browser): void {
             $browser->loginAs(User::find(1))
-            ->visit('/DLgate')
-            ->click('@view-button')
-            ->assertSee('test_gate')
-            ->screenshot('DLgate');
+                ->visit('/DLgate')
+                ->click('@view-button')
+                ->assertSee('test_gate')
+                ->screenshot('DLgate');
         });
     }
 }

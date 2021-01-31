@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Http\Controllers\Auth;
 
@@ -30,8 +30,6 @@ class VerificationController extends Controller
 
     /**
      * Create a new controller instance.
-     *
-     * @return void
      */
     public function __construct()
     {
@@ -40,7 +38,7 @@ class VerificationController extends Controller
         $this->middleware('throttle:6,1')->only('verify', 'resend');
     }
 
-    public function resend( \Illuminate\Http\Request $request)
+    public function resend(\Illuminate\Http\Request $request)
     {
         if ($request->user()->hasVerifiedEmail()) {
             return $request->wantsJson()

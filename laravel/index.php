@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /**
  * Library Requirements
@@ -9,7 +9,7 @@
  *    $ composer require google/apiclient:~2.0
  */
 if (!file_exists(__DIR__ . '/vendor/autoload.php')) {
-  throw new \Exception('please run "composer require google/apiclient:~2.0" in "' . __DIR__ .'"');
+    throw new \Exception('please run "composer require google/apiclient:~2.0" in "' . __DIR__ . '"');
 }
 
 require_once __DIR__ . '/vendor/autoload.php';
@@ -29,91 +29,101 @@ $client = new Google_Client();
 $client->setClientId($OAUTH2_CLIENT_ID);
 $client->setClientSecret($OAUTH2_CLIENT_SECRET);
 $client->setScopes('https://www.googleapis.com/auth/youtube');
-$redirect = filter_var('http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'],
-    FILTER_SANITIZE_URL);
+$redirect = filter_var(
+    'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'],
+    FILTER_SANITIZE_URL
+);
 $client->setRedirectUri($redirect);
-
-
 
 // Define an object that will be used to make all API requests.
 $youtube = new Google_Service_YouTube($client);
 
 // Check if an auth token exists for the required scopes
 $tokenSessionKey = 'token-' . $client->prepareScopes();
-if (isset($_GET['code'])) {
-  if (strval($_SESSION['state']) !== strval($_GET['state'])) {
-    die('The session state did not match.');
-  }
 
-  $client->authenticate($_GET['code']);
-  $_SESSION[$tokenSessionKey] = $client->getAccessToken();
-  header('Location: ' . $redirect);
+if (isset($_GET['code'])) {
+    if ((string) ($_SESSION['state']) !== (string) ($_GET['state'])) {
+        die('The session state did not match.');
+    }
+
+    $client->authenticate($_GET['code']);
+    $_SESSION[$tokenSessionKey] = $client->getAccessToken();
+    header('Location: ' . $redirect);
 }
 var_dump($tokenSessionKey);
 var_dump($client->getAccessToken());
 
 if (isset($_SESSION[$tokenSessionKey])) {
-  $client->setAccessToken($_SESSION[$tokenSessionKey]);
+    $client->setAccessToken($_SESSION[$tokenSessionKey]);
 }
 
 // Check to ensure that the access token was successfully acquired.
 if ($client->getAccessToken()) {
-  $htmlBody = '';
-  try {
-    // This code subscribes the authenticated user to the specified channel.
+    $htmlBody = '';
 
-    // Identify the resource being subscribed to by specifying its channel ID
-    // and kind.
-    $resourceId = new Google_Service_YouTube_ResourceId();
-    $resourceId->setChannelId('UCtVd0c0tGXuTSbU5d8cSBUg');
-    $resourceId->setKind('youtube#channel');
+    try {
+        // This code subscribes the authenticated user to the specified channel.
 
-    // Create a snippet object and set its resource ID.
-    $subscriptionSnippet = new Google_Service_YouTube_SubscriptionSnippet();
-    $subscriptionSnippet->setResourceId($resourceId);
+        // Identify the resource being subscribed to by specifying its channel ID
+        // and kind.
+        $resourceId = new Google_Service_YouTube_ResourceId();
+        $resourceId->setChannelId('UCtVd0c0tGXuTSbU5d8cSBUg');
+        $resourceId->setKind('youtube#channel');
 
-    // Create a subscription request that contains the snippet object.
-    $subscription = new Google_Service_YouTube_Subscription();
-    $subscription->setSnippet($subscriptionSnippet);
+        // Create a snippet object and set its resource ID.
+        $subscriptionSnippet = new Google_Service_YouTube_SubscriptionSnippet();
+        $subscriptionSnippet->setResourceId($resourceId);
 
-    // Execute the request and return an object containing information
-    // about the new subscription.
-    $subscriptionResponse = $youtube->subscriptions->insert('id,snippet',
-        $subscription, array());
+        // Create a subscription request that contains the snippet object.
+        $subscription = new Google_Service_YouTube_Subscription();
+        $subscription->setSnippet($subscriptionSnippet);
 
-    $htmlBody .= "<h3>Subscription</h3><ul>";
-    $htmlBody .= sprintf('<li>%s (%s)</li>',
-        $subscriptionResponse['snippet']['title'],
-        $subscriptionResponse['id']);
-    $htmlBody .= '</ul>';
+        // Execute the request and return an object containing information
+        // about the new subscription.
+        $subscriptionResponse = $youtube->subscriptions->insert(
+            'id,snippet',
+            $subscription,
+            []
+        );
 
-  } catch (Google_Service_Exception $e) {
-    $htmlBody .= sprintf('<p>A service error occurred: <code>%s</code></p>',
-        htmlspecialchars($e->getMessage()));
-  } catch (Google_Exception $e) {
-    $htmlBody .= sprintf('<p>An client error occurred: <code>%s</code></p>',
-        htmlspecialchars($e->getMessage()));
-  }
+        $htmlBody .= '<h3>Subscription</h3><ul>';
+        $htmlBody .= sprintf(
+            '<li>%s (%s)</li>',
+            $subscriptionResponse['snippet']['title'],
+            $subscriptionResponse['id']
+        );
+        $htmlBody .= '</ul>';
+    } catch (Google_Service_Exception $e) {
+        $htmlBody .= sprintf(
+            '<p>A service error occurred: <code>%s</code></p>',
+            htmlspecialchars($e->getMessage())
+        );
+    } catch (Google_Exception $e) {
+        $htmlBody .= sprintf(
+            '<p>An client error occurred: <code>%s</code></p>',
+            htmlspecialchars($e->getMessage())
+        );
+    }
 
-  $_SESSION[$tokenSessionKey] = $client->getAccessToken();
+    $_SESSION[$tokenSessionKey] = $client->getAccessToken();
 } elseif ($OAUTH2_CLIENT_ID == 'REPLACE_ME') {
-  $htmlBody = <<<END
+    $htmlBody = <<<'END'
   <h3>Client Credentials Required</h3>
   <p>
-    You need to set <code>\$OAUTH2_CLIENT_ID</code> and
-    <code>\$OAUTH2_CLIENT_ID</code> before proceeding.
+    You need to set <code>$OAUTH2_CLIENT_ID</code> and
+    <code>$OAUTH2_CLIENT_ID</code> before proceeding.
   <p>
 END;
 } else {
-  // If the user has not authorized the application, start the OAuth 2.0 flow.
-  $state = mt_rand();
-  $client->setState($state);
-  $_SESSION['state'] = $state;
+    // If the user has not authorized the application, start the OAuth 2.0 flow.
+    $state = mt_rand();
+    $client->setState($state);
+    $_SESSION['state'] = $state;
 
-  $authUrl = $client->createAuthUrl();
-  $htmlBody = <<<END
+    $authUrl = $client->createAuthUrl();
+    $htmlBody = <<<END
   <h3>Authorization Required</h3>
-  <p>You need to <a href="$authUrl">authorize access</a> before proceeding.<p>
+  <p>You need to <a href="${authUrl}">authorize access</a> before proceeding.<p>
 END;
 }
 ?>
@@ -124,6 +134,6 @@ END;
 <title>Returned Subscription</title>
 </head>
 <body>
-  <?=$htmlBody?>
+  <?=$htmlBody; ?>
 </body>
 </html>

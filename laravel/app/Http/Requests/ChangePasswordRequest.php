@@ -1,12 +1,12 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Contracts\Validation\Validator;
-use Illuminate\Http\Exceptions\HttpResponseException;
+use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+
 class ChangePasswordRequest extends FormRequest
 {
     /**
@@ -32,19 +32,18 @@ class ChangePasswordRequest extends FormRequest
         ];
     }
 
-    public function withValidator(Validator $validator) {
-            $validator->after(function ($validator) {
-                $auth = Auth::user();
-                //現在のパスワードと新しいパスワードが合わなければエラー
-                if (!(Hash::check($this->input('CurrentPassword'), $auth->password))) {
-                    $validator->errors()->add('CurrentPassword', __('パスワードが一致しません'));
-                }
-                if(!$this->input('newPassword') === $this->input('newPassword_confirmation') ){
-                    $validator->errors()->add('newPassword', __());
-                }
-            });
+    public function withValidator(Validator $validator): void
+    {
+        $validator->after(function ($validator): void {
+            $auth = Auth::user();
+            //現在のパスワードと新しいパスワードが合わなければエラー
+            if (!(Hash::check($this->input('CurrentPassword'), $auth->password))) {
+                $validator->errors()->add('CurrentPassword', __('パスワードが一致しません'));
+            }
 
-            
-
+            if (!$this->input('newPassword') === $this->input('newPassword_confirmation')) {
+                $validator->errors()->add('newPassword', __());
+            }
+        });
     }
 }
