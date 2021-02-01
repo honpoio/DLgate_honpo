@@ -1,12 +1,13 @@
-<?php declare(strict_types=1);
+<?php 
+// declare(strict_types=1);
 
-namespace Database\operateDB;
+namespace Database\OperateDB;
 
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
-class User_Operation_DB
+class UserOperationDB
 {
     public function EmailUpdate($request)
     {

@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Database\operateDB;
+namespace Database\OperateDB;
 
 use App\Dlgate;
 

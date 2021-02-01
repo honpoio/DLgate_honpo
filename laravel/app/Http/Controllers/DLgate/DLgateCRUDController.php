@@ -5,45 +5,45 @@ namespace App\Http\Controllers\DLgate;
 use App;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\DLgateEditRequest;
-use Database\operateDB\DLgateOperationDB;
+use Database\OperateDB\DLgateOperationDB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class DLgateCRUDController extends Controller
 {
-    public function Select()
+    public function Select(DLgateOperationDB $DLgateOperationDB)
     {
         $id = Auth::id();
         $this->CheckLogin();
-        return app()->make(DLgateOperationDB::class)->Select($id);
+        return $DLgateOperationDB->Select($id);
     }
 
-    public function SelectUpdate(Request $request)
+    public function SelectUpdate(Request $request , DLgateOperationDB $DLgateOperationDB)
     {
         $id = Auth::id();
         $this->CheckLogin();
-        return app()->make(DLgateOperationDB::class)->SelectUpdate($request, $id);
+        return $DLgateOperationDB->SelectUpdate($request, $id);
     }
 
-    public function Update(DLgateEditRequest $request)
+    public function Update(DLgateEditRequest $request , DLgateOperationDB $DLgateOperationDB)
     {
         $id = Auth::id();
         $this->CheckLogin();
-        return app()->make(DLgateOperationDB::class)->Update($request, $id);
+        return $DLgateOperationDB->Update($request, $id);
     }
 
-    public function Delete(Request $request)
+    public function Delete(Request $request , DLgateOperationDB $DLgateOperationDB)
     {
         $id = Auth::id();
         $this->checkLogin();
-        return app()->make(DLgateOperationDB::class)->Delete($request, $id);
+        return $DLgateOperationDB->Delete($request, $id);
     }
 
-    public function Create(DLgateEditRequest $request)
+    public function Create(DLgateEditRequest $request , DLgateOperationDB $DLgateOperationDB)
     {
         $id = Auth::id();
         $this->checkLogin();
-        return app()->make(DLgateOperationDB::class)->Create($request, $id);
+        return $DLgateOperationDB->Create($request, $id);
     }
 
     private function CheckLogin()

@@ -9,6 +9,7 @@ use App\Http\Requests\ChangePasswordRequest;
 use App\Http\Requests\WithdrawalRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Database\OperateDB\UserOperationDB;
 
 class UserInformationController extends Controller
 {
@@ -20,21 +21,21 @@ class UserInformationController extends Controller
         return view('auth.UserInformationEdit', ['auth' => $auth]);
     }
 
-    public function EmailUpdate(addEmailRequest $request)
+    public function EmailUpdate(addEmailRequest $request, UserOperationDB $UserOperationDB)
     {
         //登録メールアドレスを更新するメソッド
         $this->checkLogin();
         $this->checkTestUser();
-        return app('User_DB_Operation')->EmailUpdate($request);
+        return  $UserOperationDB->EmailUpdate($request);
     }
 
-    public function PasswordChange(ChangePasswordRequest $request)
+    public function PasswordChange(ChangePasswordRequest $request , UserOperationDB $UserOperationDB)
     {
         //パスワードを変更するメソッド
         $this->checkLogin();
         $this->checkTestUser();
         $user = Auth::user();
-        return app('User_DB_Operation')->PasswordChange($request, $user);
+        return $UserOperationDB->PasswordChange($request, $user);
     }
 
     public function WithdrawalForm()
@@ -45,14 +46,14 @@ class UserInformationController extends Controller
         return view('auth.WithdrawalForm', ['auth' => $auth]);
     }
 
-    public function Withdrawal(WithdrawalRequest $request)
+    public function Withdrawal(WithdrawalRequest $request, UserOperationDB $UserOperationDB)
     {
         //退会処理を追加するメソッド
         $this->checkLogin();
         $this->checkTestUser();
         $id = auth::id();
 
-        return app('User_DB_Operation')->Withdrawal($request, $id);
+        return $UserOperationDB->Withdrawal($request, $id);
     }
 
     private function checkLogin()
