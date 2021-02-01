@@ -20,12 +20,15 @@
         <div class="text-wrap">
             DL_url:{{$row->dl_url}}
         </div>
+        <br>
         <div class="text-wrap">
             twitterUser:{{$row->Twitter_user}}
         </div>
+        <br>
         <div class="text-wrap">
             tweetid:{{$row->Twitter_tweet}}
         </div>
+        <br>
         <div class="text-wrap">
             youtube_channel_id:{{$row->youtube_channel_id}}
         </div>
