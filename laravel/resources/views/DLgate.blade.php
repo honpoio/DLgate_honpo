@@ -17,17 +17,17 @@
     </div>
     <div class="card-body">
 
-        <div class="form-group row">
-            DL_url: {{$row->dl_url}}
+        <div class="text-wrap">
+            DL_url:{{$row->dl_url}}
         </div>
-        <div class="form-group row">
-            twitterUser: {{$row->Twitter_user}}
+        <div class="text-wrap">
+            twitterUser:{{$row->Twitter_user}}
         </div>
-        <div class="form-group row">
-            tweetid: {{$row->Twitter_tweet}}
+        <div class="text-wrap">
+            tweetid:{{$row->Twitter_tweet}}
         </div>
-        <div class="form-group row">
-            youtube_channel_id: {{$row->youtube_channel_id}}
+        <div class="text-wrap">
+            youtube_channel_id:{{$row->youtube_channel_id}}
         </div>
     </div>
 
