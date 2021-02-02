@@ -22,10 +22,10 @@ class twitterOAuthRedirectTest extends TestCase
     {
         parent::setUp();
         $this->seed('usersTableSeeder');
-        $this->seed('dlgate_tableSeeder');
+        $this->seed('DlgatesTableSeeder');
     }
 
-    public function test_Twitter_Follow_OAuth(): void
+    public function testTwitterFollowOAuth(): void
     {
         // ルーティングDLgate/viewはtwitterのトークン要求画面(ログイン画面)に遷移するか確認
         $dlgate_table = Dlgate::select(['URL_id'])->where('id', [1])->get();
@@ -54,7 +54,7 @@ class twitterOAuthRedirectTest extends TestCase
     //     $response->assertStatus(200);
     // }
 
-    public function test_Twitter_RT_OAuth(): void
+    public function testTwitterRTOAuth(): void
     {
         $dlgate_table = Dlgate::select(['URL_id'])->where('id', [1])->get();
 

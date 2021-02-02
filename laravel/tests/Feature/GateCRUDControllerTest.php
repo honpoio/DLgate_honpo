@@ -9,7 +9,7 @@ use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Support\Facades\Auth;
 use Tests\TestCase;
 
-class Gate_CRUDControllerTest extends TestCase
+class GateCRUDControllerTest extends TestCase
 {
     /**
      * A basic feature test example.
@@ -21,7 +21,7 @@ class Gate_CRUDControllerTest extends TestCase
     {
         parent::setUp();
         $this->seed('usersTableSeeder');
-        $this->seed('dlgate_tableSeeder');
+        $this->seed('DlgatesTableSeeder');
     }
 
     public function testGateUpdate(): void

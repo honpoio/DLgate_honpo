@@ -10,6 +10,6 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call(usersTableSeeder::class);
-        $this->call(dlgate_tableSeeder::class);
+        $this->call(DlgatesTableSeeder::class);
     }
 }

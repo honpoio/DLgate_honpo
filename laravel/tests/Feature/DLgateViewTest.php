@@ -17,7 +17,7 @@ class DLgateViewTest extends TestCase
     {
         parent::setUp();
         $this->seed('usersTableSeeder');
-        $this->seed('dlgate_tableSeeder');
+        $this->seed('DlgatesTableSeeder');
     }
 
     public function testGateViewForm(): void

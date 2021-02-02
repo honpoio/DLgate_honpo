@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 class TwitterController extends Controller
 {
-    protected static $Twitter_Config;
+    protected static $TwitterConfig;
 
     public function redirect(Request $request,EndpointChanges $EndpointChanges)
     {
@@ -18,22 +18,22 @@ class TwitterController extends Controller
         return $EndpointChanges->ScopeChange($provider, $request);
     }
 
-    public function Twetter_Follow(Request $request, OAuthAndUserInfo $OAuthAndUserInfo)
+    public function TwetterFollow(Request $request, TwitterOperation $TwitterOperation)
     {
         //トークンを使用しリソースサーバーにアクセス
-        $this->OAuth_AND_User_Info();
-        return $OAuthAndUserInfo->Follow_Operation($request);
+        $this->OAuthAndUserInfo();
+        return $TwitterOperation->FollowOperation($request);
     }
 
     public function TweetRT(Request $request, TwitterOperation $TwitterOperation)
     {
-        $this->OAuth_AND_User_Info();
-        return $TwitterOperation->RT_Operation($request);
+        $this->OAuthAndUserInfo();
+        return $TwitterOperation->RTOperation($request);
     }
 
-    private function OAuth_AND_User_Info(OAuthAndUserInfo $OAuthAndUserInfo): void
+    private function OAuthAndUserInfo(OAuthAndUserInfo $OAuthAndUserInfo): void
     {
         // Oauthのアクセスキーを取得するメソッド
-        self::$Twitter_Config = $OAuthAndUserInfo->Twitter_User_Property();
+        self::$TwitterConfig = $OAuthAndUserInfo->TwitterUserProperty();
     }
 }

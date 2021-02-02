@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class dlgate_tableSeeder extends Seeder
+class DlgatesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.

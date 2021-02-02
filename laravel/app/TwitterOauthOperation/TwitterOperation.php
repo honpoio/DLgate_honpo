@@ -14,7 +14,6 @@ class TwitterOperation extends TwitterController
 
         $User_Info = self::$Twitter_Config->get('users/show', ['screen_name' => $screen_name]);
         //スクリーンネームを取得
-        // dd($User_Info);
         try {
             if ($User_Info->errors) {
                 return redirect('/DLgate/Form')->with('status', __('ユーザーの取得に失敗しました。作成者にお問い合わせお願いします'));

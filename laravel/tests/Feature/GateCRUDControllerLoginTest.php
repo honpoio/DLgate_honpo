@@ -8,7 +8,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Auth;
 use Tests\TestCase;
 
-class Gate_CRUDControllerLoginTest extends TestCase
+class GateCRUDControllerLoginTest extends TestCase
 {
     /**
      * A basic feature test example.
@@ -19,7 +19,7 @@ class Gate_CRUDControllerLoginTest extends TestCase
     {
         parent::setUp();
         $this->seed('usersTableSeeder');
-        $this->seed('dlgate_tableSeeder');
+        $this->seed('DlgatesTableSeeder');
     }
 
     public function testGateLoginForm(): void

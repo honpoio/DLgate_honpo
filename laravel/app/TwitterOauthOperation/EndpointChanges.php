@@ -10,10 +10,10 @@ class EndpointChanges extends SocialiteManager
     {
         //コールバックURLを変更するメソッド
         if ($request->has('Follow')) {
-            $this->Callback_Change = 'https://dlgate-jp.cyou/callback/follw';
+            $this->CallbackChange = 'https://dlgate-jp.cyou/callback/follw';
             return self::driver($provider)->redirect();
         } elseif ($request->has('RT')) {
-            $this->Callback_Change = 'https://dlgate-jp.cyou/callback/RT';
+            $this->CallbackChange = 'https://dlgate-jp.cyou/callback/RT';
             return self::driver($provider)->redirect();
         }
     }

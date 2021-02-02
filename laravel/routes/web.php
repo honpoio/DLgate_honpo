@@ -54,7 +54,7 @@ Route::middleware('verified')->group(function (): void {
                 Route::get('/auth/redirect/twitter', 'TwitterController@redirect')
                     ->name('twitter_OAuth');
 
-                Route::get('/callback/follw', 'TwitterController@Twetter_Follow')
+                Route::get('/callback/follw', 'TwitterController@TwetterFollow')
                     ->name('twitter');
 
                 Route::get('/callback/RT', 'TwitterController@TweetRT')

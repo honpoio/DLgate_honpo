@@ -7,7 +7,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Auth;
 use Tests\TestCase;
 
-class User_Edit_UserInformationControllerLoginTest extends TestCase
+class UserEditUserInformationControllerLoginTest extends TestCase
 {
     /**
      * A basic feature test example.
@@ -18,7 +18,7 @@ class User_Edit_UserInformationControllerLoginTest extends TestCase
     {
         parent::setUp();
         $this->seed('usersTableSeeder');
-        $this->seed('dlgate_tableSeeder');
+        $this->seed('DlgatesTableSeeder');
     }
 
     public function testUserInformation(): void

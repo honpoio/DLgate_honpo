@@ -16,7 +16,7 @@ class HomeControllerTest extends TestCase
     public function testExample(): void
     {
         $this->seed('usersTableSeeder');
-        $this->seed('dlgate_tableSeeder');
+        $this->seed('DlgatesTableSeeder');
 
         $response = $this
             ->actingAs(User::find(1))
