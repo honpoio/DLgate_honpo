@@ -30,7 +30,6 @@ class DLgateViewTest extends TestCase
         }
 
         $response = $this->get('/DLgate/view?id=' . $URL_id);
-
         $response->assertStatus(200);
         $response->assertDontSee('ダウンロードURL:');
     }

@@ -1,12 +1,12 @@
 <?php declare(strict_types=1);
 
-namespace App\Twitter_Oauth_Operation;
+namespace App\TwitterOauthOperation;
 
 use Laravel\Socialite\SocialiteManager;
 
 class EndpointChanges extends SocialiteManager
 {
-    public function Scope_Change($provider, $request)
+    public function ScopeChange($provider, $request)
     {
         //コールバックURLを変更するメソッド
         if ($request->has('Follow')) {

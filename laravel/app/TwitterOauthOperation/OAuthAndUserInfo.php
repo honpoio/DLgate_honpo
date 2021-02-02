@@ -1,13 +1,13 @@
 <?php declare(strict_types=1);
 
-namespace App\Twitter_Oauth_Operation;
+namespace App\TwitterOauthOperation;
 
 use Abraham\TwitterOAuth\TwitterOAuth as TwitterOAuth;
 use Laravel\Socialite\SocialiteManager;
 
-class OAuth_AND_User_Info extends SocialiteManager
+class OAuthAndUserInfo extends SocialiteManager
 {
-    public function Twitter_User_Property()
+    public function TwitterUserProperty()
     {
         // Oauthのアクセスキーを取得
         $info = self::driver('twitter')->user();

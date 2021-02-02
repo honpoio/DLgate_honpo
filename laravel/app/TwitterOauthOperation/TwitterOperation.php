@@ -1,13 +1,13 @@
 <?php declare(strict_types=1);
 
-namespace App\Twitter_Oauth_Operation;
+namespace App\TwitterOauthOperation;
 
 use App\Http\Controllers\TwitterController;
 use Exception;
 
-class Twitter_Operation extends TwitterController
+class TwitterOperation extends TwitterController
 {
-    public function Follow_Operation($request)
+    public function FollowOperation($request)
     {
         //アクセストークンを使用しフォローするメソッド
         $screen_name = $request->session()->get('Twitter_user');
@@ -39,7 +39,7 @@ class Twitter_Operation extends TwitterController
         }
     }
 
-    public function RT_Operation($request)
+    public function RTOperation($request)
     {
         $tweet = $request->session()->get('Twitter_tweet');
         self::$Twitter_Config->post('statuses/retweet', ['id' => $tweet]);
